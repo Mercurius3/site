@@ -61,5 +61,5 @@ gem 'icalendar'
 
 # Images
 gem 'carrierwave'
-gem 'asset_sync', '>= 1.0.0'
+# gem 'asset_sync', '>= 1.0.0'
 gem 'rmagick'
