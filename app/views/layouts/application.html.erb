@@ -24,20 +24,22 @@
       </div>
     </div>
     <%= render 'layouts/header' %>
-    <div class="row">
-      <div class="large-offset-4 large-8 columns">
-        <%= render 'layouts/nav' %>
+    <div id="wrapper">
+      <div class="row">
+        <div class="large-offset-4 large-8 columns">
+          <%= render 'layouts/nav' %>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="large-4 columns">
-        <nav id="sidebar_nav">
-          <%= render 'layouts/sidebar' %>
-        </nav>
-      </div>
-      <div class="large-8 columns">
-        <%= render 'layouts/messages' -%>
-        <%= yield %>
+      <div class="row">
+        <div class="large-4 columns">
+          <nav id="sidebar_nav">
+            <%= render 'layouts/sidebar' %>
+          </nav>
+        </div>
+        <div class="large-8 columns">
+          <%= render 'layouts/messages' -%>
+          <%= yield %>
+        </div>
       </div>
     </div>
 

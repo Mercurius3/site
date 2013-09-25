@@ -1,15 +1,22 @@
-<header id="logo" role="banner" class="clearfix">
-  <h1 id="title"><%= link_to (raw "lassche <span>&</span> lassche"), root_path %></h1>
-  <h2 id="logo_extra">kunst- en cultuureducatie</h2>
-  <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
-  <div id="user_nav">
-    <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
-    <% end %>
-  </div>
+<header role="banner" class="row">
+  <section class="large-6 columns">
+    <div id="logo"></div>
+    <div id="logo-text">
+      <h1 id="title"><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
+      <h2 id="logo_extra">kunst- en cultuureducatie</h2>
+    </div>
+  </section>
+  <aside class="large-6 columns">
+    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> |
+        <%= link_to "Login", new_user_session_path %>
+      <% end %>
+    </div>
+  </aside>
 </header>
