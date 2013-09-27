@@ -85,6 +85,7 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    kramdown (1.2.0)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -201,6 +202,7 @@ DEPENDENCIES
   icalendar
   jbuilder (~> 1.2)
   jquery-rails
+  kramdown
   mysql2
   rails (= 4.0.0)
   rails_admin
