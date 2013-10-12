@@ -1,3 +1,7 @@
+set :default_environment, {
+  'PATH' => "/Users/axel/.rbenv/shims:/Users/axel/.rbenv/bin:$PATH"
+}
+
 set :stages, %w(production staging)
 set :default_stage, "staging"
 
