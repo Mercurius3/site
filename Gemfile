@@ -45,7 +45,7 @@ end
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-gem 'capistrano', '~> 3.0.0'
+gem 'capistrano'
 gem 'rvm-capistrano'
 
 # Use debugger
