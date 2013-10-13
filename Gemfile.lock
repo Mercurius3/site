@@ -193,7 +193,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (~> 2.15.4)
+  capistrano (~> 2.15)
   carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails

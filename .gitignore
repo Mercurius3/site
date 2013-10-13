@@ -18,6 +18,3 @@
 /config/app_environment_variables.rb
 /config/initializers/devise.rb
 /vendor/bundle
-
-#
-.ruby-version

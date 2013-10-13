@@ -1,10 +1,3 @@
-# add binstubs in app/bin directory
-set :bundle_flags, '--deployment --quiet --binstubs'
-
-set :default_environment, {
-  'PATH' => "/Users/axel/.rbenv/shims:/Users/axel/.rbenv/bin:$PATH"
-}
-
 set :stages, %w(production staging)
 set :default_stage, "staging"
 
