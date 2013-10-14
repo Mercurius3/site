@@ -16,7 +16,8 @@ set :scm, :git  # Of 'subversion', 'mercurial' , etc.
 set :repository,  "git@github.com:Mercurius3/site.git"
 
 # Gebruik de standaard Ruby van de server
-# set :rvm_ruby_string, 'default'
+# Zou niet meer nodig moeten zijn
+set :rvm_ruby_string, 'default'
 
 # De onderstaande instellingen zijn specifiek voor de Bluerail servers, u
 # hoeft hier zelf geen wijzigingen in aan te brengen.
