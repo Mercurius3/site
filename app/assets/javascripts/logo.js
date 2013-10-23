@@ -1,8 +1,9 @@
-window.onload = function() {
+//window.onload = function() {
+$("document").ready(function() {
   
  // All other browsers
 
-   var paper = new Raphael(document.getElementById("horizon"), "100%",500);
+   var paper = new Raphael(document.getElementById("horizon"), "100%",0);
    var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
    paper.setViewBox(0,0,2400,500);
   // y = paper._viewBox[3]
@@ -12,6 +13,7 @@ window.onload = function() {
       fill: "white",
       stroke: "none"
     });
+ 
   // icon
   var brand_paper = new Raphael(document.getElementById("logo"),500,250);
   brand_paper.setViewBox(0,0,1000,500);
@@ -38,4 +40,8 @@ window.onload = function() {
     five.attr({fill:"#e97438"});
     six.attr({fill:"#a55298"});
     logo.transform("T200,0");
-};
+});
+$("document").ready(function() {
+	var svg = $('#horizon').find('svg')[0];
+	svg.setAttribute('preserveAspectRatio', 'xMinYMax meet')
+});

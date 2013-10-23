@@ -1,4 +1,8 @@
-<h1><%= @category.name %></h1>
-<% @products.each do |product| %>
-  <p><%= link_to(product.name, product) %></p>
-<% end %>
+<div class="row">
+	<div class="large-8 columns">
+		<h1><%= @category.name %></h1>
+		<% @products.each do |product| %>
+			<p><%= link_to(product.name, product) %></p>
+		<% end %>
+	</div>
+</div>
