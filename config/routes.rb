@@ -6,10 +6,11 @@ Site::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'pages#show', id: "home"
+  get 'nieuws', to: 'posts#index', as: 'nieuws'
   get 'agenda', to: 'events#index', as: 'agenda'
   get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
-  resources :categories, :products, :transactions
+  resources :categories, :products, :transactions, :posts
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

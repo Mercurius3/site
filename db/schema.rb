@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130721150345) do
+ActiveRecord::Schema.define(version: 20131023180546) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20130721150345) do
     t.text     "content"
     t.string   "permalink"
     t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.boolean  "active"
+    t.integer  "position"
+    t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
