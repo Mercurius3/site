@@ -4,8 +4,10 @@
    	<p><%= @product.description %></p>
 	<table>
 		<% @product.events.each do |event| %>
+		<tr>
 			<td><%= l event.eventdate, format: :long %></td><td><%= l event.starttime, format: :time %> - <%= l event.endtime, format: :time %></td><td><%= event.name %></td>
 		<% end %>
+		</tr>
 	</table>
   </div>
   <div class="large-4 columns">
