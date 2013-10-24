@@ -1,14 +1,9 @@
-//window.onload = function() {
 $("document").ready(function() {
   
- // All other browsers
-
-   var paper = new Raphael(document.getElementById("horizon"), "100%",0);
-   var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
-   paper.setViewBox(0,0,2400,500);
-  // y = paper._viewBox[3]
- 
- 
+  var paper = new Raphael(document.getElementById("horizon"), "100%",0);
+  var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
+  // paper.setViewBox(0,0,2400,500); 
+  horizon.setViewBox(0,0,2400,500);
   horizon.attr({
       fill: "white",
       stroke: "none"
@@ -24,6 +19,12 @@ $("document").ready(function() {
     var one = brand_paper.path("m570,209.350906c-30.127991,-38.970001 -73.813995,-61.393997 -119.78299,-66.09201c2.75,-14.740005 5.5,-29.479996 8.248993,-44.219986c57.521973,-1.073013 116.176025,20.016998 161.937988,64.447983c-16.800964,15.287994 -33.602966,30.576004 -50.403992,45.864014");
     var two = brand_paper.path("m438,142.255997c-46.287994,-1.463989 -93.834015,14.903 -131.358002,50.281998c-4.60202,-4.186996 -9.204987,-8.375 -13.806,-12.561996c38.360992,-48.018997 93.152008,-75.165001 150.350006,-80.258011l-5.186005,42.53801z");
     var three = brand_paper.path("m455,202.939102c-4.854004,6.468002 -12.649994,8.813004 -17.406006,5.233994c-4.764008,-3.565994 -4.682983,-11.713013 0.17099,-18.172012c4.853027,-6.465988 12.642029,-8.814987 17.406006,-5.235977c4.755005,3.572998 4.681,11.707977 -0.17099,18.173996");
+    one.attr({fill:"#373535"});
+    two.attr({fill:"#373535"});
+    three.attr({fill:"#ffffff"});
+    four.attr({fill:"#373535"});
+    five.attr({fill:"#e97438"});
+    six.attr({fill:"#a55298"});
     logo.push(
         three,
         four,
@@ -33,15 +34,7 @@ $("document").ready(function() {
         two
       );
     logo.attr({stroke:"none"});
-    one.attr({fill:"#373535"});
-    two.attr({fill:"#373535"});
-    three.attr({fill:"#ffffff"});
-    four.attr({fill:"#373535"});
-    five.attr({fill:"#e97438"});
-    six.attr({fill:"#a55298"});
     logo.transform("T200,0");
-});
-$("document").ready(function() {
-	var svg = $('#horizon').find('svg')[0];
-	svg.setAttribute('preserveAspectRatio', 'xMinYMax meet')
+  var svg = $('#horizon').find('svg')[0];
+  svg.setAttribute('preserveAspectRatio', 'xMinYMid meet')
 });
