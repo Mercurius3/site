@@ -36,12 +36,12 @@ RailsAdmin.config do |config|
   # config.label_methods << :description # Default is [:name, :title]
 
   
-  config.authorize_with do |controller|
-    unless current_user.try(:admin?)
-      flash[:error] = "You are not an admin"
-      redirect_to pages(id: "home")
-    end
-  end
+  # config.authorize_with do |controller|
+  #   unless current_user.try(:admin?)
+  #     flash[:error] = "You are not an admin"
+  #     redirect_to pages(id: "home")
+  #   end
+  # end
   
   ################  Model configuration  ################
 
