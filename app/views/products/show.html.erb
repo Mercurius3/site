@@ -15,7 +15,9 @@
 			<li class="title"><%= @product.category.name %>: <%= @product.name %></li>
       <li class="price">&euro;&nbsp;<%= @product.price if @product.price %></li>
       <li class="bullet-item"><%= @product.teacher.name if @product.teacher %></li>
-			<li class="bullet-item"><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></li>
+			<% if @product.location %>
+				<li class="bullet-item"><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></li>
+			<% end %>
       <li class="cta-button"><%= button %></li>
     </ul>
     <%= image_tag(@product.picture) if @product.picture %>
