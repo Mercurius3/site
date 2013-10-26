@@ -1,12 +1,12 @@
 $("document").ready(function() {
   
   // var paper = new Raphael(document.getElementById("horizon"), "100%",0);
-  // var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
-  // paper.setViewBox(0,0,2400,500);
-  // horizon.attr({
-  //     fill: "white",
-  //     stroke: "none"
-  //   });
+  var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
+  paper.setViewBox(0,0,2400,500);
+  horizon.attr({
+    fill: "white",
+    stroke: "none"
+  });
  
   // icon
   var brand_paper = new Raphael(document.getElementById("logo"),500,250);
@@ -34,6 +34,7 @@ $("document").ready(function() {
       );
     logo.attr({stroke:"none"});
     logo.transform("T200,0");
-  // var svg = $('#horizon').find('svg')[0];
-  // svg.setAttribute('preserveAspectRatio', 'xMinYMid meet')
+  var svg = $('#horizon').find('svg')[0];
+  svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
+	svg.setAttribute('background-repeat','no-repeat');
 });

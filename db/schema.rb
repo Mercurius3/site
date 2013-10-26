@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024212715) do
+ActiveRecord::Schema.define(version: 20131026194717) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -70,6 +70,9 @@ ActiveRecord::Schema.define(version: 20131024212715) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "short_description"
+    t.text     "payment_details"
+    t.boolean  "third_party"
   end
 
   add_index "products", ["active"], name: "index_products_on_active"

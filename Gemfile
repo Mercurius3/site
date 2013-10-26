@@ -53,7 +53,7 @@ gem 'rvm-capistrano'
 
 # Rails_Admin:
 gem 'rails_admin'
-gem "devise"
+gem 'devise'
 
 # Translate Devise Views
 gem 'devise-i18n-views'
