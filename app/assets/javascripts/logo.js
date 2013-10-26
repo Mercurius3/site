@@ -1,15 +1,15 @@
 $("document").ready(function() {
   
-  var paper = new Raphael(document.getElementById("horizon"), "100%",0);
-  var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
-  paper.setViewBox(0,0,2400,500);
-  horizon.attr({
-      fill: "white",
-      stroke: "none"
-    });
+  // var paper = new Raphael(document.getElementById("horizon"), "100%",0);
+  // var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
+  // paper.setViewBox(0,0,2400,500);
+  // horizon.attr({
+  //     fill: "white",
+  //     stroke: "none"
+  //   });
  
   // icon
-  // var brand_paper = new Raphael(document.getElementById("logo"),500,250);
+  var brand_paper = new Raphael(document.getElementById("logo"),500,250);
   brand_paper.setViewBox(0,0,1000,500);
   var logo = brand_paper.set();
     var four = brand_paper.path("m485,210c0,21.164001 -17.14801,38.313004 -38.311005,38.313004c-21.161011,0 -38.309998,-17.149002 -38.309998,-38.313004c0,-21.158005 17.148987,-38.313004 38.309998,-38.313004c21.162994,0 38.311005,17.154999 38.311005,38.313004");
