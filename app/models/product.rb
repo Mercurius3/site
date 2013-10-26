@@ -8,4 +8,5 @@ class Product < ActiveRecord::Base
   has_many :events
   belongs_to :teacher
   has_many :transactions
+  belongs_to :location
 end

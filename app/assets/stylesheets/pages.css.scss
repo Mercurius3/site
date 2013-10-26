@@ -7,7 +7,8 @@ $primary-color:$full;
 
 // Logo
 #horizon-container {position:absolute; width: 100%;}
-#wrapper { background-color: blue;min-height: 1000px;margin-top: -50px; padding-top: 100px;}
+#horizon {position:relative;}
+//#wrapper { background-color: blue;min-height: 1000px;margin-top: -50px; padding-top: 100px;}
 //#logo {position: absolute; top:5em;}
 //#wrapper {min-height: 1000px; padding-top: 300px; margin-top: 0px;}
 #wrapper {

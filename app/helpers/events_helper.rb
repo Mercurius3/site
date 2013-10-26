@@ -4,7 +4,14 @@ module EventsHelper
   end
 
   def event_calendar_item(event)
-    raw("#{l event.eventdate, format: :long}: #{l event.starttime, format: :time} - #{l event.endtime, format:	:time} #{link_to event.product.name, event.product}: #{event.name}") if event.starttime && event.endtime
+    name = "<strong>#{event.product.category.name}</strong> #{l event.eventdate, format: :long}"
+    if event.starttime && event.endtime
+      date = " : #{l event.starttime, format: :time} - #{l event.endtime, format:	:time} "
+    else
+      date = " "
+    end
+    event = "#{link_to event.product.name, event.product}: #{event.name}"
+    name + date + event
   end
 
   def group_events_per_month(events)

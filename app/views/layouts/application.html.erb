@@ -23,11 +23,33 @@
       <div id="horizon">
       </div>
     </div>
-    <%= render 'layouts/header' %>
+
     <div id="wrapper">
+			<header role="banner" class="row">
+			  <section class="large-6 columns">
+			    <div id="logo"></div>
+			    <div id="logo-text">
+			      <h1 id="title"><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
+			      <h2 id="logo_extra">kunst- en cultuureducatie</h2>
+			    </div>
+			  </section>
+			  <aside class="large-6 columns">
+			    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
+			    <div id="user_nav">
+			      <% if user_signed_in? %>
+			        Logged in as <strong><%= current_user.email %></strong>.
+			        <%= link_to 'Edit profile', edit_user_registration_path %> |
+			        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+			      <% else %>
+			        <%= link_to "Sign up", new_user_registration_path %> |
+			        <%= link_to "Login", new_user_session_path %>
+			      <% end %>
+			    </div>
+			  </aside>
+			</header>
       <div class="row">
         <div class="large-offset-4 large-8 columns">
-          <%= render 'layouts/nav' %>
+        	<%= render 'layouts/nav' %>
         </div>
       </div>
       <div class="row">
@@ -41,13 +63,12 @@
           <%= yield %>
         </div>
       </div>
-	  <div class="row">
-		  <footer class="large-12 columns">
-			  <p>Copyright 2013</p>
-		  </footer>
-	  </div>
-    </div>
-
+		  <div class="row">
+			  <footer class="large-12 columns">
+				  <p>Copyright 2013</p>
+			  </footer>
+		  </div>
+		</div>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
