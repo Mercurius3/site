@@ -1,7 +1,9 @@
 $("document").ready(function() {
   
   var paper = new Raphael(document.getElementById("horizon"), "100%",0);
-  var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
+  // var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
+  var horizon = paper.path("M0,0 L0,340 C1200,180 2000,260 2400,340 L2400,0 Z");
+	// var horizon = paper.path("M0,0 L0,300 C1000,180 1400,180 2400,300 L2400,0 Z");
   paper.setViewBox(0,0,2400,500);
   horizon.attr({
     fill: "white",
@@ -35,6 +37,6 @@ $("document").ready(function() {
     logo.attr({stroke:"none"});
     logo.transform("T200,0");
   var svg = $('#horizon').find('svg')[0];
-  svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 	svg.setAttribute('background-repeat','no-repeat');
 });
