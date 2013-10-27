@@ -4,6 +4,6 @@ class TransactionMailer < ActionMailer::Base
     def transaction_confirmation(transaction, user)
       @transaction = transaction
       @user = user
-      mail(to: user, subject: "Aanmelding")
+      mail(to: user.email, subject: "Aanmelding")
     end
 end
