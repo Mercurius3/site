@@ -11,9 +11,9 @@ h1, h2, h3, h4 { font-size: 1em;}
 
 //social
 #social_icons a { position: relative; margin-right: 5px;}
-#social_icons a:nth-child(1){ top:-45px;};
-#social_icons a:nth-child(2){ top:-48px;};
-#social_icons a:nth-child(3){ top:-49px;};
+#social_icons a:nth-child(1){ top:-45px; color: #3B5998;};
+#social_icons a:nth-child(2){ top:-48px; color: #4099FF;};
+#social_icons a:nth-child(3){ top:-49px; color: #d34836;};
 
 //navigation
 nav {
@@ -88,13 +88,13 @@ h2#logo_extra{display:none;}
 
 	// Logo
 	#logo {display: block;}
-	#logo {position: absolute; left:0; top:0;}
+	#logo {position: absolute; left:6.4em; top:2.7em;}
 	#logo-image {display: none;}
-	#logo-text {position: absolute; top:5em;}
+	#logo-text {position: absolute; left: -2.4em; top:5em;}
 	
 	h1#title {display: block;}
 	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: 1.5em;left:12em; font-weight:normal;}
-	#tagline {display: block; font-style: italic;font-size: 1.5em; font-weight: bold; position: relative; top:2em; left: 4em; text-indent: 1em;
+	#tagline {display: block; font-style: italic;font-size: 1.3em; font-weight: bold; position: relative; top:4em; left: 4em; text-indent: 1em;
 	  span {color: $full;}
 	}
 	#wrapper { padding-top: 100px;}
