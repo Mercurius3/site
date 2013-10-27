@@ -12,7 +12,7 @@
 
   	<!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title>Lassche &amp; Lassche</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -51,12 +51,12 @@
             <%= render 'layouts/sidebar' %>
 				    <div id="user_nav">
 				      <% if user_signed_in? %>
-				        Logged in as <strong><%= current_user.email %></strong>.
-				        <%= link_to 'Edit profile', edit_user_registration_path %> |
-				        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+				        <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
+				        <p><%= link_to 'Profiel aanpassen', edit_user_registration_path %><br>
+				        <%= link_to "Uitloggen", destroy_user_session_path, method: :delete %></p>
 				      <% else %>
-				        <%= link_to "Sign up", new_user_registration_path %> |
-				        <%= link_to "Login", new_user_session_path %>
+				        <p><%= link_to "Aanmelden", new_user_registration_path %><br>
+				        <%= link_to "Inloggen", new_user_session_path %></p>
 				      <% end %>
 				    </div>
           </nav>
