@@ -1,7 +1,6 @@
 <div class="row">
-  <div class="large-8 columns">
 	<h1><%= @product.name %></h1>
-   	<p><%= Kramdown::Document.new(@product.description).to_html.html_safe %></p>
+ 	<p><%= Kramdown::Document.new(@product.description).to_html.html_safe %></p>
 	<table>
 		<% @product.events.each do |event| %>
 		<tr>
@@ -9,26 +8,20 @@
 		<% end %>
 		</tr>
 	</table>
-  </div>
-  <div class="large-4 columns">
-    <ul class="pricing-table">
-			<li class="title"><%= @product.category.name %>: <%= @product.name %></li>
-			<% if @product.price %>
-				<li class="price">Prijs: &euro;&nbsp;<%= @product.price if @product.price %></li>
-			<% else %>
-				<li class="price">Prijs: nog niet bekend</li>
-			<% end %>
-			<li class="bullet-item"><%= Kramdown::Document.new(@product.payment_details).to_html.html_safe %></li>
-      <% if @product.teacher %>
-				<li class="bullet-item">Docent: <%= @product.teacher.name %></li>
-			<% end %>
-			<% if @product.location %>
-				<li class="bullet-item"><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></li>
-			<% end %>
-			<% unless @product.third_party %>
-      	<li class="cta-button"><%= button %></li>
-			<% end %>
-    </ul>
-    <%= image_tag(@product.picture) if @product.picture %>
-  </div>
+	<p><%= @product.category.name %>: <%= @product.name %></p>
+	<% if @product.price %>
+		<p>Prijs: &euro;&nbsp;<%= @product.price if @product.price %></p>
+	<% else %>
+		<p>Prijs: nog niet bekend</p>
+	<% end %>
+	<p><%= Kramdown::Document.new(@product.payment_details).to_html.html_safe %></p>
+  <% if @product.teacher %>
+		<p>Docent: <%= @product.teacher.name %></p>
+	<% end %>
+	<% if @product.location %>
+		<p><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></p>
+	<% end %>
+	<% unless @product.third_party %>
+  	<p><%= button %></p>
+	<% end %>
 </div>

@@ -4,31 +4,50 @@
 $full:#e97438;
 $secondary:purple;
 $primary-color:$full;
+//typography
+h1#title {font-family:'Lucida-Bol',georgia,serif;}
+a.social {font-family:'Entypo-Social'; font-size: 300%; z-index: 10;}
+h1, h2, h3, h4 { font-size: 1em;}
+
+//social
+#social_icons a { position: relative; margin-right: 5px;}
+#social_icons a:nth-child(1){ top:-45px;};
+#social_icons a:nth-child(2){ top:-48px;};
+#social_icons a:nth-child(3){ top:-49px;};
 
 //navigation
-#main_nav, #sidebar_nav {
+nav {
 	ul {margin-left: -0.5em; margin-bottom: 1em; list-style: none;} 
 	li {margin-right: 0.5em; }
 	a {padding: 0.5em;}
+}
+
+#main_nav { margin-bottom: 1em;
+	ul { margin-left: -0.5em;}
+	li { margin-right: 0.5em;}
+}
+
+#main_nav, #sidebar_nav {
 	a:link, a:visited {color: black; }
-	a:hover, a:active, a.selected {color: black; background-color: $full; }
+	a:hover, a:active, a.selected {background-color: $full; color: black;}
 }
 
 #sidebar_nav {
-	ul {width: 100%;}
-	a {display: block; text-align: center;}
+	a {text-align: center;margin-bottom: 1em;}
 	a:link, a:visited { background-color: lighten($full, 30%)}
-	a:hover, a:active, a.selected {background-color: $full;}
+	a:hover, a:active, a.selected {background-color: $full; color: black;}
+}
+#user_nav {
+	li {margin-bottom: 1.5em;}
+	a { text-align: right;color: white; text-align: right; font-style: bold;}
+	a:link, a:visited {background-color: $full; color: white;}
+	a:hover, a:active {background-color: lighten($full, 20%); color: white;}
+	a:after {content:" >>";};
 }
 
-#sidebar {
-	a {margin-bottom: 1em;}
-	#user_nav {
-		a { color: white; text-align: right; font-style: bold;}
-		a:link, a:visited {background-color: $full; color: white;}
-		a:hover, a:active {background-color: lighten($full, 20%); color: white;}
-		a:after {content:" >>";};
-	}
+#sidebar_nav, #user_nav {
+	a {display: block;}
+	li {width: 100%;}
 }
 
 #wrapper {
@@ -45,10 +64,12 @@ $primary-color:$full;
   //  behavior: url(/assets/PIE.htc);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d65818',GradientType=1 ); /* IE6-8 */
 }
-h1#title {display: none; font-family:'Lucida-Bol',georgia,serif;font-size:1.5em; line-height: 1em; position: relative; top: 1.5em; left: 1.5em; font-weight: 200;
+h1#title {display: none; font-size:1.5em; line-height: 1em; position: relative; top: 1.5em; left: 1.5em; font-weight: 200;
   a {letter-spacing:1px;}
   span {color:#333;}
 }
+
+iframe { width: 100%; }
 
 //header & media queries
 #horizon-container { display: none;}

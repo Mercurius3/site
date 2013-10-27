@@ -1,7 +1,9 @@
-<h4>rechterkolom</h4>
 <% if @page && @page.name == "Home" %>
-	<p>video</p>
+	<iframe src="//www.youtube.com/embed/Ov9SSSZ96ek" frameborder="0" allowfullscreen></iframe>
 <% end %>
 <% if @page && @page.name == "Over ons" %>
 	<p>Foto's</p>
+<% end %>
+<% if @product %>
+	<%= image_tag(@product.picture) if @product.picture %>
 <% end %>
