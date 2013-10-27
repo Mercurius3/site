@@ -1,5 +1,5 @@
 <ul class="button-group">
   <% @page_nav.each do |page| %>
-    <li><%= nav_link_to(page.name, page_path(page.permalink), class: "small button") %></li>
+    <li><%= nav_link_to(page.name.upcase, page_path(page.permalink)) %></li>
   <% end %>
 </ul>

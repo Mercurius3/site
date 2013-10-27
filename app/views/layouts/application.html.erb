@@ -41,27 +41,17 @@
 		</header>
     <div id="wrapper">
       <div class="row">
-        <div class="large-offset-4 large-8 columns">
+        <div id="main_nav" class="large-offset-2 large-10 columns">
         	<%= render 'layouts/nav' %>
         </div>
       </div>
       <div class="row">
-        <div class="large-3 columns">
+        <div class="large-2 columns" id="sidebar">
           <nav id="sidebar_nav">
             <%= render 'layouts/sidebar' %>
-				    <div id="user_nav">
-				      <% if user_signed_in? %>
-				        <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
-				        <p><%= link_to 'Profiel aanpassen', edit_user_registration_path %><br>
-				        <%= link_to "Uitloggen", destroy_user_session_path, method: :delete %></p>
-				      <% else %>
-				        <p><%= link_to "Aanmelden", new_user_registration_path %><br>
-				        <%= link_to "Inloggen", new_user_session_path %></p>
-				      <% end %>
-				    </div>
           </nav>
         </div>
-        <div class="large-6 columns">
+        <div class="large-7 columns">
           <%= render 'layouts/messages' -%>
           <%= yield %>
         </div>

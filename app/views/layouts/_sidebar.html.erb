@@ -1,5 +1,19 @@
 <ul>
   <% Category.order('position').each do |category| %>
-    <li><%= nav_link_to category.name, category_path(category.name) %></li>
+    <li><%= nav_link_to category.name.upcase, category_path(category.name) %></li>
   <% end %>
+  <div id="user_nav">
+    <% if user_signed_in? %>
+      <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
+			<ul>
+     		<li><%= link_to 'Wijzigen', edit_user_registration_path %><li>
+				<li><%= link_to "Uitloggen", destroy_user_session_path, method: :delete %></li>
+			</ul>
+    <% else %>
+			<ul>
+      	<li><%= link_to "Aanmelden", new_user_registration_path %></li>
+				<li><%= link_to "Inloggen", new_user_session_path %></li>
+			</ul>
+    <% end %>
+  </div>
 </ul>

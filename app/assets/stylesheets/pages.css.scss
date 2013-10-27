@@ -5,6 +5,32 @@ $full:#e97438;
 $secondary:purple;
 $primary-color:$full;
 
+//navigation
+#main_nav, #sidebar_nav {
+	ul {margin-left: -0.5em; margin-bottom: 1em; list-style: none;} 
+	li {margin-right: 0.5em; }
+	a {padding: 0.5em;}
+	a:link, a:visited {color: black; }
+	a:hover, a:active, a.selected {color: black; background-color: $full; }
+}
+
+#sidebar_nav {
+	ul {width: 100%;}
+	a {display: block; text-align: center;}
+	a:link, a:visited { background-color: lighten($full, 30%)}
+	a:hover, a:active, a.selected {background-color: $full;}
+}
+
+#sidebar {
+	a {margin-bottom: 1em;}
+	#user_nav {
+		a { color: white; text-align: right; font-style: bold;}
+		a:link, a:visited {background-color: $full; color: white;}
+		a:hover, a:active {background-color: lighten($full, 20%); color: white;}
+		a:after {content:" >>";};
+	}
+}
+
 #wrapper {
   background: $full; /* Old browsers */
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
