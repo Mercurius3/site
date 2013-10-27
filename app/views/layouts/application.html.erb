@@ -46,7 +46,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="large-4 columns">
+        <div class="large-3 columns">
           <nav id="sidebar_nav">
             <%= render 'layouts/sidebar' %>
 				    <div id="user_nav">
@@ -61,10 +61,13 @@
 				    </div>
           </nav>
         </div>
-        <div class="large-8 columns">
+        <div class="large-6 columns">
           <%= render 'layouts/messages' -%>
           <%= yield %>
         </div>
+				<div class="large-3 columns">
+					<%= render 'layouts/aside' %>
+				</div>
       </div>
 		  <div class="row">
 			  <footer class="large-12 columns">
