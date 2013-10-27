@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.new(transaction_params)
     @transaction.user = current_user
     if @transaction.save
-      TransactionMailer.transaction_confirmation(@transaction, current_user).deliver
+      TransactionMailer.transaction_confirmation(@transaction).deliver
       redirect_to root_path, notice: 'Wij hebben uw aanmelding ontvangen!'
     else
       flash[:alert] = "Er is een probleem met uw aanmelding!"

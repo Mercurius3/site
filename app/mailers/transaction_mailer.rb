@@ -1,9 +1,8 @@
 class TransactionMailer < ActionMailer::Base
   default from: "axelgraff@gmail.com"
 
-    def transaction_confirmation(transaction, user)
+    def transaction_confirmation(transaction)
       @transaction = transaction
-      @user = user
-      mail(to: user.email, subject: "Aanmelding")
+      mail(to: @transaction.user.email, subject: "Aanmelding")
     end
 end
