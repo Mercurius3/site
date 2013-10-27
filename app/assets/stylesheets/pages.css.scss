@@ -12,9 +12,9 @@ body { font-family: helvetica, sans-serif; line-height: 1.3em;}
 
 //social
 #social_icons a { position: relative; margin-right: 5px;}
-#social_icons a:nth-child(1){ top:-45px; color: #3B5998;};
-#social_icons a:nth-child(2){ top:-48px; color: #4099FF;};
-#social_icons a:nth-child(3){ top:-49px; color: #d34836;};
+#social_icons a:nth-child(1){ top:-5px; color: #3B5998;};
+#social_icons a:nth-child(2){ top:-12px; color: #4099FF;};
+#social_icons a:nth-child(3){ top:-17px; color: #d34836;};
 
 //navigation
 nav {
@@ -39,6 +39,7 @@ nav {
 	a:hover, a:active, a.selected {background-color: $full; color: black;}
 }
 #user_nav {
+	margin-top: 3em;
 	li {margin-bottom: 1em;}
 	a { text-align: right;color: white; text-align: right; font-style: bold;}
 	a:link, a:visited {background-color: $full; color: white;}
@@ -70,7 +71,7 @@ h1#title {display: none; font-size:1.6em; line-height: 1em; position: relative; 
   span {color:#333;}
 }
 
-iframe { width: 100%; }
+iframe { width: 100%; margin-top: 10em;}
 
 //header & media queries
 #horizon-container { display: none;}
