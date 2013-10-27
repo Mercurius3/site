@@ -3,10 +3,10 @@
     <li><%= nav_link_to category.name.upcase, category_path(category.name) %></li>
   <% end %>
 </ul>
-<% if user_signed_in? %>
-  <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
-<% end %>
 <ul id="user_nav">
+	<li><a href="#">actueel</a></li>
+	<li><a href="#">database</a></li>
+	<li><a href="#">reviews</a></li>
 	<% if user_signed_in? %>
  		<li><%= link_to 'Wijzigen', edit_user_registration_path %><li>
 		<li><%= link_to "Uitloggen", destroy_user_session_path, method: :delete %></li>
@@ -15,3 +15,6 @@
 		<li><%= link_to "Inloggen", new_user_session_path %></li>
 		<% end %>
 </ul>
+<% if user_signed_in? %>
+  <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
+<% end %>

@@ -8,6 +8,7 @@ $primary-color:$full;
 h1#title {font-family:'Lucida-Bol',georgia,serif;}
 a.social {font-family:'Entypo-Social'; font-size: 300%; z-index: 10;}
 h1, h2, h3, h4 { font-size: 1em; }
+body { font-family: helvetica, sans-serif; line-height: 1.3em;}
 
 //social
 #social_icons a { position: relative; margin-right: 5px;}
@@ -38,7 +39,7 @@ nav {
 	a:hover, a:active, a.selected {background-color: $full; color: black;}
 }
 #user_nav {
-	li {margin-bottom: 1.5em;}
+	li {margin-bottom: 1em;}
 	a { text-align: right;color: white; text-align: right; font-style: bold;}
 	a:link, a:visited {background-color: $full; color: white;}
 	a:hover, a:active {background-color: lighten($full, 20%); color: white;}
@@ -46,7 +47,7 @@ nav {
 }
 
 #sidebar_nav, #user_nav {
-	a {display: block;}
+	a {display: block;padding: 0;}
 	li {width: 100%;}
 }
 

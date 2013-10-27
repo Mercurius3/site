@@ -2,8 +2,8 @@ $("document").ready(function() {
   
   var paper = new Raphael(document.getElementById("horizon"), "100%",0);
   // var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
-  var horizon = paper.path("M0,0 L0,500 C1200,180 2000,260 2400,340 L2400,0 Z");
-	// var horizon = paper.path("M0,0 L0,300 C1000,180 1400,180 2400,300 L2400,0 Z");
+  var horizon = paper.path("M0,0 L0,430 C1200,110 2000,190 2400,230 L2400,0 Z");
+  // var horizon = paper.path("M0,0 L0,450 C1200,130 2000,210 2400,290 L2400,0 Z");
   paper.setViewBox(0,0,2400,500);
   horizon.attr({
     fill: "white",
