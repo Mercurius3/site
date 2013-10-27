@@ -7,7 +7,7 @@ $primary-color:$full;
 //typography
 h1#title {font-family:'Lucida-Bol',georgia,serif;}
 a.social {font-family:'Entypo-Social'; font-size: 300%; z-index: 10;}
-h1, h2, h3, h4 { font-size: 1em;}
+h1, h2, h3, h4 { font-size: 1em; }
 
 //social
 #social_icons a { position: relative; margin-right: 5px;}
@@ -55,7 +55,7 @@ nav {
   /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNjU4MTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
   background: -moz-linear-gradient(left, #ffffff 0%, #d65818 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#d65818)); /* Chrome,Safari4+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(25%,#ffffff), color-stop(100%,#d65818)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(left, #ffffff 0%,#d65818 100%); /* Chrome10+,Safari5.1+ */
   background: -o-linear-gradient(left, #ffffff 0%,#d65818 100%); /* Opera 11.10+ */
   background: -ms-linear-gradient(left, #ffffff 0%,#d65818 100%); /* IE10+ */
@@ -64,7 +64,7 @@ nav {
   //  behavior: url(/assets/PIE.htc);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d65818',GradientType=1 ); /* IE6-8 */
 }
-h1#title {display: none; font-size:1.5em; line-height: 1em; position: relative; top: 1.5em; left: 1.5em; font-weight: 200;
+h1#title {display: none; font-size:1.6em; line-height: 1em; position: relative; top: 0em; left: 1.5em; font-weight: 200;
   a {letter-spacing:1px;}
   span {color:#333;}
 }
@@ -88,13 +88,13 @@ h2#logo_extra{display:none;}
 
 	// Logo
 	#logo {display: block;}
-	#logo {position: absolute; left:6.4em; top:2.7em;}
+	#logo {position: absolute; left:7.6em; top:1em;}
 	#logo-image {display: none;}
 	#logo-text {position: absolute; left: -2.4em; top:5em;}
 	
 	h1#title {display: block;}
-	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: 1.5em;left:12em; font-weight:normal;}
-	#tagline {display: block; font-style: italic;font-size: 1.3em; font-weight: bold; position: relative; top:4em; left: 4em; text-indent: 1em;
+	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: -0.5em;left:14em; font-weight:normal;}
+	#tagline {display: block; font-style: italic;font-size: 1.3em; font-weight: normal; position: relative; top:2.3em; left: 4em; text-indent: 1.3em;
 	  span {color: $full;}
 	}
 	#wrapper { padding-top: 100px;}
