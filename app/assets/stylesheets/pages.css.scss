@@ -26,6 +26,7 @@ $primary-color:$full;
 }
 #logo {position: absolute; left:0; top:0;}
 #logo-text {position: absolute; top:5em;}
+body {background-image: url(logo.png) no-repeat;}
 h1#title {font-family:'Lucida-Bol',georgia,serif;font-size:1.5em; line-height: 1em; position: relative; top: 1.5em; left: 1.5em; font-weight: 200;
   a {letter-spacing:1px;}
   span {color:#333;}
