@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
   rails_admin do
   end
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_many :transactions
 end

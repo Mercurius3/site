@@ -2,7 +2,7 @@
 	<iframe src="//www.youtube.com/embed/Ov9SSSZ96ek" frameborder="0" allowfullscreen></iframe>
 <% end %>
 <% if @page && @page.name == "Over ons" %>
-	<p>Foto's</p>
+	<p><%= image_tag("marielle.jpg") %></p>
 <% end %>
 <% if @product %>
 	<%= image_tag(@product.picture) if @product.picture %>
