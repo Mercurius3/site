@@ -4,6 +4,12 @@ source 'http://production.cf.rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
@@ -55,6 +61,7 @@ gem 'rvm-capistrano'
 # Rails_Admin:
 gem 'rails_admin'
 gem 'devise'
+gem 'rails_admin_nestable'
 
 # Translate Devise Views
 gem 'devise-i18n-views'

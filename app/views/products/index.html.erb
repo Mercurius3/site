@@ -1,5 +1,5 @@
 <% @products.each do |product| %>
 <h3><%= product.name %></h3>
 <p><%= product.short_description %></p>
-<%= link_to "meer info", product, class: "tiny button" %>
+<%= link_to "meer info", product %>
 <% end %>

@@ -43,6 +43,27 @@ RailsAdmin.config do |config|
   #   end
   # end
   
+  config.actions do 
+    dashboard
+    index
+    new
+    export
+    history_index
+    bulk_delete
+    # member actions
+    show
+    edit
+    delete
+    history_show
+    show_in_app
+    
+    nestable
+  end
+  
+  config.model Product do
+    nestable_list true
+  end
+  
   ################  Model configuration  ################
 
   # Each model configuration can alternatively:
