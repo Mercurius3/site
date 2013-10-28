@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   rails_admin do
   end
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable, :confirmable
   has_many :transactions
 end
