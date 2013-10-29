@@ -1,9 +1,9 @@
 <% if @page && @page.name == "Home" %>
 	<iframe src="//www.youtube.com/embed/Ov9SSSZ96ek" frameborder="0" allowfullscreen></iframe>
 <% end %>
-<% if @page && @page.name == "Over ons" %>
-	<p><%= image_tag("marielle.jpg") %></p>
+<% if @page && @page.picture && @page.name != "Nieuwsbrief" %>
+	<%= image_tag(@page.picture) %>
 <% end %>
-<% if @product %>
+<% if @product && @product.picture %>
 	<%= image_tag(@product.picture) if @product.picture %>
 <% end %>
