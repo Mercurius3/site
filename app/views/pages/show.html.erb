@@ -1,0 +1,4 @@
+<%= Kramdown::Document.new(@page.content).to_html.html_safe %>
+<% if @page.picture %>
+	<a href="<%= @page.picture.url %>" target="_blank">pdf</a>
+<% end %>

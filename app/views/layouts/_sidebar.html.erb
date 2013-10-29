@@ -9,7 +9,7 @@
  		<li><%= link_to 'Wijzigen', edit_user_registration_path %><li>
 		<li><%= link_to "Uitloggen", destroy_user_session_path, method: :delete %></li>
 	<% else %>
-  	<li><%= link_to "Aanmelden", new_user_registration_path %></li>
+  	<li><%= link_to "Maak Account", new_user_registration_path %></li>
 		<li><%= link_to "Inloggen", new_user_session_path %></li>
 		<% end %>
 </ul>
