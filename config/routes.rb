@@ -11,6 +11,7 @@ Site::Application.routes.draw do
   get 'nieuws', to: 'posts#index', as: 'nieuws'
   get 'agenda', to: 'products#index', as: 'agenda'  
   get 'contact', to: 'questions#new', as: 'contact'
+  get 'inopdracht', to: 'products#inopdracht', as: 'inopdracht'
   get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
   resources :categories, :products, :transactions, :posts, :events

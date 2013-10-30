@@ -6,4 +6,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
   end
+  
+  def inopdracht
+    @product = Product.where(third_party: true)
+  end
 end

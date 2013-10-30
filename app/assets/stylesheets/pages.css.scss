@@ -34,7 +34,7 @@ nav {
 }
 
 #sidebar_nav {
-	a {text-align: center;margin-bottom: 1em;}
+	a { margin-bottom: 1em;}
 	a:link, a:visited { background-color: lighten($full, 30%)}
 	a:hover, a:active, a.selected {background-color: $full; color: black;}
 }
@@ -48,7 +48,7 @@ nav {
 }
 
 #sidebar_nav, #user_nav {
-	a {display: block;padding: 0;}
+	a {text-align: left; display: block;padding: 0 0 0 0.5em;}
 	li {width: 100%;}
 }
 
