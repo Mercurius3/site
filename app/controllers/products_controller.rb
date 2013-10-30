@@ -8,6 +8,6 @@ class ProductsController < ApplicationController
   end
   
   def inopdracht
-    @product = Product.where(third_party: true)
+    @products = Product.where(third_party: true)
   end
 end
