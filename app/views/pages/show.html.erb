@@ -1,4 +1,4 @@
 <%= Kramdown::Document.new(@page.content).to_html.html_safe %>
 <% if @page.name == "Nieuwsbrief" && @page.picture %>
-<p>Download onze meest recente nieuwsbrief: <a href="<%= @page.picture.url %>" target="_blank"><%= @page[:picture] %></a>.
+<p>Bekijk onze meest recente nieuwsbrief: <a href="<%= @page.picture.url %>" target="_blank"><%= @page[:picture] %></a>.<p>
 <% end %>

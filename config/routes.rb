@@ -9,7 +9,7 @@ Site::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#show', id: "home"
   get 'nieuws', to: 'posts#index', as: 'nieuws'
-  get 'agenda', to: 'products#index', as: 'agenda'  
+  get 'activiteiten', to: 'products#index', as: 'activiteiten'  
   get 'contact', to: 'questions#new', as: 'contact'
   get 'inopdracht', to: 'products#inopdracht', as: 'inopdracht'
   get ':id', to: 'pages#show', as: :page

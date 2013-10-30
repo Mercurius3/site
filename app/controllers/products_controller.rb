@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.where(active: true).order("position")
+    @products = Product.where(active: true, third_party: false).order("position")
   end
 
   def show
