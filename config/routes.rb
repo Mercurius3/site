@@ -14,7 +14,7 @@ Site::Application.routes.draw do
 
   get 'inopdracht', to: 'pages#inopdracht', id: 'inopdracht'
   
-  get 'activiteiten', to: 'pages#category', id: 'activiteiten'
+  get 'activiteiten', to: 'pages#activiteiten', id: 'activiteiten'
   
   get 'cursussen', to: 'pages#category', id: 'cursussen'
   get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'

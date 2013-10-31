@@ -1,15 +1,8 @@
-<ul class="sidebar_nav">
+<ul id="sidebar_nav">
   <% @page_nav.where(main_navigation: false).each do |page| %>
     <li><%= nav_link_to(page.name.downcase, page_path(page.permalink)) %></li>
   <% end %>
 </ul>
-<!-- <ul id="sidebar_nav">
-  <% Category.order('position').each do |category| %>
-    <li><%= nav_link_to category.name.downcase, category_path(category.name) %></li>
-  <% end %>
-	<li><%= link_to 'in opdracht', inopdracht_path %></li>
-	<li><a href="#">actueel</a></li>
-</ul> -->
 <ul id="user_nav">
 	<% if user_signed_in? %>
  		<li><%= link_to 'wijzigen', edit_user_registration_path %><li>

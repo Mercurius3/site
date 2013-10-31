@@ -10,15 +10,9 @@ a.social {font-family:'Entypo-Social'; font-size: 300%; z-index: 10;}
 h1, h2, h3, h4 { font-size: 1em; }
 body { font-family: helvetica, sans-serif; line-height: 1.3em;}
 
-//social
-#social_icons a { position: relative; margin-right: 5px;}
-#social_icons a:nth-child(1){ top:-5px; color: #3B5998;};
-#social_icons a:nth-child(2){ top:-12px; color: #4099FF;};
-#social_icons a:nth-child(3){ top:-17px; color: #d34836;};
-
 //navigation
-nav {
-	ul {margin-left: -0.5em; margin-bottom: 1em; list-style: none;} 
+nav, #social_icons {
+	ul {margin-left: -0.5em; list-style: none;} 
 	li {margin-right: 0.5em; }
 	a {padding: 0.5em;}
 }
@@ -38,6 +32,7 @@ nav {
 	a:link, a:visited { background-color: lighten($full, 30%)}
 	a:hover, a:active, a.selected {background-color: $full; color: black;}
 }
+
 #user_nav {
 	margin-top: 3em;
 	li {margin-bottom: 1em;}
@@ -48,8 +43,18 @@ nav {
 }
 
 #sidebar_nav, #user_nav {
-	a {text-align: left; display: block;padding: 0 0 0 0.5em;}
+	a {text-align: left; display: block; padding: 0 0 0 0.5em;}
 	li {width: 100%;}
+}
+
+//social
+#social_icons {
+	ul { margin-left: 0.4em;}
+	li { display: inline; }
+	a { margin: 0; padding: 0;}
+	a:nth-child(1){ color: #3B5998;}
+	a:nth-child(2){ color: #4099FF;}
+	a:nth-child(3){ color: #d34836;}
 }
 
 #wrapper {

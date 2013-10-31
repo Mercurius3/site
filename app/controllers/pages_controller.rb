@@ -11,7 +11,14 @@ class PagesController < ApplicationController
   end
   
   def inopdracht
+    @page = Page.find_by_permalink!(params[:id])
     @products = Product.where(third_party: true, active: true).order(:position)
+  end
+  
+  def activiteiten
+    @page = Page.find_by_permalink!(params[:id])
+    @products = Product.where(third_party: false, active: true).order(:position)
+    render :inopdracht
   end
   
   def download(page)
