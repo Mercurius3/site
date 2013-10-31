@@ -6,6 +6,6 @@ class CategoriesController < ApplicationController
   def show
     name = params[:name].capitalize
     @category = Category.where(name: name).first
-    @products = @category.products.where(active: true)
+    @products = @category.products.where(active: true).order(:position)
   end
 end
