@@ -64,6 +64,10 @@ RailsAdmin.config do |config|
     nestable_list true
   end
   
+  config.model Page do
+    nestable_list true
+  end
+  
   ################  Model configuration  ################
 
   # Each model configuration can alternatively:
