@@ -29,6 +29,8 @@ set :rvm_bin_path, '/usr/local/rvm/bin'
 set :use_sudo, false
 set :keep_releases, 1
 
+set :shared_children, shared_children + %w{public/uploads}
+
 role :web, host
 role :app, host
 role :db,  host, :primary => true
@@ -53,4 +55,5 @@ task :create_symlinks do
   run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
   run "ln -nfs #{deploy_to}/shared/config/initializers/devise.rb #{release_path}/config/initializers/devise.rb"
   run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
+  run "ln -nfs #{deploy_to}/shared/public/uploads/* #{release_path}/public/uploads"
 end
