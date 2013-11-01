@@ -13,8 +13,9 @@
   	<!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lassche &amp; Lassche</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= stylesheet_link_tag "application", media: "all" %>
+    <!-- <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %> -->
+    <!-- <%= javascript_include_tag "application", "data-turbolinks-track" => true %> -->
     <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
@@ -25,9 +26,9 @@
 		</div>
 		<header role="banner" class="row">
 		  <section class="large-6 columns">
-				<div id="logo-image">
+				<!-- <div id="logo-image">
 					<%= image_tag("logo.png") %>
-				</div>
+				</div> -->
 				<div id="logo">
 				</div>
 		    <div id="logo-text">

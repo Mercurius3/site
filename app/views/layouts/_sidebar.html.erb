@@ -3,7 +3,7 @@
     <li><%= nav_link_to(page.name.downcase, page_path(page.permalink), id: page.permalink) %></li>
   <% end %>
 </ul>
-<ul id="user_nav">
+<!-- <ul id="user_nav">
 	<% if user_signed_in? %>
  		<li><%= link_to 'wijzigen', edit_user_registration_path %><li>
 		<li><%= link_to "uitloggen", destroy_user_session_path, method: :delete %></li>
@@ -11,7 +11,7 @@
   	<li><%= link_to "maak account", new_user_registration_path %></li>
 		<li><%= link_to "inloggen", new_user_session_path %></li>
 		<% end %>
-</ul>
+</ul> -->
 <% if user_signed_in? %>
   <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
 <% end %>
