@@ -34,7 +34,8 @@ $("document").ready(function() {
       );
     logo.attr({stroke:"none"});
     logo.transform("T200,0");
-  var svg = $('#horizon').find('svg')[0];
-  svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
-	svg.setAttribute('background-repeat','no-repeat');
+  var svg1 = $('#horizon').find('svg')[0];
+  // svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
+	svg1.setAttribute('preserveAspectRatio', 'none');
+	// svg.setAttribute('background-repeat','no-repeat');
 });
