@@ -12,7 +12,7 @@
 //
 
 // This is the default html and body font-size for the base em value.
-// $em-base: 16px;
+ $em-base: 13px;
 
 // We use these to control various global styles
 // $body-bg: #fff;
@@ -28,6 +28,9 @@
 // $text-direction: ltr;
 
 // We use these as default colors throughout
+$full:#e97438;
+$secondary-color:purple;
+$primary-color:$full;
 // $primary-color: #2ba6cb;
 // $secondary-color: #e9e9e9;
 // $alert-color: #c60f13;
