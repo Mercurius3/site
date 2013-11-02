@@ -15,4 +15,5 @@ class ApplicationController < ActionController::Base
   def set_nav_var
     @page_nav = Page.order("position")
   end
+  
 end

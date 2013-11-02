@@ -1,13 +1,12 @@
 Site::Application.routes.draw do
-  devise_for :users
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#show', id: "home"
+  root 'pages#show', id: 'home'
   
   get 'nieuws', to: 'posts#index', as: 'nieuws'
   get 'contact', to: 'questions#new', as: 'contact'
@@ -15,11 +14,12 @@ Site::Application.routes.draw do
   get 'inopdracht', to: 'pages#inopdracht', id: 'inopdracht'
   
   get 'overzicht', to: 'pages#overzicht', id: 'overzicht'
+  get 'home', to: 'pages#show', id: 'home'
   
   get 'cursussen', to: 'pages#category', id: 'cursussen'
   get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
   get 'lezingen', to: 'pages#category', id: 'lezingen' 
-
+  
   get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
   resources :categories, :products, :transactions, :posts, :events

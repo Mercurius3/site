@@ -48,8 +48,10 @@ nav {
 	a:hover, a:active {background-color: lighten($full, 20%); color: white;}
 	a:after {content:" >>";};
 }
+//TWEAK
 #main_content {margin-top: 1em;}
 #sidebar, #aside {margin-top: 3.5em;}
+
 #sidebar_nav, #user_nav {
 	a {text-align: left; display: block; padding: 0 0 0 0.5em; overflow: hidden;}
 	li {width: 100%; overflow: hidden;}

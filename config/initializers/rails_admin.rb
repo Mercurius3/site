@@ -36,12 +36,12 @@ RailsAdmin.config do |config|
   # config.label_methods << :description # Default is [:name, :title]
 
 
-  # config.authorize_with do |controller|
-  #   unless current_user.try(:admin?)
-  #     flash[:error] = "You are not an admin"
-  #     redirect_to pages(id: "home")
-  #   end
-  # end
+  config.authorize_with do |controller|
+    unless current_user.try(:admin?)
+      flash[:error] = "U bent geen admin"
+      redirect_to main_app.root_path
+    end
+  end
   
   config.actions do 
     dashboard
@@ -63,10 +63,11 @@ RailsAdmin.config do |config|
   config.model Product do
     nestable_list true
   end
-  
+
   config.model Page do
     nestable_list true
   end
+
   
   ################  Model configuration  ################
 
