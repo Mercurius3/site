@@ -4,6 +4,9 @@
 $full:#e97438;
 $secondary:purple;
 $primary-color:$full;
+.left {text-align: left;}
+.center {text-align: center;}
+.right {text-align: right;}
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
 
@@ -45,12 +48,12 @@ nav {
 	a:hover, a:active {background-color: lighten($full, 20%); color: white;}
 	a:after {content:" >>";};
 }
+#main_content {margin-top: 1em;}
 
 #sidebar_nav, #user_nav {
 	a {text-align: left; display: block; padding: 0 0 0 0.5em; overflow: hidden;}
 	li {width: 100%; overflow: hidden;}
 }
-#sidebar, #aside { margin-top: 2em;}
 //social
 #social_icons {
 
@@ -59,9 +62,6 @@ nav {
 	a.twitter { color: #4099FF;}
 	a.googleplus { color: #d34836; padding-right: 0; margin-right: 0;}
 }
-.left {text-align: left;}
-.center {text-align: center;}
-.right {text-align: right;}
 
 #wrapper {
   background: $full; /* Old browsers */
@@ -79,10 +79,6 @@ nav {
 }
 
 iframe { width: 100%; margin-top: 10em; overflow: hidden;}
-
-// logo & horizon
-//svg { overflow: hidden;}
-//#logo svg { overflow: hidden;}
 #marketing { overflow: hidden;}
 #horizon-container {position:absolute; width: 100%; overflow: hidden;}
 #wrapper { margin-top: 132px; padding-top: 150px; overflow: hidden;}
@@ -94,17 +90,15 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
   span {color:#333;}
 }
 #logo h2 { position: absolute; top: 95px; left: 90px; font-style: italic; font-weight: normal; overflow: hidden;}
-
 #marketing-right { position: absolute; overflow: hidden; right: 0; top: 4em;}
 #tagline { display: none; position: relative; font-style: italic; font-size: 1.3em; font-weight: normal; text-indent: 1.3em; overflow: hidden;
 	span { color: $full;}
 }
-// media query
 
+// media query
 @media only screen and (min-width: 768px) {
 	
 	#logo {position: absolute; left: -30px; top: 30px; overflow: visible;}
-
-//	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: -0.5em;left:14em; font-weight:normal;}
-#tagline {display: block; overflow: hidden;}
+	#tagline {display: block; overflow: hidden;}
+	#sidebar_nav { padding-left: 0;}
 }

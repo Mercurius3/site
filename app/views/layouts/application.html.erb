@@ -44,7 +44,7 @@
         	<%= render 'layouts/nav' %>
         </nav>
       </div>
-      <div class="row">
+      <div class="row" id="main_content">
         <div class="large-2 columns" id="sidebar">
           <nav>
             <%= render 'layouts/sidebar' %>
@@ -55,7 +55,7 @@
           <%= render 'layouts/messages' -%>
           <%= yield %>
         </div>
-				<div class="large-3 columns">
+				<div class="large-3 columns" id="aside">
 					<%= render 'layouts/aside' %>
 				</div>
       </div>
