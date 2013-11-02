@@ -7,14 +7,14 @@ $primary-color:$full;
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
 
-a.social {font-family:'Entypo-Social'; font-size: 300%;}
+#social_icons a {font-family:'Entypo-Social'; font-size: 300%;}
 h1, h2, h3, h4 { font-size: 1em; }
 body { font-family: helvetica, sans-serif; line-height: 1.3em;}
 
 //image
 img { border: 1px solid rgba(0,0,0,0.1); overflow: hidden;}
 //navigation
-nav, #social_icons {
+nav {
 	ul {margin-left: -0.5em; list-style: none;} 
 	li {margin-right: 0.5em; }
 	a {padding: 0.5em;}
@@ -50,17 +50,18 @@ nav, #social_icons {
 	a {text-align: left; display: block; padding: 0 0 0 0.5em; overflow: hidden;}
 	li {width: 100%; overflow: hidden;}
 }
-
+#sidebar, #aside { margin-top: 2em;}
 //social
 #social_icons {
-	padding-left: 15%;
-	ul { margin-left: 0.4em;}
-	li { display: inline; }
-	a { margin: 0; padding: 0;}
-	a:nth-child(1){ color: #3B5998;}
-	a:nth-child(2){ color: #4099FF;}
-	a:nth-child(3){ color: #d34836;}
+
+	span {display: inline-block; margin:0;padding: 0; }
+	a.facebook { color: #3B5998; }
+	a.twitter { color: #4099FF;}
+	a.googleplus { color: #d34836; padding-right: 0; margin-right: 0;}
 }
+.left {text-align: left;}
+.center {text-align: center;}
+.right {text-align: right;}
 
 #wrapper {
   background: $full; /* Old browsers */
@@ -84,9 +85,9 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
 //#logo svg { overflow: hidden;}
 #marketing { overflow: hidden;}
 #horizon-container {position:absolute; width: 100%; overflow: hidden;}
-#wrapper { margin-top: 132px; padding-top: 130px; overflow: hidden;}
+#wrapper { margin-top: 132px; padding-top: 150px; overflow: hidden;}
 //#logo {display: block;}
-#logo {position: absolute;left: 100px; top: 30px; }
+#logo {position: absolute;left: 105px; top: 30px; }
 #logo h1 { position: absolute; left: -100px; top: 65px; 
 	font-size: 1.6em; line-height: 1em; font-weight: 200;
   a {letter-spacing:1px;}
@@ -102,7 +103,7 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
 
 @media only screen and (min-width: 768px) {
 	
-	#logo {position: absolute; left: -50px; top: 30px; overflow: visible;}
+	#logo {position: absolute; left: -30px; top: 30px; overflow: visible;}
 
 //	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: -0.5em;left:14em; font-weight:normal;}
 #tagline {display: block; overflow: hidden;}
