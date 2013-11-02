@@ -10,7 +10,7 @@ $("document").ready(function() {
  
   // icon
   var brand_paper = new Raphael(document.getElementById("logo"),500,250);
-  brand_paper.setViewBox(0,0,1000,500);
+  brand_paper.setViewBox(0,0,1500,750);
   var logo = brand_paper.set();
     var four = brand_paper.path("m485,210c0,21.164001 -17.14801,38.313004 -38.311005,38.313004c-21.161011,0 -38.309998,-17.149002 -38.309998,-38.313004c0,-21.158005 17.148987,-38.313004 38.309998,-38.313004c21.162994,0 38.311005,17.154999 38.311005,38.313004");
     var five = brand_paper.path("m582,259.786499c-44.146973,-50.876007 -102.963013,-86.057999 -167.570984,-102.234009c2.89798,-26.233994 5.814972,-52.491989 8.750977,-78.774994c77.864014,-14.777996 161.470032,-17.565987 248.075989,-3.982986c-30.083008,61.81601 -59.833008,123.481003 -89.255981,184.99202");
@@ -33,9 +33,8 @@ $("document").ready(function() {
         two
       );
     logo.attr({stroke:"none"});
-    logo.transform("T200,0");
-  var svg1 = $('#horizon').find('svg')[0];
-  // svg.setAttribute('preserveAspectRatio', 'xMinYMid meet');
-	svg1.setAttribute('preserveAspectRatio', 'none');
-	// svg.setAttribute('background-repeat','no-repeat');
+    // logo.transform("T100,0");
+  var svg = $('#horizon').find('svg')[0];
+	// svg.setAttribute('preserveAspectRatio', 'none');
+	svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
 });
