@@ -67,6 +67,10 @@ RailsAdmin.config do |config|
   config.model Page do
     nestable_list true
   end
+  
+  config.model External do
+    nestable_list true
+  end
 
   
   ################  Model configuration  ################

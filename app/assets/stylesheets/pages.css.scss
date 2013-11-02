@@ -7,12 +7,14 @@ $primary-color:$full;
 .left {text-align: left;}
 .center {text-align: center;}
 .right {text-align: right;}
+
+.foo {display:inline-block;}
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
 
 #social_icons a {font-family:'Entypo-Social'; font-size: 300%;}
-h1, h2, h3, h4 { font-size: 1em; line-height: 100%;}
 body { font-family: helvetica, sans-serif; line-height: 1.3em;}
+h1, h2, h3, h4 { font-size: 1em; line-height: 2.6em;}
 
 //image
 img { border: 1px solid rgba(0,0,0,0.1); overflow: hidden;}
@@ -52,7 +54,7 @@ nav {
 #sidebar, #aside {margin-top: 3.5em;}
 
 #sidebar_nav, #user_nav {
-	a {text-align: left; display: block; padding: 0 0 0 0.5em; overflow: hidden;}
+	a {text-align: left; display: block; padding: 0 0 0 0; overflow: hidden;}
 	li {width: 100%; overflow: hidden;}
 }
 
@@ -89,23 +91,23 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
 }
 //social
 #social_icons {
-	p {padding-left: 5%;}
-	a {width: 33%; float: left; margin: 0;padding: 0;}
+	p {padding-left: 0;}
+	span {width: 33.33%; float: left; margin: 0;padding: 0; display: inline;}
 	a#facebook { color: #3B5998; }
-	a#twitter { color: #4099FF;}
-	a#googleplus { color: #d34836; }
+	a#twitter { color: #4099FF; text-align: center;}
+	a#googleplus { color: #d34836; text-align: right; }
 }
-
 
 // small screen defaults
 #sidebar_nav, #user_nav, #social_icons { padding-left: 0;}
-#social_icons a { margin-right: 5px; float: none;}
+#social_icons span a { margin-right: 5px; float: none;}
+#social_icons a:last-child {margin-right: 0;}
 
 // media query - below = big screen
 @media only screen and (min-width: 768px) {
 	
 	#logo {position: absolute; left: -30px; top: 30px; overflow: visible;}
-	#tagline {display: block; overflow: hidden;}
-	#sidebar_nav, #user_nav, #social_icons { padding-left: 15%;}
-	#social_icons a { width: 33%; float: left; margin:0; padding: 0;}
+	#tagline {display: inline; overflow: hidden;}
+	#sidebar_nav, #user_nav, #social_icons { padding-left: 0}
+	#social_icons span { width: 33%; float: left; margin:0; padding: 0;}
 }

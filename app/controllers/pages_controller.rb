@@ -17,9 +17,9 @@ class PagesController < ApplicationController
   
   def inopdracht
     @page = Page.find_by_permalink!(params[:id])
-    @products = Product.where(third_party: true, active: true).order(:position)
+    @products = External.where(active: true).order(:position)
   end
-  
+
   def download(page)
     send_file @page.picture.url,
       :filename => @page[:picture],

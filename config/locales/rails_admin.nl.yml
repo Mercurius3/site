@@ -5,6 +5,9 @@
 
 nl:
   admin:
+    actions:
+      nestable:
+        menu: sleep
     home:
       name: Home
     pagination:
