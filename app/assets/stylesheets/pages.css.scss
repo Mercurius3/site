@@ -49,18 +49,18 @@ nav {
 	a:after {content:" >>";};
 }
 #main_content {margin-top: 1em;}
-
+#sidebar, #aside {margin-top: 3.5em;}
 #sidebar_nav, #user_nav {
 	a {text-align: left; display: block; padding: 0 0 0 0.5em; overflow: hidden;}
 	li {width: 100%; overflow: hidden;}
 }
 //social
 #social_icons {
-
-	span {display: inline-block; margin:0;padding: 0; }
-	a.facebook { color: #3B5998; }
-	a.twitter { color: #4099FF;}
-	a.googleplus { color: #d34836; padding-right: 0; margin-right: 0;}
+	p {padding-left: 5%;}
+	a {width: 33%; float: left; margin: 0;padding: 0;}
+	a#facebook { color: #3B5998; }
+	a#twitter { color: #4099FF;}
+	a#googleplus { color: #d34836; }
 }
 
 #wrapper {
