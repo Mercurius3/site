@@ -31,6 +31,7 @@ nav, #social_icons {
 }
 
 #sidebar_nav {
+	padding-left: 15%;
 	a { margin-bottom: 1em;}
 	a:link, a:visited { background-color: lighten($full, 30%); border: 1px solid lighten($full, 28%);outline:1px solid rgba(255,255,255,0.1);}
 	a:hover, a:active, a.selected {background-color: $full; color: black; border: 1px solid darken($full,2%);outline:1px solid rgba(255,255,255,0.1);}
@@ -52,6 +53,7 @@ nav, #social_icons {
 
 //social
 #social_icons {
+	padding-left: 15%;
 	ul { margin-left: 0.4em;}
 	li { display: inline; }
 	a { margin: 0; padding: 0;}
@@ -84,13 +86,13 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
 #horizon-container {position:absolute; width: 100%; overflow: hidden;}
 #wrapper { margin-top: 132px; padding-top: 130px; overflow: hidden;}
 //#logo {display: block;}
-#logo {position: absolute;left: 0px; top: 30px;}
+#logo {position: absolute;left: 100px; top: 30px; }
 #logo h1 { position: absolute; left: -100px; top: 65px; 
 	font-size: 1.6em; line-height: 1em; font-weight: 200;
   a {letter-spacing:1px;}
   span {color:#333;}
 }
-#logo h2 { position: absolute; top: 95px; left: 90px; font-style: italic; font-weight: normal;}
+#logo h2 { position: absolute; top: 95px; left: 90px; font-style: italic; font-weight: normal; overflow: hidden;}
 
 #marketing-right { position: absolute; overflow: hidden; right: 0; top: 4em;}
 #tagline { display: none; position: relative; font-style: italic; font-size: 1.3em; font-weight: normal; text-indent: 1.3em; overflow: hidden;
@@ -100,7 +102,7 @@ iframe { width: 100%; margin-top: 10em; overflow: hidden;}
 
 @media only screen and (min-width: 768px) {
 	
-	#logo {position: absolute; left: 100px;}
+	#logo {position: absolute; left: -50px; top: 30px; overflow: visible;}
 
 //	h2#logo_extra {display:block; font-style:italic;font-size:1em;position:relative;top: -0.5em;left:14em; font-weight:normal;}
 #tagline {display: block; overflow: hidden;}
