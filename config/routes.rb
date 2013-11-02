@@ -18,7 +18,8 @@ Site::Application.routes.draw do
   
   get 'cursussen', to: 'pages#category', id: 'cursussen'
   get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
-  get 'lezingen', to: 'pages#category', id: 'lezingen' 
+  get 'lezingen', to: 'pages#category', id: 'lezingen'
+  get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
   
   get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
