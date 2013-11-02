@@ -1,5 +1,5 @@
 <h1><%= @page.name %></h1>
 <%= Kramdown::Document.new(@page.content).to_html.html_safe if @page.content %>
 <% @products.each do |product| %>
-	<%= Kramdown::Document.new(product.description).to_html.html_safe %></p>
+	<%= Kramdown::Document.new(product.description).to_html.html_safe if product.description %></p>
 <% end %>

@@ -1,6 +1,7 @@
 <div class="row">
-	<h1><%= @product.name %></h1>
- 	<p><%= Kramdown::Document.new(@product.description).to_html.html_safe %></p>
+	<!-- <h1><%= link_to @product.category.name, pages: @product.category.name %> >> <%= @product.name %></h1> -->
+ 	<h1><%= @product.name %></h1>
+	<p><%= Kramdown::Document.new(@product.description).to_html.html_safe %></p>
 	<table>
 		<% @product.events.each do |event| %>
 		<tr>
@@ -8,7 +9,6 @@
 		<% end %>
 		</tr>
 	</table>
-	<p><%= @product.category.name %>: <%= @product.name %></p>
 	<% if @product.price %>
 		<p>Prijs: &euro;&nbsp;<%= @product.price if @product.price %></p>
 	<% else %>
@@ -22,6 +22,6 @@
 		<p><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></p>
 	<% end %>
 	<% unless @product.third_party %>
-  	<p><%= button %></p>
+  	<%= button %>
 	<% end %>
 </div>
