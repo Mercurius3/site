@@ -1,37 +1,35 @@
-<div class="row">
-	<!-- <h1><%= link_to @product.category.name, pages: @product.category.name %> >> <%= @product.name %></h1> -->
-	<h1><%= @product.name %></h1>
-	<%= Kramdown::Document.new(@product.description).to_html.html_safe %>
-  <% if @product.teacher %>
-		<p>Docent: <%= @product.teacher.name %></p>
-	<% end %>
-	<p>
-		<% if @product.category.name == "Lezingen" %>
-			Datum:&nbsp;
-		<% else %>
-			Startdatum:&nbsp;
-		<% end %>
-		<!--<%= @product.startdate.strftime("%A") %> --><%=l @product.startdate, format: :long %>
-	</p>
-	<p>Tijd:&nbsp;<%= @product.timefield %></p>
-<!-- 		<table>
-		<% @product.events.each do |event| %>
-		<tr>
-			<td><%= l event.eventdate, format: :long %></td><td><%= l event.starttime, format: :time %> - <%= l event.endtime, format: :time %></td><td><%= event.name %></td>
-		<% end %>
-		</tr>
-	</table> -->
-	<% if @product.price %>
-		<p>Prijs: &euro;&nbsp;<%= @product.price if @product.price %></p>
+<!-- <h1><%= link_to @product.category.name, pages: @product.category.name %> >> <%= @product.name %></h1> -->
+<h1><%= @product.name %></h1>
+<%= Kramdown::Document.new(@product.description).to_html.html_safe %>
+<% if @product.teacher %>
+	<p>Docent: <%= @product.teacher.name %></p>
+<% end %>
+<p>
+	<% if @product.category.name == "Lezingen" %>
+		Datum:&nbsp;
 	<% else %>
-		<p>Prijs: nog niet bekend</p>
+		Startdatum:&nbsp;
 	<% end %>
-	<p><%= Kramdown::Document.new(@product.payment_details).to_html.html_safe %></p>
+	<!--<%= @product.startdate.strftime("%A") %> --><%=l @product.startdate, format: :long %>
+</p>
+<p>Tijd:&nbsp;<%= @product.timefield %></p>
+<!-- 		<table>
+	<% @product.events.each do |event| %>
+	<tr>
+		<td><%= l event.eventdate, format: :long %></td><td><%= l event.starttime, format: :time %> - <%= l event.endtime, format: :time %></td><td><%= event.name %></td>
+	<% end %>
+	</tr>
+</table> -->
+<% if @product.price %>
+	<p>Prijs: &euro;&nbsp;<%= @product.price if @product.price %></p>
+<% else %>
+	<p>Prijs: nog niet bekend</p>
+<% end %>
+<p><%= Kramdown::Document.new(@product.payment_details).to_html.html_safe %></p>
 
-	<% if @product.location %>
-		<p><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></p>
-	<% end %>
-	<% unless @product.third_party %>
-  	<!-- <%= link_to "Aanmelden", new_transaction_path(product_id: @product.id), class: "small button" %>-->
-	<% end %>
-</div>
+<% if @product.location %>
+	<p><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></p>
+<% end %>
+<% unless @product.third_party %>
+	<!-- <%= link_to "Aanmelden", new_transaction_path(product_id: @product.id), class: "small button" %>-->
+<% end %>
