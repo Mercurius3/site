@@ -84,9 +84,12 @@ iframe { width: 100%; overflow: hidden;}
   a {letter-spacing:1px;}
   span {color:#333;}
 }
-#logo h2 { position: absolute; top: 95px; left: 90px; font-style: italic; font-weight: normal; overflow: hidden;}
+#logo h2 { position: absolute; top: 88px; left: 85px; font-style: italic; font-weight: normal; overflow: hidden;}
 #marketing-right { position: absolute; overflow: hidden; right: 0; top: 4em;}
-#tagline { display: none; position: relative; font-style: italic; font-size: 1.3em; font-weight: normal; text-indent: 1.3em; overflow: hidden;
+//#tagline { display: none; position: relative; font-style: italic; font-size: 1.3em; font-weight: normal; text-indent: 1.3em; overflow: hidden;
+//	span { color: $full;}
+//}
+#tagline {display:none;font-style:italic;font-size: 1.3em; font-weight: normal;
 	span { color: $full;}
 }
 //social
@@ -107,7 +110,8 @@ iframe { width: 100%; overflow: hidden;}
 @media only screen and (min-width: 768px) {
 	
 	#logo {position: absolute; left: -30px; top: 30px; overflow: visible;}
-	#tagline {display: inline; overflow: hidden;}
+//	#tagline {display: inline; overflow: hidden; text-indent: 1.3em;}
+	#tagline {display:block; text-indent: 1.3em;}
 	#sidebar_nav, #user_nav, #social_icons { padding-left: 0}
 	#social_icons span { width: 33%; float: left; margin:0; padding: 0;}
 }
