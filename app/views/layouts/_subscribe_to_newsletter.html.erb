@@ -1,0 +1,6 @@
+<p>Aanmelden nieuwsbrief</p>
+<%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "uw mailadres"}) %>
+   <%= submit_tag("Aanmelden") %>
+<% end %>
+<div id="response"></div>
