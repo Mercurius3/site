@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require raphael
 //= require logo
+//= require mailchimp
 //= require foundation
 $(document).foundation();

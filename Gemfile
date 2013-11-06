@@ -80,3 +80,5 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'kramdown'
+
+gem "mailchimp-api", "~> 2.0.4"
