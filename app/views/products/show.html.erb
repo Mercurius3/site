@@ -10,7 +10,9 @@
 	<% else %>
 		Startdatum:&nbsp;
 	<% end %>
-	<!--<%= @product.startdate.strftime("%A") %> --><%=l @product.startdate, format: :long %>
+	<% if @product.startdate %>
+		<%=l @product.startdate, format: :long %>
+	<% end %>
 </p>
 <p>Tijd:&nbsp;<%= @product.timefield %></p>
 <!-- 		<table>

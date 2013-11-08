@@ -65,7 +65,7 @@ gem 'devise'
 gem 'rails_admin_nestable'
 
 # Translate Devise Views
-# gem 'devise-i18n-views'
+gem 'devise-i18n-views'
 
 # Zurb/Foundation
 gem 'compass-rails'
@@ -82,3 +82,4 @@ gem 'rmagick'
 gem 'kramdown'
 
 gem "mailchimp-api", "~> 2.0.4"
+gem 'gibbon'

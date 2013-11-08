@@ -22,6 +22,14 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :first_name
   end
   
+  def devise_parameter_sanitizer
+    if resource_class == User
+       User::ParameterSanitizer.new(User, :user, params)
+    else
+       super
+    end
+  end
+  
   private
   def set_nav_var
     @page_nav = Page.order("position")
