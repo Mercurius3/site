@@ -5,11 +5,15 @@
 </ul>
 
 <% if user_signed_in? %>
+	Ingelogd als:<br><strong><%= current_user.email %></strong>
 	<ul id="user_nav">
+		<li><%= link_to "mijn account", edit_user_registration_path %>
 		<li><%= link_to "uitloggen", destroy_user_session_path, method: :delete %></li>
 	</ul>
+<% else %>
+	<ul id="user_nav">
+	  	<li><%= link_to('inloggen', new_user_session_path)  %></li>
+			<li><%= link_to('account maken', new_user_registration_path) %></li>
+	</ul>
 <% end %>
-<% if user_signed_in? %>
-  <p>Ingelogd als:<br><strong><%= current_user.email %></strong></p>
-<% end %>
-<p><%= render 'layouts/subscribe_to_newsletter' %></p>
+<div><%= render 'layouts/subscribe_to_newsletter' %></div>
