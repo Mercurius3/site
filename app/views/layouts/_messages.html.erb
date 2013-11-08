@@ -5,5 +5,8 @@
   <% if flash[:notice] -%>
     <p class='notice label success radius'><%=h flash[:notice] %></p>
   <% end -%>
+  <% if flash[:alert] -%>
+    <p class='notice label success radius'><%=h flash[:alert] %></p>
+  <% end -%>
 <% end -%>
 <% @messages_rendered = true -%>
