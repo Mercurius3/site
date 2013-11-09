@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   end
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :registerable, :confirmable
   has_many :transactions
+  
+  validate :email, uniqueness: true, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create } 
 end

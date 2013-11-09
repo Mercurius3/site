@@ -14,6 +14,10 @@ $primary-color:$full;
 .right {text-align: right;}
 
 .foo {display:inline-block;}
+
+//errors
+label.error { position: absolute; right: 0; top: -1em;}
+
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
 

@@ -3,41 +3,70 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <h3>Accountgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.password_field :password, :autocomplete => "off", placeholder: "Wachtwoord wijzigen" %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.password_field :password_confirmation, placeholder: "Herhaal uw wachtwoord" %>
+    </div>
+  </div>
+  <div class="row">
+    <p class="small-12 columns">Alleen als u uw wachtwoord wilt wijzigen!</p>
+  </div>
+  
+  <h3>Persoonsgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">  
+      <%= f.text_field :first_name, placeholder: "Voornaam", required: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
+    </div>
+  </div>
 
-  <div><%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-	
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></div>
-	
-  <div><%= f.label :last_name %><br />
-  <%= f.text_field :last_name %></div>
-	
-  <div><%= f.label :street %><br />
-  <%= f.text_field :street %></div>
-	
-  <div><%= f.label :street_number %><br />
-  <%= f.text_field :street_number %></div>
-
-  <div><%= f.label :post_code %><br />
-  <%= f.text_field :post_code %></div>
-	
-  <div><%= f.label :city %><br />
-  <%= f.text_field :city %></div>
-	
-  <div><%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>)</i><br />
-  <%= f.password_field :current_password %></div>
-
-  <div><%= f.submit t('.update', :default => "Update") %></div>
+  <h3>NAW-gegevens</h3>
+  <div class="row">
+    <div class="small-9 columns">
+      <%= f.text_field :street, placeholder: "Straatnaam", required: true %>
+    </div>
+    <div class="small-3 columns">
+      <%= f.text_field :street_number, placeholder: "Nummer", required: true %>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :post_code, placeholder: "Postcode", required: true %>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :city, placeholder: "Woonplaats", required: true %>
+    </div>
+  </div>
+  
+  <h3>Uw huidige wachtwoord</h3>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.password_field :current_password, :autocomplete => "off", placeholder: "Typ hier uw huidige wachtwoord", required: true %>
+    </div>
+    <p>Typ hier uw huidige wachtwoord om uw wijzigingen te bevestigen.</p>
+  </div>
+  
+  <div class="row">
+    <div class="small-3 columns">
+      <%= f.submit t('.update', :default => "Update") %>
+    </div>
+  </div>
 <% end %>
 
 <h3><%= t('.cancel_my_account', :default => 'Cancel my account') %></h3>
 
 <p><%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel my account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.</p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Terug", :back %>

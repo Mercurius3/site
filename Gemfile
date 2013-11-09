@@ -1,5 +1,5 @@
-# source 'https://rubygems.org'
-source 'http://production.cf.rubygems.org'
+source 'https://rubygems.org'
+# source 'http://production.cf.rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -83,3 +83,5 @@ gem 'kramdown'
 
 gem "mailchimp-api", "~> 2.0.4"
 gem 'gibbon'
+
+gem 'jquery-validation-rails'

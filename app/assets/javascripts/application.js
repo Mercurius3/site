@@ -16,4 +16,17 @@
 //= require logo
 //= require mailchimp
 //= require foundation
+//= require jquery.validate
+//= require jquery.validate.additional-methods
+//= require jquery.validate.localization/messages_nl
 $(document).foundation();
+$('#new_user').validate({
+});
+$('#edit_user').validate({});
+
+
+$('#user_email').validate({
+  messages: {
+    'user[email]': {required : true, remote:'users/check_email'}  
+  },
+});

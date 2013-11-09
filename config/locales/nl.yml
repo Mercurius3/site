@@ -203,7 +203,14 @@ nl:
       user:
         first_name: 'Voornaam'
         last_name: 'Achternaam'
-        email: 'Emailadres'
+        email: 'Mailadres'
+        street: 'Straatnaam'
+        street_number: 'Huisnummer'
+        post_code: Postcode
+        city: Stad
+        password: Wachtwoord
+        current_password: 'Uw huidige wachtwoord'
+        password_confirmation: Herhaal wachtwoord
       subscription:
         subscription: 'aanmelding'
   formtastic:
@@ -211,19 +218,24 @@ nl:
       user:
         first_name: 'Voornaam'
         last_name: 'Achternaam'
-        email: 'Emailadres'
+        email: 'Mailadres'
+        current_password: Uw huidige wachtwoord
+        password_confirmation: Herhaal wachtwoord
       message:
         content: 'Bericht'
       subscription:
         product: 'Product'
         first_name: 'Voornaam'
         last_name: 'Achternaam'
-        email: 'Emailadres'
+        email: 'Mailadres'
+      registrations:
+        current_password: Uw huidige wachtwoord
+        password_confirmation: Herhaal wachtwoord
     :yes: 'Ja'
     :no: 'Nee'
-    :create: 'Maak %{model}'
-    :update: 'Update %{model}'
-    :submit: 'Submit %{model}'
-    :cancel: 'Annuleer %{model}'
-    :reset: 'Herstel %{model}'
+    :create: 'Aanmaken'
+    :update: 'Wijzigen'
+    :submit: 'Ga!'
+    :cancel: 'Verwijder account'
+    :reset: 'Herstel'
     :required: 'verplicht'

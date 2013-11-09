@@ -38,7 +38,7 @@ nl:
       signed_up: 'U bent inschreven.'
       update_needs_confirmation: 'U heeft uw mailadres succesvol gewijzigd, maar we moeten uw nieuwe mailadres nog verifiëren. Controleer uw mail
        en klik op de link in de mail om uw mailadres te verifiëren.'
-      updated: 'Uw accountgegevens zijn opgeslagen.'
+      updated: 'Uw accountgegevens zijn gewijzigd.'
       destroyed: 'Uw account is verwijderd, wellicht tot ziens!'
     unlocks:
       send_instructions: 'U ontvangt via mail instructies hoe u uw account kunt unlocken.'
