@@ -14,7 +14,7 @@ class McsubscribeController < ApplicationController
         @mc.lists.subscribe(@list_id, {'email' => email})
          
         respond_to do |format|  
-          format.json{render :json => {:message => "Succes! Bekijk uw mail om uw inschrijving te bevestigen."}}
+          format.json{render :json => {:message => "Succes! U krijgt binnen enkele minuten een mailbericht van noreply@lassche-lassche.nl. Klik s.v.p. op de link in dat bericht. Geen mail ontvangen? Controleer dan s.v.p. uw spamfilter."}}
         end
        
         rescue Mailchimp::ListAlreadySubscribedError 

@@ -11,9 +11,6 @@
 
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>)</i><br />
-  <%= f.password_field :current_password %></div>
 	
   <div><%= f.label :first_name %><br />
   <%= f.text_field :first_name %></div>
@@ -32,6 +29,9 @@
 	
   <div><%= f.label :city %><br />
   <%= f.text_field :city %></div>
+	
+  <div><%= f.label :current_password %> <i>(<%= t('.we_need_your_current_password_to_confirm_your_changes', :default => 'we need your current password to confirm your changes') %>)</i><br />
+  <%= f.password_field :current_password %></div>
 
   <div><%= f.submit t('.update', :default => "Update") %></div>
 <% end %>
