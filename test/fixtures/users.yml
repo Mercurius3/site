@@ -5,10 +5,19 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
-  encrypted_password: "12345678"
+  password: "12345678"
+  password_confirmation: "12345678"
   first_name: "Jan"
   last_name: "Jansen"
   email: "jan.jansen@example.com"
+  post_code: "1234aa"
+  street: "Rapenburg"
+  street_number: "3"
+  city: "Leiden"
 
-two: {}
-#  column: value
+
+# two:
+#   password: "testtest"
+#   first_name: "Pietje"
+#   last_name: "Puk"
+#   email: "Pietje.Puk@example.com"
