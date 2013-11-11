@@ -12,8 +12,9 @@ class ApplicationController < ActionController::Base
   before_action :setup_mcapi
  
   def setup_mcapi
-    @mc = Mailchimp::API.new(ENV['MC_API_TOKEN'])
-    @list_id = ENV['MC_LIST_ID']
+    @mc = Mailchimp::API.new(ENV['MAILCHIMP_API_TOKEN'])
+    @list_id = ENV['MAILCHIMP_LIST_ID']
+    @gb = Gibbon::API.new(ENV['MAILCHIMP_API_TOKEN'])
   end
   
   protected

@@ -1,6 +1,35 @@
 <h2><%= t('.sign_up', :default => "Sign up") %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= content_for :head do %>
+    <script>
+      $('#new_user').validate({
+        success: "valid",
+        rules: {
+          'user[email]': {
+            required: true,
+            email: true,
+            remote:'check_email'
+          },
+          'user[password]': {
+            minlength: 8
+          },
+          'user[password_confirmation]': {
+            equalTo: '#user_password'
+          }
+        },
+        messages: {
+          'user[email]' : {
+            remote: 'mailadres is al in gebruik'
+          },
+          'user[password_confirmation]': {
+            equalTo: 'wachtwoorden komen niet overeen'
+          }
+        }
+      });
+    </script>
+  <% end %>
+
   <%= devise_error_messages! %>
 
   <h3>Accountgegevens</h3>
@@ -12,6 +41,7 @@
   <div class="row">
     <div class="small-6 columns">
       <%= f.password_field :password, :autocomplete => "off", placeholder: "Typ hier een wachtwoord", required: true %>
+      <small>Minimaal 8 tekens</small>
     </div>
     <div class="small-6 columns">
       <%= f.password_field :password_confirmation, placeholder: "Herhaal uw wachtwoord", required: true %>
@@ -48,7 +78,7 @@
     </div>
   </div>
 
-  <div><%= f.submit t('.sign_up', :default => "Sign up", class: "small button") %></div>
+  <div><%= f.label :news_letter, 'Wilt u onze nieuwsbrief ontvangen?' %><%= f.check_box :news_letter %><%= f.submit t('.sign_up', :default => "Sign up", class: "small button") %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

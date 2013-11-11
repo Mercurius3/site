@@ -10,6 +10,7 @@ Site::Application.routes.draw do
   
   get 'aanmelden', to: 'mcsubscribe#index'
   post 'mcsubscribe/subscribe' => 'mcsubscribe#subscribe'
+  get 'users/check_email' => 'users#check_email'
   
   get 'nieuws', to: 'posts#index', as: 'nieuws'
   get 'contact', to: 'questions#new', as: 'contact'

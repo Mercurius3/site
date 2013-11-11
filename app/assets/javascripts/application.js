@@ -20,13 +20,51 @@
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_nl
 $(document).foundation();
-$('#new_user').validate({
-});
-$('#edit_user').validate({});
+// $('#edit_user').validate({
+//   success: "valid",
+//   rules: {
+//     'user[email]': {
+//       email: true,
+//       remote:'check_email'
+//     },
+//     'user[password]': {
+//       minlength: 8
+//     },
+//     'user[password_confirmation]': {
+//       equalTo: '#user_password'
+//     }
+//   },
+//   messages: {
+//     'user[email]' : {
+//       remote: 'mailadres is al in gebruik'
+//     },
+//     'user[password_confirmation]': {
+//       equalTo: 'wachtwoorden komen niet overeen'
+//     }
+//   }
+// });
 
-
-$('#user_email').validate({
-  messages: {
-    'user[email]': {required : true, remote:'users/check_email'}  
-  },
-});
+// $('#new_user').validate({
+//   success: "valid",
+//   rules: {
+//     'user[email]': {
+//       required: true,
+//       email: true,
+//       remote:'check_email'
+//     },
+//     'user[password]': {
+//       minlength: 8
+//     },
+//     'user[password_confirmation]': {
+//       equalTo: '#user_password'
+//     }
+//   },
+//   messages: {
+//     'user[email]' : {
+//       remote: 'mailadres is al in gebruik'
+//     },
+//     'user[password_confirmation]': {
+//       equalTo: 'wachtwoorden komen niet overeen'
+//     }
+//   }
+// });

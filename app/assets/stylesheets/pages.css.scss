@@ -17,6 +17,8 @@ $primary-color:$full;
 
 //errors
 label.error { position: absolute; right: 0; top: -1em;}
+.valid:after{ content: "\2713"; color: green;}
+input:required { content: "\002A"; }
 
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
