@@ -13,6 +13,7 @@ end
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
+  gem 'factory_girl_rails'
 end
 
 group :production do

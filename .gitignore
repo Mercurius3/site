@@ -20,3 +20,5 @@
 /config/initializers/devise.rb
 /vendor/bundle
 .rvmrc
+.ruby-version
+.ruby-gemset

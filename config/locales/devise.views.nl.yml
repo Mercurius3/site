@@ -6,19 +6,19 @@ nl:
     mailer:
       confirmation_instructions:
         action: Bevestig mijn account
-        greeting: "Geachte %{recipient},"
+        greeting: "Geachte heer, mevrouw,"
         instruction: ! 'U kunt uw email bevestigen via onderstaande link:'
         subject: Bevestigingsinstructies
       reset_password_instructions:
         action: Verander mijn wachtwoord
-        greeting: "Geachte %{recipient},"
+        greeting: "Geachte heer, mevrouw,"
         instruction: Iemand heeft een link gevraagd om uw wachtwoord te wijzigen; U kunt via onderstaande link uw wachtwoord aanpassen.
         instruction_2: Als u dit niet heeft gedaan, negeer deze mail alstublieft.
         instruction_3: Uw wachtwoord zal niet wijzigen totdat u bovenstaande link heeft gevolgd en een nieuw wachtwoord heeft aangevraagd.
         subject: Hoe kan ik mijn wachtwoord wijzigen?
       unlock_instructions:
         action: Ontgrendel mijn account
-        greeting: "Geachte %{recipient},"
+        greeting: "Geachte heer, mevrouw,"
         instruction: ! 'U kunt uw account ontgrendelen via onderstaande link:'
         message: Uw account is vergrendeld wegens te veel mislukte pogingen in te loggen.
         subject: Ontgrendelinstructies

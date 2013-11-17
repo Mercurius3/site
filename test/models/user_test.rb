@@ -2,6 +2,12 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   test "User aanmaken lukt" do
-    User.create!(first_name: users(:one).first_name, last_name: users(:one).last_name)
+    user = FactoryGirl.build(:user)
+    assert user.save
   end
+  
+  # test "Street number should not be saved without a street_number" do
+  #   user = FactoryGirl.build(:user_without_street_number)
+  #   assert !user.save, "user should not be saved without a street number"
+  # end
 end

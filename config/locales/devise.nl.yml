@@ -16,7 +16,7 @@ nl:
       unconfirmed: 'U dient eerst uw account te bevestigen.'
       locked: 'Je account is gelocked.'
       invalid: 'Ongeldig e-mail of wachtwoord.'
-      invalid_token: 'Invalide authenticiteit token.'
+      invalid_token: 'Ongeldig authenticiteitstoken.'
       timeout: 'Uw sessie is verlopen, log a.u.b. opnieuw in.'
       inactive: 'Uw account is nog niet geactiveerd.'
     sessions:
