@@ -1,5 +1,5 @@
 nl:
-  devise:
+  users:
     confirmations:
       new:
         resend_confirmation_instructions: Verstuur bevestiginginstructies opnieuw
@@ -7,7 +7,7 @@ nl:
       confirmation_instructions:
         action: Bevestig mijn account
         greeting: "Geachte heer, mevrouw,"
-        instruction: ! 'U kunt uw email bevestigen via onderstaande link:'
+        instruction: ! 'U kunt uw mailadres bevestigen via onderstaande link:'
         subject: Bevestigingsinstructies
       reset_password_instructions:
         action: Verander mijn wachtwoord

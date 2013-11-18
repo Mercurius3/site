@@ -14,6 +14,9 @@
         },
         'user[password_confirmation]': {
           equalTo: '#user_password'
+        },
+        'user[post_code]': {
+          postalcodeNL: 'Vul s.v.p. een geldige postcode in'
         }
       },
       messages: {
@@ -53,6 +56,11 @@
     </div>
     <div class="small-6 columns">
       <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :mobile, placeholder: "Mobiel telefoonnummer", required: true %>
     </div>
   </div>
 

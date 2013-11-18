@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110163842) do
+ActiveRecord::Schema.define(version: 20131118040814) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 20131110163842) do
     t.string   "city"
     t.string   "unconfirmed_email"
     t.boolean  "news_letter"
+    t.string   "mobile"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

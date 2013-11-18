@@ -19,6 +19,9 @@
           },
           'user[post_code]': {
             postalcodeNL: true
+          },
+          'user[mobile]': {
+            mobileNL: true
           }
         },
         messages: {
@@ -63,7 +66,11 @@
       <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
     </div>
   </div>
-
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :mobile, placeholder: "Mobiel telefoonnummer", required: true %>
+    </div>
+  </div>
   
   <h3>NAW-gegevens</h3>
   <div class="row">
