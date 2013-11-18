@@ -9,7 +9,7 @@ nl:
         one: "Kon de %{resource} niet opslaan:"
         other: "Kon de %{resource} niet opslaan:"
  
-  users:
+  devise:
     failure:
       already_authenticated: 'U bent al ingelogd.'
       unauthenticated: 'U dient in te loggen of zich in te schrijven.'
