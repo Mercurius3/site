@@ -32,6 +32,11 @@
       <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
     </div>
   </div>
+  
+  <div class="row">
+    <p class="small-12 columns">Alleen als u uw wachtwoord wilt wijzigen:</p>
+  </div>
+  
   <div class="row">
     <div class="small-6 columns">
       <%= f.password_field :password, :autocomplete => "off", placeholder: "Wachtwoord wijzigen" %>
@@ -39,9 +44,6 @@
     <div class="small-6 columns">
       <%= f.password_field :password_confirmation, placeholder: "Herhaal uw wachtwoord" %>
     </div>
-  </div>
-  <div class="row">
-    <p class="small-12 columns">Alleen als u uw wachtwoord wilt wijzigen!</p>
   </div>
   
   <h3>Persoonsgegevens</h3>
