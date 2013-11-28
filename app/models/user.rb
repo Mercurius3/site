@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   has_many :transactions
   
   # validate :email, uniqueness: true, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
-  validate :street_number, presence: true
+  # validate :street_number, presence: true
   
 end

@@ -7,7 +7,8 @@
       success: "valid",
       rules: {
         'user[email]': {
-          email: true
+          email: true,
+          remote: 'check_email_same_as_current_user_or_unique'
         },
         'user[password]': {
           minlength: 8
@@ -25,6 +26,9 @@
       messages: {
         'user[password_confirmation]': {
           equalTo: 'wachtwoorden komen niet overeen'
+        },
+        'user[email]': {
+          remote: 'dit mailadres is al in gebruik'
         }
       }
     });
@@ -32,57 +36,96 @@
 <% end %>
   <%= devise_error_messages! %>
 
-  <h3>Accountgegevens</h3>
-  <div class="row">
-    <div class="small-6 columns">
-      <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
+  <div class="change">
+    <h3>Mailadres</h3>
+    <div class="row change_info">
+      <p class="small-6 columns">
+        <%= current_user.email %>
+      </p>
+      <p class="small-6 columns">
+        <%= link_to "Wijzig mailadres", "#" %>
+      </p>
+    </div>
+    <div class="row change_form">
+      <div class="small-6 columns">
+        <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
+      </div>
+      <div class="small-6 columns">
+        <%= link_to "Annuleer wijzigingen", root_path %>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="change">
+    <h3>Wachtwoord</h3>
+    <div class="row change_info">
+      <p class="small-6 columns">********</p>
+      <p class="small-6 columns" id="change_password_click_here"><%= link_to "Wijzig wachtwoord", root_path %></p>
+    </div>
+    <div class="row change_form">
+      <div class="small-6 columns">
+        <%= f.label :password, "Nieuw wachtwoord" %>
+        <%= f.password_field :password, :autocomplete => "off", placeholder: "Nieuw wachtwoord" %>
+        <%= f.label :password_confirmation, "Herhaal nieuw wachtwoord" %>
+        <%= f.password_field :password_confirmation, placeholder: "Herhaal nieuw wachtwoord" %>
+      </div>
+      <div class="small-6 columns">
+        <%= link_to "Annuleer wijzigingen", root_path %>
+      </div>
     </div>
   </div>
   
-  <div class="row">
-    <p class="small-12 columns">Alleen als u uw wachtwoord wilt wijzigen:</p>
-  </div>
-  
-  <div class="row">
-    <div class="small-6 columns">
-      <%= f.password_field :password, :autocomplete => "off", placeholder: "Wachtwoord wijzigen" %>
+  <div class="change">
+    <h3>Persoonsgegevens</h3> 
+    <div class="row change_info">
+      <p class="small-6 columns">
+        <%= current_user.first_name %> <%= current_user.last_name %><br>
+        <%= current_user.mobile %>
+      </p>
+      <p class="small-6 columns">
+        <%= link_to "Wijzig persoonsgegevens", root_path %>
+      </p>
     </div>
-    <div class="small-6 columns">
-      <%= f.password_field :password_confirmation, placeholder: "Herhaal nieuw wachtwoord" %>
-    </div>
-  </div>
-  
-  <h3>Persoonsgegevens</h3>
-  <div class="row">
-    <div class="small-6 columns">  
-      <%= f.text_field :first_name, placeholder: "Voornaam", required: true %>
-    </div>
-    <div class="small-6 columns">
-      <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-4 columns">
-      <%= f.text_field :mobile, placeholder: "Mobiel telefoonnummer", required: true %>
+    <div class="row change_form">
+      <div class="small-6 columns"> 
+        <%= f.label :first_name, "Voornaam" %>
+        <%= f.text_field :first_name, placeholder: "Voornaam", required: true %>
+        <%= f.label :last_name, "Achternaam" %>
+        <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
+        <%= f.label :mobile, "Mobiel nummer" %>
+        <%= f.text_field :mobile, placeholder: "Mobiel telefoonnummer", required: true %>
+      </div>
+      <div class="small-6 columns">
+        <%= link_to "Annuleer wijzigingen", root_path %>
+      </div>
     </div>
   </div>
 
   <h3>NAW-gegevens</h3>
-  <div class="row">
-    <div class="small-9 columns">
-      <%= f.text_field :street, placeholder: "Straatnaam", required: true %>
+  <div class="change">
+    <div class="row change_info">
+      <p class="small-6 columns">
+        <%= current_user.street %> <%= current_user.street_number %><br>
+        <%= current_user.post_code %> <%= current_user.city %>
+      </p>
+      <p class="small-6 columns">
+        <%= link_to "Wijzig adresgegevens", root_path %>
+      </p>
     </div>
-    <div class="small-3 columns">
-      <%= f.text_field :street_number, placeholder: "Nummer", required: true %>
-    </div>
-  </div>
-    
-  <div class="row">
-    <div class="small-4 columns">
-      <%= f.text_field :post_code, placeholder: "Postcode", required: true %>
-    </div>
-    <div class="small-8 columns">
-      <%= f.text_field :city, placeholder: "Woonplaats", required: true %>
+    <div class="row change_form">
+      <div class="small-6 columns">
+        <%= f.label :street, "Straatnaam" %>
+        <%= f.text_field :street, placeholder: "Straatnaam", required: true %>
+        <%= f.label :street_number, "Huisnummer" %>
+        <%= f.text_field :street_number, placeholder: "Huisnummer", required: true %>
+        <%= f.label :post_code, "Postcode" %>
+        <%= f.text_field :post_code, placeholder: "Postcode", required: true %>
+        <%= f.label :city, "Woonplaats" %>
+        <%= f.text_field :city, placeholder: "Woonplaats", required: true %>
+      </div>
+      <div class="small-6 columns">
+        <%= link_to "Annuleer wijzigingen", root_path %>
     </div>
   </div>
   
@@ -91,7 +134,9 @@
     <%= f.label :news_letter, 'Wilt u onze nieuwsbrief ontvangen?' %><%= f.check_box :news_letter %>
   </div>
   
-  <fieldset>
+  <h3>Afronden</h3>
+  <%= link_to "Annuleren", :back %> <%= f.submit "Wijzigingen opslaan", id: "confirm_changes_button" %>
+  <fieldset id="confirm_changes">
     <h3>Uw huidige wachtwoord</h3>
     <div class="row">
       <div class="small-6 columns">
@@ -108,8 +153,8 @@
   </fieldset>
 <% end %>
 
-<h3><%= t('.cancel_my_account', :default => 'Cancel my account') %></h3>
+<!-- <h3><%= t('.cancel_my_account', :default => 'Cancel my account') %></h3>
 
 <p><%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel my account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.</p>
 
-<%= link_to "Terug", :back %>
+<%= link_to "Terug", :back %> -->

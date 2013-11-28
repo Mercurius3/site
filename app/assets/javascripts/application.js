@@ -19,4 +19,8 @@
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_nl
+//= require users
 $(document).foundation();
+if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
+	$('<header id="devbanner">').prependTo('body');
+}
