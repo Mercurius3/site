@@ -5,5 +5,5 @@
 	<%= image_tag(@page.picture) %>
 <% end %>
 <% if @product && @product.picture %>
-	<%= image_tag(@product.picture) if @product.picture %>
+	<%= image_tag(@product.picture(:normal)) if @product.picture %>
 <% end %>
