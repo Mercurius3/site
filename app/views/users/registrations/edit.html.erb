@@ -48,6 +48,7 @@
     </div>
     <div class="row change_form">
       <div class="small-6 columns">
+        <%= f.label :email, "Uw mailadres" %>
         <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
       </div>
       <div class="small-6 columns">
@@ -140,6 +141,7 @@
     <h3>Uw huidige wachtwoord</h3>
     <div class="row">
       <div class="small-6 columns">
+        <%= f.label :current_password, "Uw huidige wachtwoord" %>
         <%= f.password_field :current_password, :autocomplete => "off", placeholder: "Typ hier uw huidige wachtwoord", required: true %>
       </div>
       <p>Typ hier uw huidige wachtwoord om uw wijzigingen te bevestigen.</p>

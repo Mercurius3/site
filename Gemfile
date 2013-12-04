@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 # source 'http://production.cf.rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~>4.0.0'
 
 group :development do
   gem 'better_errors'
@@ -14,6 +14,14 @@ end
 group :development, :testing do
   gem 'sqlite3'
   gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'faker'
+  gem 'selenium-webdriver'
 end
 
 group :production do
