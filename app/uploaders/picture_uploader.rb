@@ -25,11 +25,8 @@ class PictureUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-<<<<<<< HEAD
+
   process :scale => [200, 300]
-=======
-  process :scale => [640, 480]
->>>>>>> mailchimp
   #
   # def scale(width, height)
   #   # do something
