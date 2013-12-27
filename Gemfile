@@ -15,13 +15,14 @@ group :development, :testing do
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 2.0'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'capybara'
   gem 'faker'
-  gem 'selenium-webdriver'
+  gem 'capybara-webkit'
 end
 
 group :production do
