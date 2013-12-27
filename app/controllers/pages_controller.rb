@@ -1,23 +1,20 @@
 class PagesController < ApplicationController
+  before_action :permalink
   def show
-    @page = Page.find_by_permalink!(params[:id])
+
   end
   
   def category
-    @page = Page.find_by_permalink!(params[:id])
-    name = params[:id].capitalize
-    @category = Category.where(name: name).first
-    @products = @category.products.where(third_party: false, active: true).order(:position)
+    @category = Category.current_category(params[:id]).first
+    @products = @category.own_products.sorted
   end
 
   def overzicht
-    @page = Page.find_by_permalink!(params[:id])
-    @products = Product.where(third_party: false, active: true).order(:position)
+    @products = Product.own_products.sorted
   end
   
   def inopdracht
-    @page = Page.find_by_permalink!(params[:id])
-    @products = External.where(active: true).order(:position)
+    @products = Product.third_party.sorted
   end
 
   def download(page)
@@ -25,4 +22,10 @@ class PagesController < ApplicationController
       :filename => @page[:picture],
       :type => "application/pdf"
   end
+  
+  private
+  def permalink
+    @page = Page.find_by_permalink!(params[:id])
+  end
+    
 end

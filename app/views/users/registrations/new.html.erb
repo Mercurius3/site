@@ -1,0 +1,97 @@
+<h2><%= t('.sign_up', :default => "Sign up") %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= content_for :head do %>
+    <script>
+      $('#new_user').validate({
+        success: "valid",
+        rules: {
+          'user[email]': {
+            required: true,
+            email: true,
+            remote:'check_email_exists'
+          },
+          'user[password]': {
+            minlength: 8
+          },
+          'user[password_confirmation]': {
+            equalTo: '#user_password'
+          },
+          'user[post_code]': {
+            postalcodeNL: true
+          },
+          'user[mobile]': {
+            mobileNL: true
+          }
+        },
+        messages: {
+          'user[email]' : {
+            remote: 'mailadres is al in gebruik'
+          },
+          'user[password_confirmation]': {
+            equalTo: 'wachtwoorden komen niet overeen'
+          },
+          'user[post_code]': {
+            postalcodeNL: 'Vul s.v.p. een geldige postcode in'
+          }
+        }
+      });
+    </script>
+  <% end %>
+
+  <%= devise_error_messages! %>
+
+  <h3>Accountgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.password_field :password, :autocomplete => "off", placeholder: "Typ hier een wachtwoord", required: true %>
+      <small>Minimaal 8 tekens</small>
+    </div>
+    <div class="small-6 columns">
+      <%= f.password_field :password_confirmation, placeholder: "Herhaal uw wachtwoord", required: true %>
+    </div>
+  </div>
+  
+  <h3>Persoonsgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">  
+      <%= f.text_field :first_name, placeholder: "Voornaam", required: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :mobile, placeholder: "Mobiel telefoonnummer", required: true %>
+    </div>
+  </div>
+  
+  <h3>NAW-gegevens</h3>
+  <div class="row">
+    <div class="small-9 columns">
+      <%= f.text_field :street, placeholder: "Straatnaam", required: true %>
+    </div>
+    <div class="small-3 columns">
+      <%= f.text_field :street_number, placeholder: "Nummer", required: true %>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :post_code, placeholder: "Postcode", required: true %>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :city, placeholder: "Woonplaats", required: true %>
+    </div>
+  </div>
+
+  <div><%= f.label :news_letter, 'Wilt u onze nieuwsbrief ontvangen?' %><%= f.check_box :news_letter %><%= f.submit t('.sign_up', :default => "Sign up", class: "small button") %></div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -1,8 +1,8 @@
-# source 'https://rubygems.org'
-source 'http://production.cf.rubygems.org'
+source 'https://rubygems.org'
+# source 'http://production.cf.rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '~>4.0.0'
 
 group :development do
   gem 'better_errors'
@@ -13,6 +13,16 @@ end
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'faker'
+  gem 'capybara-webkit'
 end
 
 group :production do
@@ -65,7 +75,7 @@ gem 'devise'
 gem 'rails_admin_nestable'
 
 # Translate Devise Views
-# gem 'devise-i18n-views'
+gem 'devise-i18n-views'
 
 # Zurb/Foundation
 gem 'compass-rails'
@@ -80,3 +90,8 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'kramdown'
+
+gem "mailchimp-api", "~> 2.0.4"
+gem 'gibbon'
+
+gem 'jquery-validation-rails'

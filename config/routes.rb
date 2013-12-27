@@ -1,12 +1,20 @@
 Site::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  devise_for :users
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  # devise_for :users
+  devise_for :users, controllers: { registrations: "users/registrations", passwords: "users/passwords" }
+  
+  # devise_for :users, controllers: { sessions: "users/sessions" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'pages#show', id: 'home'
+  
+  get 'aanmelden', to: 'mcsubscribe#index'
+  post 'mcsubscribe/subscribe' => 'mcsubscribe#subscribe'
+  get 'users/check_email_exists' => 'users#check_email_exists'
+  get 'users/check_email_same_as_current_user_or_unique' => 'users#check_email_same_as_current_user_or_unique'
   
   get 'nieuws', to: 'posts#index', as: 'nieuws'
   get 'contact', to: 'questions#new', as: 'contact'

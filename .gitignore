@@ -16,6 +16,9 @@
 /tmp
 
 /config/app_environment_variables.rb
+/config/initializers/application.yml
 /config/initializers/devise.rb
 /vendor/bundle
 .rvmrc
+.ruby-version
+.ruby-gemset

@@ -11,42 +11,43 @@ nl:
  
   devise:
     failure:
-      already_authenticated: 'Je bent al ingelogd.'
-      unauthenticated: 'Je dient in te loggen of je in te schrijven.'
-      unconfirmed: 'Je dient eerst je account te bevestigen.'
-      locked: 'Je account is gelocked.'
-      invalid: 'Ongeldig e-mail of wachtwoord.'
-      invalid_token: 'Invalide authenticiteit token.'
-      timeout: 'Je sessie is verlopen, log a.u.b. opnieuw in.'
-      inactive: 'Je account is nog niet geactiveerd.'
+      already_authenticated: 'U bent al ingelogd.'
+      unauthenticated: 'U dient in te loggen of zich in te schrijven.'
+      unconfirmed: 'U dient eerst uw account te bevestigen.'
+      locked: 'Uw account is gelocked.'
+      invalid: 'Ongeldig mailadres of wachtwoord.'
+      invalid_token: 'Ongeldig authenticiteitstoken.'
+      timeout: 'Uw sessie is verlopen, log a.u.b. opnieuw in.'
+      inactive: 'Uw account is nog niet geactiveerd.'
     sessions:
-      signed_in: 'Je bent succesvol ingelogd.'
-      signed_out: 'Je bent succesvol uitgelogd.'
+      signed_in: 'U bent succesvol ingelogd.'
+      signed_out: 'U bent succesvol uitgelogd.'
+      remember_me: "Onthoud gegevens"
     passwords:
-      send_instructions: 'Je ontvangt via e-mail instructies hoe je je wachtwoord moet resetten.'
-      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je wachtwoord moet resetten.'
-      updated: 'Je wachtwoord is gewijzigd. Je bent nu ingelogd.'
-      updated_not_active: 'Je wachtwoord is gewijzigd.'
+      send_instructions: 'U ontvangt via mail instructies hoe u uw wachtwoord kunt resetten.'
+      send_paranoid_instructions: 'Als uw mailadres bestaat in de database, ontvangt u via mail instructies hoe u uw wachtwoord moet resetten.'
+      updated: 'Uw wachtwoord is gewijzigd. U bent nu ingelogd.'
+      updated_not_active: 'Uw wachtwoord is gewijzigd.'
     confirmations:
-      send_instructions: 'Je ontvangt via e-mail instructies hoe je je account kan bevestigen.'
-      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je account kan bevestigen.'
-      confirmed: 'Je account is bevestigd.'
+      send_instructions: 'U ontvangt via mail instructies hoe u uw account kunt bevestigen. Het kan enige minuten duren voordat u de mail ontvangt. Controleer s.v.p. uw spamfilter indien u geen mail ontvangt!'
+      send_paranoid_instructions: 'Als uw mailadres bestaat in de database, ontvangt u via mail instructies hoe u uw account kunt bevestigen.'
+      confirmed: 'Uw account is bevestigd.'
     registrations:
-      signed_up_but_unconfirmed: 'Je ontvangt via e-mail instructies hoe je je account kunt activeren.'
-      signed_up_but_inactive: 'Je bent inschreven. Je kon alleen niet automatisch ingelogd worden omdat je account nog niet geactoveerd is.'
-      signed_up_but_locked: 'Je bent inschreven. Je kon alleen niet automatisch ingelogd worden omdat je account geblokkeerd is.'
-      signed_up: 'Je bent inschreven.'
-      update_needs_confirmation: 'Je hebt je e-mailadres succesvol gewijzigd, maar we moeten je nieuwe mailadres nog verifiëren. Controleer je e-mail
-       en klik op de link in de mail om je mailadres te verifiëren.'
-      updated: 'Je account gegevens zijn opgeslagen.'
-      destroyed: 'Je account is verwijderd, wellicht tot ziens!'
+      signed_up_but_unconfirmed: 'U ontvangt via mail instructies hoe u uw account kunt bevestigen. Het kan enige minuten duren voordat u de mail ontvangt. Controleer s.v.p. uw spamfilter indien u geen mail ontvangt!'
+      signed_up_but_inactive: 'U bent inschreven. U kon alleen niet automatisch ingelogd worden omdat uw account nog niet geactiveerd is.'
+      signed_up_but_locked: 'U bent inschreven. U kon alleen niet automatisch ingelogd worden omdat uw account geblokkeerd is.'
+      signed_up: 'U bent inschreven.'
+      update_needs_confirmation: 'U heeft uw mailadres succesvol gewijzigd, maar we moeten uw nieuwe mailadres nog verifiëren. Controleer uw mail
+       en klik op de link in de mail om uw mailadres te verifiëren.'
+      updated: 'Uw accountgegevens zijn gewijzigd.'
+      destroyed: 'Uw account is verwijderd, wellicht tot ziens!'
     unlocks:
-      send_instructions: 'Je ontvangt via e-mail instructies hoe je je account kan unlocken.'
-      unlocked: 'Je account is ge-unlocked. Je kan nu weer inloggen.'
-      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je account kan unlocken.'
+      send_instructions: 'U ontvangt via mail instructies hoe u uw account kunt unlocken.'
+      unlocked: 'Uw account is ge-unlocked. U kunt nu weer inloggen.'
+      send_paranoid_instructions: 'Als uw mailadres bestaat in de database, ontvang u via mail instructies hoe u uw account kan unlocken.'
     omniauth_callbacks:
-      success: 'Successvol aangemeld met je %{kind} account.'
-      failure: 'Kon je niet aanmelden met je %{kind} account, omdat "%{reason}".'
+      success: 'Successvol aangemeld met uw %{kind} account.'
+      failure: 'Kon je niet aanmelden met uw %{kind} account, omdat "%{reason}".'
     mailer:
       confirmation_instructions:
         subject: 'Bevestiging mailadres'

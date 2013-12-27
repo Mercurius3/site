@@ -1,0 +1,102 @@
+<h2><%= t('.title', :resource => resource_class.model_name.human , :default => 'Edit #{resource_name.to_s.humanize}') %></h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+<%= content_for :head do %>
+  <script>
+    $('#edit_user').validate({
+      success: "valid",
+      rules: {
+        'user[email]': {
+          email: true
+        },
+        'user[password]': {
+          minlength: 8
+        },
+        'user[password_confirmation]': {
+          equalTo: '#user_password'
+        }
+      },
+      messages: {
+        'user[password_confirmation]': {
+          equalTo: 'wachtwoorden komen niet overeen'
+        }
+      }
+    });
+  </script>
+<% end %>
+  <%= devise_error_messages! %>
+
+  <h3>Accountgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.email_field :email, placeholder: "Uw mailadres", required: true %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <%= f.password_field :password, :autocomplete => "off", placeholder: "Wachtwoord wijzigen" %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.password_field :password_confirmation, placeholder: "Herhaal uw wachtwoord" %>
+    </div>
+  </div>
+  <div class="row">
+    <p class="small-12 columns">Alleen als u uw wachtwoord wilt wijzigen!</p>
+  </div>
+  
+  <h3>Persoonsgegevens</h3>
+  <div class="row">
+    <div class="small-6 columns">  
+      <%= f.text_field :first_name, placeholder: "Voornaam", required: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.text_field :last_name, placeholder: "Achternaam", required: true %>
+    </div>
+  </div>
+
+  <h3>NAW-gegevens</h3>
+  <div class="row">
+    <div class="small-9 columns">
+      <%= f.text_field :street, placeholder: "Straatnaam", required: true %>
+    </div>
+    <div class="small-3 columns">
+      <%= f.text_field :street_number, placeholder: "Nummer", required: true %>
+    </div>
+  </div>
+    
+  <div class="row">
+    <div class="small-4 columns">
+      <%= f.text_field :post_code, placeholder: "Postcode", required: true %>
+    </div>
+    <div class="small-8 columns">
+      <%= f.text_field :city, placeholder: "Woonplaats", required: true %>
+    </div>
+  </div>
+  
+  <h3>Aan-/afmelden nieuwsbrief</h3>
+  <div>
+    <%= f.label :news_letter, 'Wilt u onze nieuwsbrief ontvangen?' %><%= f.check_box :news_letter %>
+  </div>
+  
+  <fieldset>
+    <h3>Uw huidige wachtwoord</h3>
+    <div class="row">
+      <div class="small-6 columns">
+        <%= f.password_field :current_password, :autocomplete => "off", placeholder: "Typ hier uw huidige wachtwoord", required: true %>
+      </div>
+      <p>Typ hier uw huidige wachtwoord om uw wijzigingen te bevestigen.</p>
+    </div>
+  
+    <div class="row">
+      <div class="small-3 columns">
+        <%= f.submit t('.update', :default => "Update") %>
+      </div>
+    </div>
+  </fieldset>
+<% end %>
+
+<h3><%= t('.cancel_my_account', :default => 'Cancel my account') %></h3>
+
+<p><%= t('.unhappy', :default => 'Unhappy') %>? <%= link_to t('.cancel_my_account', :default => "Cancel my account"), registration_path(resource_name), :data => { :confirm => t('.are_you_sure', :default => "Are you sure?") }, :method => :delete %>.</p>
+
+<%= link_to "Terug", :back %>
