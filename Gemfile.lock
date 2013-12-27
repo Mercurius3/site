@@ -312,7 +312,7 @@ DEPENDENCIES
   mailchimp-api (~> 2.0.4)
   meta_request
   mysql2
-  rails (~> 4.0.0)
+  rails (~> 4.0.2)
   rails_admin
   rails_admin_nestable
   rmagick
