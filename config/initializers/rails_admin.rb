@@ -68,8 +68,21 @@ RailsAdmin.config do |config|
     nestable_list true
   end
   
-  config.model External do
+  config.model User do
     nestable_list true
+    edit do
+      field :first_name
+      field :middle_name
+      field :last_name
+      field :email
+      field :mobile
+      field :street
+      field :street_number
+      field :post_code
+      field :city
+      field :news_letter
+      field :admin
+    end
   end
 
   
