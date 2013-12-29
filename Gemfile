@@ -5,24 +5,24 @@ source 'https://rubygems.org'
 gem 'rails', '~>4.0.2'
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
+  # gem 'better_errors'
+  # gem 'binding_of_caller'
+  # gem 'meta_request'
 end
 
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'guard-rspec'
+  # gem 'factory_girl_rails'
+  # gem 'rspec-rails', '~> 2.0'
+  # gem 'guard-rspec'
 end
 
 group :test do
   gem 'database_cleaner'
-  gem 'capybara'
-  gem 'faker'
-  gem 'capybara-webkit'
+  # gem 'capybara'
+  # gem 'faker'
+  # gem 'capybara-webkit'
 end
 
 group :production do
@@ -82,7 +82,7 @@ gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.0.0'
 
 # Extra
-gem 'icalendar'
+# gem 'icalendar'
 
 # Images
 gem 'carrierwave'
@@ -95,3 +95,5 @@ gem "mailchimp-api", "~> 2.0.4"
 gem 'gibbon'
 
 gem 'jquery-validation-rails'
+
+gem 'nokogiri', '1.6.0'
