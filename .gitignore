@@ -19,6 +19,8 @@
 /config/initializers/application.yml
 /config/initializers/devise.rb
 /vendor/bundle
+/public/tmp
+/public/uploads
 .rvmrc
 .ruby-version
 .ruby-gemset
