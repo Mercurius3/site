@@ -31,7 +31,7 @@ set :stage, :staging
  # }
 
 # and/or per server
- server 'lassche@mushu.bluerail.nl',
+ server 'mushu.bluerail.nl',
   user: 'lassche',
   roles: %w{web app db},
   ssh_options: {
