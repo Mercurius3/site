@@ -95,6 +95,6 @@ gem "mailchimp-api", "~> 2.0.4"
 gem 'gibbon'
 
 gem 'jquery-validation-rails'
-gem 'mini_portile'
+gem 'mini_portile', '0.5.2'
 
 gem 'nokogiri', '1.6.1'
