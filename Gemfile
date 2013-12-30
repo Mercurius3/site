@@ -95,3 +95,4 @@ gem "mailchimp-api", "~> 2.0.4"
 gem 'gibbon'
 
 gem 'jquery-validation-rails'
+gem 'nokogiri', '1.5.10'

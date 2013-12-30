@@ -106,7 +106,6 @@ GEM
       excon (>= 0.16.0)
       json (>= 1.7.7)
     mime-types (1.25.1)
-    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_xml (0.5.5)
@@ -119,8 +118,7 @@ GEM
     net-ssh (2.7.0)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.5.10)
     orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -226,6 +224,7 @@ DEPENDENCIES
   kramdown
   mailchimp-api (~> 2.0.4)
   mysql2
+  nokogiri (= 1.5.10)
   rails (~> 4.0.2)
   rails_admin
   rails_admin_nestable
