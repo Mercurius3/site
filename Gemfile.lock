@@ -38,6 +38,8 @@ GEM
       sshkit (>= 1.2.0)
     capistrano-rails (1.0.0)
       capistrano
+    capistrano-rvm (0.0.3)
+      capistrano
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -164,8 +166,6 @@ GEM
     ref (1.0.5)
     remotipart (1.2.1)
     rmagick (2.13.2)
-    rvm-capistrano (1.5.0)
-      capistrano (>= 2.15.4)
     safe_yaml (0.9.7)
     sass (3.2.13)
     sass-rails (4.0.1)
@@ -218,6 +218,7 @@ DEPENDENCIES
   capistrano (~> 3.0)
   capistrano-bundler
   capistrano-rails (~> 1.0.0)
+  capistrano-rvm
   carrierwave
   coffee-rails (~> 4.0.0)
   compass-rails
@@ -237,7 +238,6 @@ DEPENDENCIES
   rails_admin
   rails_admin_nestable
   rmagick
-  rvm-capistrano
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3

@@ -69,7 +69,7 @@ group :development do
 end
 gem 'capistrano', '~> 3.0', require: false, group: :development
 gem 'capistrano-bundler'
-gem 'rvm-capistrano'
+gem 'capistrano-rvm'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
