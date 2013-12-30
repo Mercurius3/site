@@ -225,6 +225,7 @@ DEPENDENCIES
   mailchimp-api (~> 2.0.4)
   mysql2
   nokogiri (= 1.5.10)
+  rack (~> 1.5.2)
   rails (~> 4.0.2)
   rails_admin
   rails_admin_nestable
