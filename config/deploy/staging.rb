@@ -33,11 +33,11 @@ set :stage, :staging
 # and/or per server
  server 'mushu.bluerail.nl',
   user: 'lassche',
-  roles: %w{web app db},
+  roles: %w{web app db all},
   ssh_options: {
     user: 'lassche', # overrides user setting above
     keys: %w(/Users/axel/.ssh/id_rsa),
-    forward_agent: false,
+    forward_agent: true,
     verbose: :debug,
     auth_methods: %w(publickey password)
     # password: 'please use keys'

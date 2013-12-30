@@ -52,6 +52,12 @@ task :check_write_permissions do
   end
 end
 
+task :whoami do
+  on roles(:all) do
+    execute :whoami
+  end
+end
+
 
 # set :rvm_path, '/usr/local/rvm'
 # set :rvm_bin_path, '/usr/local/rvm/bin'
