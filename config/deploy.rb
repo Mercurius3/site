@@ -1,13 +1,12 @@
 set :application, 'site'
 set :repo_url, 'git@github.com:Mercurius3/site.git'
 
-set :host, "mushu.bluerail.nl"
-set :user, "lassche"
+set :branch, "master"
 
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
-# set :deploy_to, '/var/www/my_app'
-set :scm, :git
+# set :deploy_to, '/var/www/vhosts/lassche-lassche.nl/staging'
+# set :scm, :git
 
 # set :format, :pretty
 # set :log_level, :debug
@@ -25,7 +24,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
@@ -42,6 +41,17 @@ namespace :deploy do
 
 end
 
+desc "Check that we can access everything"
+task :check_write_permissions do
+  on roles(:all) do |host|
+    if test("[ -w #{fetch(:deploy_to)} ]")
+      info "#{fetch(:deploy_to)} is writable on #{host}"
+    else
+      error "#{fetch(:deploy_to)} is not writable on #{host}"
+    end
+  end
+end
 
-set :rvm_path, '/usr/local/rvm'
-set :rvm_bin_path, '/usr/local/rvm/bin'
+
+# set :rvm_path, '/usr/local/rvm'
+# set :rvm_bin_path, '/usr/local/rvm/bin'

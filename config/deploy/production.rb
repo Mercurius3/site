@@ -39,5 +39,4 @@ set :stage, :production
 #   }
 # setting per server overrides global ssh_options
 
-# fetch(:default_env).merge!(rails_env: :production)
-set :deploy_to, lambda { capture("echo -n ~/rails") }
+fetch(:default_env).merge!(rails_env: :production)

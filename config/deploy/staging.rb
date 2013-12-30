@@ -5,9 +5,9 @@ set :stage, :staging
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-# role :app, %w{deploy@example.com}
-# role :web, %w{deploy@example.com}
-# role :db,  %w{deploy@example.com}
+# role :app, %w{mushu.bluerail.nl}
+# role :web, %w{mushu.bluerail.nl}
+# role :db,  %w{mushu.bluerail.nl}, primary: true
 
 # Extended Server Syntax
 # ======================
@@ -15,7 +15,7 @@ set :stage, :staging
 # definition into the server list. The second argument
 # something that quacks like a hash can be used to set
 # extended properties on the server.
-# server 'example.com', user: 'deploy', roles: %w{web app}, my_property: :my_value
+server 'mushu.bluerail.nl', user: 'lassche', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
@@ -38,6 +38,6 @@ set :stage, :staging
 #     # password: 'please use keys'
 #   }
 # setting per server overrides global ssh_options
+set :deploy_to, "var/www/vhosts/lassche-lassche.nl/staging"
 
-# fetch(:default_env).merge!(rails_env: :staging))
-set :deploy_to, lambda { capture("echo -n ~/staging") }
+fetch(:default_env).merge!(rails_env: :production)
