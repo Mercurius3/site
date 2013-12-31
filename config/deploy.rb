@@ -18,6 +18,7 @@ set :rvm_ruby_string, 'default'
 # De onderstaande instellingen zijn specifiek voor de Bluerail servers, u
 # hoeft hier zelf geen wijzigingen in aan te brengen.
 set :deploy_to, lambda { capture("echo -n ~/staging") }
+set :rvm_path, '/usr/local/rvm'
 set :rvm_type, :system
 set :rvm_bin_path, '/usr/local/rvm/bin'
 set :use_sudo, false
