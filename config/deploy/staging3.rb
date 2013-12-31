@@ -31,11 +31,11 @@ set :stage, :staging
  # }
 
 # and/or per server
- server 'mushu.bluerail.nl',
-  user: 'lassche',
-  roles: %w{web app db all},
+ server 'lassche@mushu.bluerail.nl',
+  roles: %w{web},
+  user: 'Mercurius3',
   ssh_options: {
-    user: 'lassche', # overrides user setting above
+    user: 'Mercurius3', # overrides user setting above
     keys: %w(/Users/axel/.ssh/id_rsa),
     forward_agent: true,
     verbose: :debug,
@@ -43,7 +43,7 @@ set :stage, :staging
     # password: 'please use keys'
   }
 # setting per server overrides global ssh_options
-set :deploy_to, "var/www/vhosts/lassche-lassche.nl/staging"
+# set :deploy_to, "var/www/vhosts/lassche-lassche.nl/staging"
 set :tmp_dir, "var/www/vhosts/lassche-lassche.nl/staging/tmp"
 
 fetch(:default_env).merge!(rails_env: :production)

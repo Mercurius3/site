@@ -1,63 +1,52 @@
-set :application, 'site'
-set :repo_url, 'git@github.com:Mercurius3/site.git'
+require 'bundler/capistrano'
+require 'rvm/capistrano'
 
-set :branch, "master"
+# De naam van uw applicatie
+set :application, "site"
 
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+# Gegevens van de Bluerail server
+set :host, "mushu.bluerail.nl"
+set :user, "lassche"
 
-set :deploy_to, '/var/www/vhosts/lassche-lassche.nl/staging'
-set :scm, :git
+# Versiebeheer instellingen
+set :scm, :git  # Of 'subversion', 'mercurial' , etc.
+set :repository,  "git@github.com:Mercurius3/site.git"
 
-set :format, :pretty
-# set :log_level, :debug
-set :pty, true
+# Gebruik de standaard Ruby van de server
+set :rvm_ruby_string, 'default'
 
-# set :linked_files, %w{config/database.yml}
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
-
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+# De onderstaande instellingen zijn specifiek voor de Bluerail servers, u
+# hoeft hier zelf geen wijzigingen in aan te brengen.
+set :deploy_to, lambda { capture("echo -n ~/staging") }
+set :rvm_type, :system
+set :rvm_bin_path, '/usr/local/rvm/bin'
+set :use_sudo, false
 set :keep_releases, 3
 
-namespace :deploy do
-
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-    end
-  end
-
-  after :finishing, 'deploy:cleanup'
-
-end
-
-desc "Check that we can access everything"
-task :check_write_permissions do
-  on roles(:all) do |host|
-    if test("[ -w #{fetch(:deploy_to)} ]")
-      info "#{fetch(:deploy_to)} is writable on #{host}"
-    else
-      error "#{fetch(:deploy_to)} is not writable on #{host}"
-    end
-  end
-end
-
-task :whoami do
-  on roles(:all) do
-    execute :whoami
-  end
-end
-
-
+# Bij rvm-capistrano v1.3.0 of hoger dient de volgende regel toegevoegd te worden.
 # set :rvm_path, '/usr/local/rvm'
-# set :rvm_bin_path, '/usr/local/rvm/bin'
+
+role :web, host
+role :app, host
+role :db,  host, :primary => true
+
+# Taak voor het herstarten van de Passenger applicatie en symlinken van de database.yml
+namespace :deploy do
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  after "deploy:update_code", :link_production_db
+end
+
+desc "Link database.yml from shared path"
+task :link_production_db do
+  run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
+  run "ln -nfs #{deploy_to}/shared/config/initializers/devise.rb #{release_path}/config/initializers/devise.rb"
+  run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
+  run "ln -nfs #{deploy_to}/shared/config/app_environment_variables.rb #{release_path}/config/app_environment_variables.rb"
+  run "rm -rf #{release_path}/public/uploads} && ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+end
