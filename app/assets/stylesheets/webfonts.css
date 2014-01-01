@@ -11,3 +11,11 @@
 	     font-url('entypo-social.ttf')  format('truetype'), /* Safari, Android, iOS */
 	     font-url('entypo-social.svg#svgFontName') format('svg'); /* Legacy iOS */
 	}
+  
+@font-face {
+    font-family: 'Lucida-Bol';
+    src: url(font-path('294612_0_0.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('294612_0_0.woff')) format('woff'), 
+         url(font-path('294612_0_0.ttf'))  format('truetype'),
+         url(font-path('294612_0_0.svg') + "#MyFont") format('svg');
+}
