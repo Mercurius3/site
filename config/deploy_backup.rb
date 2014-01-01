@@ -56,5 +56,6 @@ task :create_symlinks do
   run "ln -nfs #{deploy_to}/shared/config/initializers/devise.rb #{release_path}/config/initializers/devise.rb"
   run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
   run "ln -nfs #{deploy_to}/shared/config/app_environment_variables.rb #{release_path}/config/app_environment_variables.rb"
+  run "ln -nfs #{shared_path}/assets #{release_path}/public/assets"
   run "rm -rf #{release_path}/public/uploads} && ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
 end
