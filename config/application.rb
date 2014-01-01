@@ -22,7 +22,7 @@ module Site
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :nl
     config.assets.enabled = true
-    config.assets.version = '1.1'
+    config.assets.version = '1.2'
     config.assets.prefix = '/assets'
   end
 end
