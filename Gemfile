@@ -94,7 +94,7 @@ gem 'zurb-foundation', '~> 4.0.0'
 # Images
 gem 'carrierwave'
 # gem 'asset_sync', '>= 1.0.0'
-gem 'rmagick'
+gem 'rmagick', require: false
 
 gem 'kramdown'
 
