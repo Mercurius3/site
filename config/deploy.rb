@@ -28,7 +28,6 @@ set :rvm_path, '/usr/local/rvm'
 set :rvm_bin_path, '/usr/local/rvm/bin'
 set :use_sudo, false
 set :keep_releases, 1
-after "deploy_update", "deploy_cleanup"
 
 set :shared_children, shared_children + %w{public/uploads}
 

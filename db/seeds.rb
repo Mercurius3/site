@@ -11,4 +11,3 @@ pages = Page.create(
     { name: 'Contact', content: 'Contact pagina', permalink: 'contact' }
   ]
 )
-
