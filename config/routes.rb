@@ -1,10 +1,11 @@
 Site::Application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  # devise_for :users
-  devise_for :users, controllers: { registrations: "users/registrations", passwords: "users/passwords" }
+#  devise_for :users, controllers: { registrations: "users/registrations", passwords: "users/passwords", sessions: "users/sessions" }
+  devise_for :users
+#  devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'registration', sign_up: 'sign_up' }
   
-  # devise_for :users, controllers: { sessions: "users/sessions" }
+#  devise_for :users, controllers: { sessions: "users/sessions" }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

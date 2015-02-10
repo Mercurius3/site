@@ -14,15 +14,15 @@ end
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
-  # gem 'factory_girl_rails'
+  gem 'factory_girl_rails'
   # gem 'rspec-rails', '~> 2.0'
   # gem 'guard-rspec'
 end
 
 group :test do
   gem 'database_cleaner'
-  # gem 'capybara'
-  # gem 'faker'
+  gem 'capybara'
+  gem 'faker'
   # gem 'capybara-webkit'
 end
 
@@ -31,7 +31,7 @@ group :production do
 end
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -103,3 +103,6 @@ gem 'gibbon'
 
 gem 'jquery-validation-rails'
 gem 'nokogiri', '1.5.10'
+
+# Temporarily fixing capistrano and net-ssh bug
+gem 'net-ssh', '~> 2.7.0'

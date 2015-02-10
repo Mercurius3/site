@@ -1,6 +1,8 @@
 class Product < ActiveRecord::Base
   rails_admin do
-    
+#		configure :description do
+#//			html_attributes rows: 20, cols: 50
+#//		end		
   end
   scope :third_party, -> { where(third_party: true, active: true) }
   scope :own_products, -> { where(third_party: false, active: true) }

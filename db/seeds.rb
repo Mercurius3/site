@@ -11,3 +11,4 @@ pages = Page.create(
     { name: 'Contact', content: 'Contact pagina', permalink: 'contact' }
   ]
 )
+user1 = User.create first_name: 'Axel', last_name: 'Graff', email: 'mercurius3@me.com', password: 'testtest'
