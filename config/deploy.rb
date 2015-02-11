@@ -29,6 +29,8 @@ set :rvm_bin_path, '/usr/local/rvm/bin'
 set :use_sudo, false
 set :keep_releases, 1
 
+ssh_options[:forward_agent] = true
+
 set :shared_children, shared_children + %w{public/uploads}
 
 role :web, host
