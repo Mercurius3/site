@@ -1,8 +1,8 @@
 $("document").ready(function() {
   
-  var paper = new Raphael(document.getElementById("horizon"), "100%",0);
-  var horizon = paper.path("M0,0 L0,1000 C2400,360 4000,520 4800,680 L4800,0 Z");
-  paper.setViewBox(0,0,4800,1000);
+  var paper = new Raphael(document.getElementById("horizon"), "100%","100%");
+  var horizon = paper.path("M0,0 L0,2000 C4800,720,8000,1040,9600,1360 L9600,0 Z");
+  paper.setViewBox(0,0,9600,2000);
   horizon.attr({
     fill: "white",
     stroke: "none"
