@@ -1,6 +1,6 @@
 $("document").ready(function() {
   
-  var paper = new Raphael(document.getElementById("horizon"), "100%","100%");
+  var paper = Raphael(document.getElementById("horizon"),"100%",300);
   var horizon = paper.path("M0,0 L0,2000 C4800,720,8000,1040,9600,1360 L9600,0 Z");
   paper.setViewBox(0,0,9600,2000);
   horizon.attr({
@@ -9,7 +9,7 @@ $("document").ready(function() {
   });
  
   // icon
-  var brand_paper = new Raphael(document.getElementById("logo"),500,250);
+  var brand_paper = Raphael(document.getElementById("logo"),"100%","100%");
   brand_paper.setViewBox(0,0,1500,750);
   var logo = brand_paper.set();
     var four = brand_paper.path("m485,210c0,21.164001 -17.14801,38.313004 -38.311005,38.313004c-21.161011,0 -38.309998,-17.149002 -38.309998,-38.313004c0,-21.158005 17.148987,-38.313004 38.309998,-38.313004c21.162994,0 38.311005,17.154999 38.311005,38.313004");
@@ -35,6 +35,6 @@ $("document").ready(function() {
     logo.attr({stroke:"none"});
     // logo.transform("T100,0");
   var svg = $('#horizon').find('svg')[0];
-	// svg.setAttribute('preserveAspectRatio', 'none');
-	svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+//  svg.setAttribute('preserveAspectRatio', 'none');
+	svg.setAttribute('preserveAspectRatio', 'xMaxYMax slice');
 });

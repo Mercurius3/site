@@ -33,5 +33,5 @@
 	<p><%= @product.location.name %><br><%= @product.location.address %><br><%= @product.location.postcode %> <%= @product.location.city %></p>
 <% end %>
 <% unless @product.third_party %>
-	<!-- <%= link_to "Aanmelden", new_transaction_path(product_id: @product.id), class: "small button" %>-->
+	<%= link_to "Aanmelden", new_transaction_path(product_id: @product.id), class: "small button" %>
 <% end %>

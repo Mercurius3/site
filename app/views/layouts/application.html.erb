@@ -24,47 +24,41 @@
 			<div id="horizon">
 			</div>
 		</div>
-		<header class="row">
-		  <section class="row" id="marketing">
-				<div id="logo" class="large-offset-2 large-5 columns">
-		      <h1><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
-		      <h2>kunst- en cultuureducatie</h2>
-				</div>
-			  <aside class="large-5 columns" id="marketing-right">
-			    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
-			  </aside>
-				<!-- <div id="logo-image">
-					<%= image_tag("logo.png") %>
-				</div> -->
-		  </section>
+		<header id="header" class="row">
+		  <section id="marketing" class="large-6 columns">
+			<div id="logo"> </div>
+		    <h1><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
+		    <h2>kunst- en cultuureducatie</h2>
+			</section>
+		  <aside id="marketing-right" class="large-6 columns">
+		    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
+		  </aside>
 		</header>
-    <div id="wrapper">
-      <div class="row">
-        <nav id="main_nav" class="large-offset-2 large-10 columns">
-        	<%= render 'layouts/nav' %>
-        </nav>
-      </div>
-      <div class="row" id="main_content">
-        <div class="large-2 columns" id="sidebar">
-          <nav>
-            <%= render 'layouts/sidebar' %>
-						<%= render 'layouts/social' %>
-          </nav>
-        </div>
-        <div class="large-7 columns">
-          <%= render 'layouts/messages' -%>
-          <%= yield %>
-        </div>
-				<div class="large-3 columns" id="aside">
-					<%= render 'layouts/aside' %>
+			<div id="container">
+      	<div class="row">
+        	<nav id="main_nav" class="large-offset-3 large-9 columns">
+        		<%= render 'layouts/nav' %>
+        	</nav>
 				</div>
-      </div>
-		  <div class="row">
-			  <footer class="large-12 columns">
-				  <p>Copyright 2013</p>
-			  </footer>
-		  </div>
-		</div>
+      	<div class="row" id="main_content">
+        	<div class="large-6 push-3 columns">
+          	<%= render 'layouts/messages' -%>
+          	<%= yield %>
+        	</div>
+        	<nav class="large-3 pull-6 columns" id="sidebar">
+          	  <%= render 'layouts/sidebar' %>
+							<%= render 'layouts/social' %>
+        	</nav>
+					<aside class="large-3 columns" id="aside">
+						<%= render 'layouts/aside' %>
+					</aside>
+      	</div>
+			</div>
+		  <footer class="row">
+			  <div class="large-12 columns">
+					<p>Copyright <%= Time.now.year %></p>
+			  </div>
+		  </footer>
     <%= javascript_include_tag "application" %>
     <%= yield :head %>
   </body>

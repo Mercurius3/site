@@ -86,7 +86,7 @@ gem 'devise-i18n-views'
 
 # Zurb/Foundation
 gem 'compass-rails'
-gem 'zurb-foundation', '~> 4.0.0'
+gem 'zurb-foundation'
 
 # Extra
 # gem 'icalendar'

@@ -24,3 +24,4 @@ $(document).foundation();
 if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
 	$('<header id="devbanner">').prependTo('body');
 }
+$(function(){ $(document).foundation(); });
