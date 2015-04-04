@@ -26,5 +26,6 @@ module Site
     config.assets.enabled = true
     config.assets.version = '1.2'
     config.assets.prefix = '/assets'
+		config.middleware.use Rack::Deflater
   end
 end
