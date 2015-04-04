@@ -6,6 +6,8 @@ for (var i=0; i<videos.length; i++) {
 
 	var img = document.createElement("img");
 	img.setAttribute("src", "http://i.ytimg.com/vi/" + youtube.id + "/hqdefault.jpg");
+	img.setAttribute("width", "480");
+	img.setAttribute("height", "360");
 	img.setAttribute("class", "thumb");
 
 	var circle = document.createElement("div");
