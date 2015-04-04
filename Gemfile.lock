@@ -100,6 +100,7 @@ GEM
       haml (>= 4.0.0.rc.1)
       hpricot (~> 0.8.6)
       ruby_parser (~> 3.1.1)
+    htmlcompressor (0.2.0)
     httparty (0.13.3)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -245,6 +246,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   gibbon
+  htmlcompressor
   jbuilder (~> 1.2)
   jquery-rails
   jquery-validation-rails

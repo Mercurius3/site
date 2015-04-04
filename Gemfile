@@ -106,3 +106,5 @@ gem 'nokogiri', '1.5.10'
 
 # Temporarily fixing capistrano and net-ssh bug
 gem 'net-ssh', '~> 2.7.0'
+
+gem 'htmlcompressor'
