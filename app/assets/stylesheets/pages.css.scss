@@ -27,7 +27,7 @@ input:required { content: "\002A"; }
 //typography
 #marketing h1 {font-family:'Lucida-Bol',georgia,serif;}
 
-body { background: $full;}
+// body { background: $full;}
 
 #horizon-container { display: none;}
 #logo { position: absolute; display: block; }
@@ -131,12 +131,12 @@ iframe { max-width: 100%; overflow: hidden;}
 	#logo { display: block; }
 
 	body {
-		background: $full;
-
-  	///* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNjU4MTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-		//background: -moz-linear-gradient(left, #ffffff 0%, $full 100%); /* FF3.6+ */
-		background: -webkit-gradient(linear, top, bottom, color-stop(0%,#ffffff), color-stop(25%,#ffffff), color-stop(100%,$full)); /* Chrome,Safari4+ */
+	//	background: $full;
+	background: #F4D5C9;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  //	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkNjU4MTgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		background: linear-gradient(to right, (lighten($full, 55%)), (lighten($full, 25%))); /* FF3.6+ */
+//		background: lineair-gradient(linear, top, bottom, color-stop(0%,#ffffff), color-stop(25%,#ffffff), color-stop(50%,$full)); /* Chrome,Safari4+ */
 		//background: -o-linear-gradient(left, #ffffff 0%,$full 100%); /* Opera 11.10+ */
 		//background: -ms-linear-gradient(top, #ffffff 0%,$full 100%); /* IE10+ */
 		//background: linear-gradient(to top, $full 60%,$full 70%); /* W3C */

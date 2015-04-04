@@ -4,7 +4,8 @@ $("document").ready(function() {
   var horizon = paper.path("M0,0 L0,2000 C4800,720,8000,1040,9600,1360 L9600,0 Z");
   paper.setViewBox(0,0,9600,2000);
   horizon.attr({
-    fill: "white",
+//    fill: "0-#fff-#d65818",
+		fill: "#FFF",
     stroke: "none"
   });
  
