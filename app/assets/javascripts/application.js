@@ -21,6 +21,7 @@
 //= require jquery.validate.localization/messages_nl
 //= require users
 //= require youtube
+//= require MyFontsWebfontsKit
 $(document).foundation();
 if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
 	$('<header id="devbanner">').prependTo('body');
