@@ -25,7 +25,7 @@ module Site
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :nl
     config.assets.enabled = true
-    config.assets.version = '1.2'
+    config.assets.version = '1.2.1'
     config.assets.prefix = '/assets'
 		config.assets.js_compressor = :uglifier
 		config.assets.css_compressor = :sass
