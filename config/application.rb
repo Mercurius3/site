@@ -40,7 +40,7 @@ module Site
 				:compress_css => true,
 				:css_compressor => Sass,
 				:compress_javascript => true,
-				:javascript_compressor => uglifier,
+				:javascript_compressor => :uglifier,
 				:simple_doctype => false,
 				:remove_script_attributes => true,
 				:remove_style_attributes => true,
