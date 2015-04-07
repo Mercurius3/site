@@ -108,3 +108,9 @@ gem 'nokogiri', '1.5.10'
 gem 'net-ssh', '~> 2.7.0'
 
 gem 'htmlcompressor'
+option = {
+	:compress_javascript => true,
+	:javascript_compressor => :uglifier,
+	:compress_css => true,
+	:css_compressor => :sass
+}
