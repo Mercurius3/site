@@ -27,7 +27,7 @@ module Site
     config.assets.enabled = true
     config.assets.version = '1.2'
     config.assets.prefix = '/assets'
-		config.assets.js_compressor = uglifier
+		config.assets.js_compressor = :uglifier
 		config.assets.css_compressor = :sass
 
 		config.middleware.use Rack::Deflater
