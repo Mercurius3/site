@@ -14,7 +14,7 @@
   
 /*@font-face {
     font-family: 'Lucida-Bol';
-    src: url('2DD418_0_0.eot?#iefix') format('embedded-opentype'),
-         url('2DD418_0_0.woff') format('woff'), 
-         url('2DD418_0_0.ttf')  format('truetype')
+    src: font_url('2DD418_0_0.eot?#iefix') format('embedded-opentype'),
+         font_url('2DD418_0_0.woff') format('woff'), 
+         font_url('2DD418_0_0.ttf')  format('truetype')
 }*/
