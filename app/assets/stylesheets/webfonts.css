@@ -14,7 +14,7 @@
   
 @font-face {
     font-family: 'Lucida-Bol';
-    src: url('2DD418_0_0.eot') + "?#iefix") format('embedded-opentype'),
+    src: url('2DD418_0_0.eot?#iefix') format('embedded-opentype'),
          url('2DD418_0_0.woff') format('woff'), 
          url('2DD418_0_0.ttf')  format('truetype'),
          url('2DD418_0_0.svg') + "#MyFont") format('svg');
