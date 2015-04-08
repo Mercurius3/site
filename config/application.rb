@@ -29,6 +29,7 @@ module Site
     config.assets.prefix = '/assets'
 		config.assets.js_compressor = :uglifier
 		config.assets.css_compressor = :sass
+		config.assets.precompile += %w( .svg )
 
 		config.middleware.use Rack::Deflater
 		config.middleware.use HtmlCompressor::Rack, {
