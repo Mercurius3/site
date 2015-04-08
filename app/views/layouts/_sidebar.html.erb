@@ -10,9 +10,5 @@
 		<li><%= link_to "mijn account", edit_user_registration_path %></li>
 		<li><%= link_to "uitloggen", destroy_user_session_path, method: :delete %></li>
 	</ul>
-<% else %>
-	<ul id="user_nav">
-		<li><%= link_to "inloggen", new_user_session_path %></li>
-	</ul>
 <% end %>
 <div><%= render 'layouts/subscribe_to_newsletter' %></div>
