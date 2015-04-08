@@ -7,6 +7,8 @@
   -moz-box-shadow:    2px 2px 2px rgba(50, 50, 50, 0.25);
   box-shadow:         2px 2px 2px rgba(50, 50, 50, 0.25);
 }
+.row { max-width: 100%; margin-left: 0; margin-right: 0; }
+
 .Lucida-Bol { 
 	font-family: Lucida-Bol;
 	font-weight: normal;
@@ -24,13 +26,11 @@ label.error { position: absolute; right: 0; top: -1em;}
 .valid:after{ content: "\2713"; color: green;}
 input:required { content: "\002A"; }
 
-//typography
-#marketing h1 {font-family:'Lucida-Bol',georgia,serif;}
-
 // body { background: $full;}
 
 #horizon-container { display: none;}
 #logo { position: relative; display: block; }
+#tagline { display: none; }
 #icon { position: absolute; display: block; } 
 
 #container {margin-top: 150px;}
@@ -44,7 +44,6 @@ img { //border: 1px solid rgba(0,0,0,0.1);
 img.logo { text-shadow: none; box-shadow: none; }
 //navigation
 nav {
-//	ul {margin-left: -0.5em; list-style: none;} 
 	ul {list-style:none;}
 	li {margin-right: 0.5em; }
 	a {padding: 0.5em;}
@@ -129,10 +128,13 @@ iframe { max-width: 100%; overflow: hidden;}
 #social_icons span a { margin-right: 5px; float: none;}
 #social_icons a:last-child {margin-right: 0;}
 
+footer { background-color: $full; color: white; padding-top: 1em; font-size: 80%; }
+
 // media query - below = big screen
 @media only screen and (min-width: 768px) {
 	#horizon-container { display: block;}
 	#logo { display: block; }
+	#tagline { display: block; }
 
 	body {
 	//	background: $full;
@@ -154,5 +156,6 @@ iframe { max-width: 100%; overflow: hidden;}
 //	#tagline {display:block; text-indent: 1.3em;}
 	#sidebar_nav, #user_nav, #social_icons { padding-left: 0}
 	#social_icons span { width: 33%; float: left; margin:0; padding: 0;}
-}
 
+	footer { background: none; color: black; }
+}

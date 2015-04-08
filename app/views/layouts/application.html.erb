@@ -36,38 +36,38 @@
 		    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
 		  </aside>
 		</header>
-			<div id="container">
-      	<div class="row">
-        	<nav id="main_nav" class="large-offset-3 large-9 columns">
-        		<%= render 'layouts/nav' %>
-        	</nav>
-				</div>
-      	<div class="row" id="main_content">
-        	<div class="large-6 push-3 columns">
-          	<%= render 'layouts/messages' -%>
-          	<%= yield %>
-        	</div>
-        	<nav class="large-3 pull-6 columns" id="sidebar">
-          	  <%= render 'layouts/sidebar' %>
-							<%= render 'layouts/social' %>
-        	</nav>
-					<aside class="large-3 columns" id="aside">
-						<%= render 'layouts/aside' %>
-					</aside>
-      	</div>
+		<nav class="row">
+			<div id="main_nav" class="large-offset-3 large-9 columns">
+				<%= render 'layouts/nav' %>
 			</div>
-		  <footer class="row">
-			  <div class="large-12 columns">
-					<p>Lassche &amp; Lassche Kunst en Cultuureducatie V.O.F.<br>
-					Mercurius 3<br>
-					2353 WP Leiderdorp<br>
-					Telefoonnummer<br>
+		</nav>
+		<section class="row" id="main_content">
+			<div class="large-6 push-3 columns">
+				<%= render 'layouts/messages' -%>
+				<%= yield %>
+			</div>
+			<nav class="large-3 pull-6 columns" id="sidebar">
+					<%= render 'layouts/sidebar' %>
+					<%= render 'layouts/social' %>
+			</nav>
+			<aside class="large-3 columns" id="aside">
+				<%= render 'layouts/aside' %>
+			</aside>
+		</section>
+		<footer class="row">
+			<p class="small-12 medium-12 large-12 columns">
+				Lassche &amp; Lassche Kunst en Cultuureducatie V.O.F.<br>
+				Mercurius 3<br>
+				2353 WP Leiderdorp<br>
+				Telefoonnummer<br>
 
-					KVK<br>
-					Bankrekeningnummer</p>
-					<p>Copyright <%= Time.now.year %></p>
-			  </div>
-		  </footer>
+				KVK<br>
+				Bankrekeningnummer
+			</p>
+			<p class="large-12 columns">
+				Copyright <%= Time.now.year %>
+			</p>
+		</footer>
     <%= javascript_include_tag "application" %>
     <%= yield :head %>
   </body>
