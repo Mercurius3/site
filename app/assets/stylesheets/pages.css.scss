@@ -30,7 +30,8 @@ input:required { content: "\002A"; }
 // body { background: $full;}
 
 #horizon-container { display: none;}
-#logo { position: absolute; display: block; }
+#logo { position: relative; display: block; }
+#icon { position: absolute; display: block; } 
 
 #container {margin-top: 150px;}
 #social_icons a {font-family:'Entypo-Social'; font-size: 300%;}
@@ -40,6 +41,7 @@ h1, h2, h3, h4 { font-size: 1em; line-height: 2.6em;}
 //image
 img { //border: 1px solid rgba(0,0,0,0.1);
    overflow: hidden; @include shadow; }
+img.logo { text-shadow: none; box-shadow: none; }
 //navigation
 nav {
 //	ul {margin-left: -0.5em; list-style: none;} 
