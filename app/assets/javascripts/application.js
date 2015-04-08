@@ -13,8 +13,6 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require raphael
-//= require logo
 //= require mailchimp
 //= require foundation
 //= require jquery.validate
