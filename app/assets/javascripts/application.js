@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require raphael
 //= require logo
 //= require mailchimp
@@ -22,6 +22,7 @@
 //= require jquery.validate.localization/messages_nl
 //= require users
 //= require youtube
+//= require turbolinks
 $(document).foundation();
 if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
 	$('<header id="devbanner">').prependTo('body');
