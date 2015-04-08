@@ -51,8 +51,7 @@ nav {
 }
 
 #main_nav { margin-bottom: 1em;
-//	ul { margin-left: -0.5em;}
-//	li { margin-right: 0.5em;}
+	left: -0.5em;
 }
 
 #main_nav, #sidebar_nav {
@@ -104,6 +103,9 @@ iframe { max-width: 100%; overflow: hidden;}
 	font-size: 1.6em; line-height: 1em; font-weight: 200;
   a {letter-spacing:1px;}
   span {color:#333;}
+}
+#marketing h1, #marketing h2 {
+	margin-left: -9999px;
 }
 //#logo h2 { position: absolute; top: 88px; left: 85px; font-style: italic; font-weight: normal; overflow: hidden;}
 //#marketing-right { position: absolute; overflow: hidden; right: 0; top: 4em;}
