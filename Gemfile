@@ -95,7 +95,9 @@ gem 'zurb-foundation'
 # Images
 gem 'carrierwave'
 # gem 'asset_sync', '>= 1.0.0'
-gem 'rmagick', require: false
+gem 'mini_magick'
+gem 'piet'
+gem 'piet-binary'
 
 gem 'kramdown'
 
