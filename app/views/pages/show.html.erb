@@ -1,3 +1,9 @@
+<%
+meta title: "Lassche & Lassche",
+     description: "Kunsthistorisch Bureau",
+     keywords: %w(kunst cursussen lezingen rondleidingen tentoonstellingen)
+%>
+<% breadcrumb :page, @page %>
 <%= Kramdown::Document.new(@page.content).to_html.html_safe if @page.content %>
 <% if @page.name.downcase == "nieuwsbrief" && @page.picture %>
 <p><a href="<%= @page.picture.url %>" target="_blank"><%= @page[:picture] %></a>.<p>

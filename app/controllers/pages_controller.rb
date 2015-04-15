@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   before_action :permalink
   def show
-
   end
   
   def category
@@ -25,7 +24,8 @@ class PagesController < ApplicationController
   
   private
   def permalink
-    @page = Page.find_by_permalink!(params[:id])
+#    @page = Page.find_by_permalink!(params[:id])
+		@page = Page.friendly.find(params[:id])
   end
     
 end

@@ -5,6 +5,7 @@
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
+		<%= metamagic %>
     <meta charset="utf-8" />
 
   	<!-- Uncomment to make IE8 render like IE7 -->
@@ -54,6 +55,7 @@
 		<section class="row" id="main_content">
 			<div class="large-6 push-3 columns">
 				<%= render 'layouts/messages' -%>
+				<%= breadcrumbs pretext: "You are here: ", separator: " &raquo; " %>
 				<%= yield %>
 			</div>
 			<nav class="large-3 pull-6 columns" id="sidebar">
