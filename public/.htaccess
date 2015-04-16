@@ -9,6 +9,7 @@ ExpiresByType image/jpeg "access plus 1 month"
 FileETag none
 
 </IfModule>
+LoadModule deflate_module modules/mod_deflate.so
 <IfModule mod_deflate.c>
 	AddOutputFilterByType DEFLATE image/svg+xml
 
