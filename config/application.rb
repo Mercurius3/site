@@ -3,7 +3,6 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 require 'carrierwave'
-require 'uglifier'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -27,8 +26,6 @@ module Site
     config.assets.enabled = false
     config.assets.version = '1.2.2'
     config.assets.prefix = '/assets'
-		config.assets.js_compressor = :uglifier
-		config.assets.css_compressor = :sass
 		config.assets.precompile += %w( .svg )
 
 		config.exceptions_app = self.routes
