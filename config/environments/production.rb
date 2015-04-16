@@ -104,4 +104,7 @@ Site::Application.configure do
 	}
 	config.exceptions_app = self.routes
 	config.active_record.raise_in_transactional_callbacks = true
+
+	# Set far future expires headers on files that are served up.
+	config.static_cache_control = "public, max-age=31536000"
 end
