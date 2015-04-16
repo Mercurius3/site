@@ -24,7 +24,7 @@ module Site
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :nl
     config.assets.enabled = false
-    config.assets.version = '1.2.2'
+    config.assets.version = '1.2.3'
     config.assets.prefix = '/assets'
 		config.assets.precompile += %w( .svg )
 
