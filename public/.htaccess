@@ -9,3 +9,15 @@ ExpiresByType image/jpeg "access plus 1 month"
 FileETag none
 
 </IfModule>
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE image/svg+xml
+	AddOutputFilterByType DEFLATE text/plain
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE text/javascript
+	AddOutputFilterByType DEFLATE text/x-icon
+	AddOutputFilterByType DEFLATE text/xml
+	AddOutputFilterByType DEFLATE application/javascript
+
+	DeflateCompressionLevel 9
+</IfModule>
