@@ -15,7 +15,7 @@ FileETag none
 	AddOutputFilterByType DEFLATE text/html
 	AddOutputFilterByType DEFLATE text/css
 	AddOutputFilterByType DEFLATE text/javascript
-	AddOutputFilterByType DEFLATE text/x-icon
+	AddOutputFilterByType DEFLATE image/x-icon
 	AddOutputFilterByType DEFLATE text/xml
 	AddOutputFilterByType DEFLATE application/javascript
 
