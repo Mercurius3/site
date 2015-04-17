@@ -2,7 +2,7 @@
 
 Site::Application.configure do
   # Use environment names or environment variables:
-#  break unless Rails.env.production? 
+  break unless Rails.env.production? 
   # break unless ENV['ENABLE_COMPRESSION'] == '1'
   
   # Strip all comments from JavaScript files, even copyright notices.
@@ -16,9 +16,6 @@ Site::Application.configure do
 
   config.assets.compile = true
   config.assets.debug = false
-
-  config.assets.js_compressor = :uglifier
-  config.assets.css_compressor = :sass
 
 	config.middleware.use Rack::PageCaching, gzip: :best_speed
 	config.middleware.use HtmlCompressor::Rack
