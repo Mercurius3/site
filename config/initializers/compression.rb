@@ -20,8 +20,10 @@ Site::Application.configure do
   config.assets.js_compressor = uglifier
   config.assets.css_compressor = :sass
 
-  config.middleware.use Rack::Deflater
-  config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
+	config.middleware.use Rack::PageCaching, gzip: :best_speed
+
+#  config.middleware.use Rack::Deflater
+#  config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
 
   config.middleware.use HtmlCompressor::Rack,
     compress_css: true,
