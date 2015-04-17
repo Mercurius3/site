@@ -7,7 +7,7 @@
 	ExpiresByType image/jpeg "access plus 1 month"
 
 	FileETag none
-	<FilesMatch "\.(js|css|svg)$">
+	<FilesMatch "\.(js|css|svg|woff)$">
 		SetOutputFilter DEFLATE
 	</FilesMatch>
 </IfModule>
