@@ -1,10 +1,13 @@
 <IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/x-icon "access plus 1 month"
+	ExpiresActive On
+	ExpiresByType image/x-icon "access plus 1 month"
 
-ExpiresByType image/jpg "access plus 1 month"
-ExpiresByType image/svg "access plus 1 month"
-ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/jpg "access plus 1 month"
+	ExpiresByType image/svg "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
 
-FileETag none
+	FileETag none
+	<FilesMatch "\.(js|css|svg)$">
+		SetOutputFilter DEFLATE
+	</FilesMatch>
 </IfModule>
