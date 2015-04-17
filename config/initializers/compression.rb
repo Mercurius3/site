@@ -1,8 +1,8 @@
 # config/nitializers/compression.rb
 
-Rails.application.configure do
+Site::Application.configure do
   # Use environment names or environment variables:
-  break unless Rails.env.production? 
+#  break unless Rails.env.production? 
   # break unless ENV['ENABLE_COMPRESSION'] == '1'
   
   # Strip all comments from JavaScript files, even copyright notices.
