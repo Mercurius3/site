@@ -78,30 +78,6 @@ Site::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
 	config.log_formatter = ::Logger::Formatter.new
 	
-	# Test compression
-	config.middleware.use Rack::Deflater
-	config.middleware.use HtmlCompressor::Rack, {
-			enabled: true,
-			remove_multi_spaces: true,
-			remove_comments: true,
-			remove_intertag_spaces: false,
-			remove_quotes: true,
-			compress_css: true,
-			css_compressor: :sass,
-			compress_javascript: true,
-			javascript_compressor: :yui,
-			simple_doctype: false,
-			remove_script_attributes: true,
-			remove_style_attributes: true,
-			remove_link_attributes:  true,
-			remove_form_attributes: false,
-			remove_input_attributes: true,
-			remove_javascript_protocol: true,
-			remove_http_protocol: false,
-			remove_https_protocol: false,
-			preserve_line_breaks: false,
-			simple_boolean_attributes: true
-	}
 	config.exceptions_app = self.routes
 	config.active_record.raise_in_transactional_callbacks = true
 
