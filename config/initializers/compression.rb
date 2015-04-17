@@ -1,4 +1,4 @@
-nitializers/compression.rb
+# config/nitializers/compression.rb
 
 Rails.application.configure do
   # Use environment names or environment variables:
