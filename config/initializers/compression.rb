@@ -21,6 +21,7 @@ Site::Application.configure do
   config.assets.css_compressor = :sass
 
 	config.middleware.use Rack::PageCaching, gzip: :best_speed
+	config.middleware.use HtmlCompressor::Rack
 
 #  config.middleware.use Rack::Deflater
 #  config.middleware.insert_before ActionDispatch::Static, Rack::Deflater
