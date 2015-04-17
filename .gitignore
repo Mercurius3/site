@@ -24,6 +24,7 @@
 /vendor/bundle
 /public/tmp
 /public/uploads
+/public/deploy
 .rvmrc
 .ruby-version
 .ruby-gemset

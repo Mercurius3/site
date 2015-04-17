@@ -47,4 +47,8 @@ Site::Application.configure do
   config.assets.debug = true
 
 	config.assets.prefix = "/dev-assets"
+
+	config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
+	config.action_controller.perform_caching = true
+
 end
