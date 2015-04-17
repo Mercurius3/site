@@ -14,8 +14,6 @@ GEM
       rack-test (~> 0.6.2)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.1)
-    actionpack-page_caching (1.0.2)
-      actionpack (>= 4.0.0, < 5)
     actionview (4.2.1)
       activesupport (= 4.2.1)
       builder (~> 3.1)
@@ -173,6 +171,8 @@ GEM
     rack (1.6.0)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-page_caching (0.0.3)
+      rack
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
       rack (~> 1.1)
@@ -277,7 +277,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack-page_caching
   capistrano (~> 2.15)
   capybara
   carrierwave
@@ -306,6 +305,7 @@ DEPENDENCIES
   piet-binary
   rack
   rack-cache
+  rack-page_caching
   rails
   rails_admin
   rails_admin_nestable

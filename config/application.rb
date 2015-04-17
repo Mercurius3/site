@@ -30,5 +30,7 @@ module Site
 
 		config.exceptions_app = self.routes
 		config.active_record.raise_in_transactional_callbacks = true
+
+		config.middleware.use Rack::PageCaching
   end
 end

@@ -121,5 +121,5 @@ option = {
 	:compress_css => true,
 	:css_compressor => :sass
 }
-gem 'actionpack-page_caching'
+gem 'rack-page_caching'
 
