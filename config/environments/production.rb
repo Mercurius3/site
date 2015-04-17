@@ -107,4 +107,6 @@ Site::Application.configure do
 
 	# Set far future expires headers on files that are served up.
 	config.static_cache_control = "public, max-age=31536000"
+
+	config.action_controller.perform_caching = true
 end
