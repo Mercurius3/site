@@ -36,7 +36,6 @@ gem 'sass-rails'#, '4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'#, '>= 1.3.0'
-gem 'yui-compressor'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'#, '~> 4.0.0'
@@ -113,13 +112,5 @@ gem 'net-ssh'#, '~> 2.7.0'
 
 gem 'metamagic'
 gem 'gretel'
-gem 'htmlcompressor'
 gem 'friendly_id'
-option = {
-	:compress_javascript => true,
-	:javascript_compressor => :yui,
-	:compress_css => true,
-	:css_compressor => :sass
-}
 gem 'rack-page_caching'
-
