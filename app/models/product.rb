@@ -8,9 +8,9 @@ class Product < ActiveRecord::Base
   scope :own_products, -> { where(third_party: false, active: true) }
   scope :sorted, -> { order(:position) }
   validates :name, presence: true
-  # validates :description, presence: true #change test if description becomes manditory
-  # validates :price, presence: true #change test if price becomes manditory
-  # validates :startdate, presence: true #change test if startdate becomes manditory
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :startdate, presence: true
   mount_uploader :picture, PictureUploader
   
   belongs_to :category

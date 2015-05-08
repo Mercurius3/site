@@ -8,7 +8,6 @@ $(document).ready(function() {
 			stroke: "none"
 		});
 	};
- 
   // icon
 //  var brand_paper = Raphael(document.getElementById("icon"),"100%","100%");
 //  brand_paper.setViewBox(0,0,1500,750);

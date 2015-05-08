@@ -1,4 +1,5 @@
 Site::Application.configure do
+	config.logger = Logger.new(STDOUT)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -44,6 +45,7 @@ Site::Application.configure do
   config.assets.compress = true
  
 #	config.assets.prefix = "/dev-assets"
+	config.assets.js_compressor = :uglifier
 
 	config.action_controller.perform_caching = true
 

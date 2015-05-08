@@ -1,4 +1,5 @@
 Site::Application.configure do
+	puts "Running in production mode"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -12,7 +13,7 @@ Site::Application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = true
+  config.action_controller.perform_caching = false
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -23,7 +24,7 @@ Site::Application.configure do
   config.serve_static_files = true
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = :yui
   config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -33,7 +34,7 @@ Site::Application.configure do
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.2.5'
+#  config.assets.version = '1.2.5'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -84,5 +85,5 @@ Site::Application.configure do
 	# Set far future expires headers on files that are served up.
 	config.static_cache_control = "public, max-age=31536000"
 
-	config.action_controller.perform_caching = true
+#	config.action_controller.perform_caching = true
 end

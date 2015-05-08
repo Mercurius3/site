@@ -3,11 +3,21 @@ require 'test_helper'
 class UsersControllerTest < ActionController::TestCase
 	include Devise::TestHelpers
 
-	test "login succeeds" do
-		FactoryGirl.build_stubbed(@user)
+	def setup
 		@request.env["devise.mapping"] = Devise.mappings[:user]
-		sign_in :user, @user
-		assert_equal "true", current_user.email
+		@admin = FactoryGirl.create(:admin)
+		sign_in @admin
+
+		@user = FactoryGirl.create(:user)
+		sign_in @user
+	end
+	
+	test "admin has admin rights" do
+		assert_equal(@admin.admin, true)
+	end
+
+	test "user has no admin rights" do
+		assert_equal(@user.admin, false)
 	end
 
 end

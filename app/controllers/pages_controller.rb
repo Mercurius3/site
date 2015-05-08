@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	caches_page :show
+#	caches_page :show
   before_action :permalink
   def show
   end

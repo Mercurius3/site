@@ -28,14 +28,16 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2'
+#  gem 'mysql2'
+gem 'sqlite3'
 end
 
 # Use SCSS for stylesheets
 gem 'sass-rails'#, '4.0.2'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'#, '>= 1.3.0'
+# gem 'uglifier'#, '>= 1.3.0'
+gem 'yui-compressor'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'#, '~> 4.0.0'
@@ -115,3 +117,4 @@ gem 'gretel'
 gem 'friendly_id'
 gem 'rack-page_caching'
 gem 'htmlcompressor'
+gem 'thin'

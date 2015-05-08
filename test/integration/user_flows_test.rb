@@ -3,14 +3,14 @@ require 'test_helper'
 class UserFlowsTest < ActionDispatch::IntegrationTest
  
   test "go to login page" do
-    get "/users/sign_in"
+    get "/auth/login"
     assert_select '#main_content h2', 'Inloggen'
     assert_response :success
   end    
    
   test "login" do
     @user = FactoryGirl.build_stubbed(:user)
-    post_via_redirect "/users/sign_in", new_user: {user_email: @user.email, user_password: @user.password}
+    post_via_redirect "/auth/login", new_user: {user_email: @user.email, user_password: @user.password}
     assert_response :success
   end
 

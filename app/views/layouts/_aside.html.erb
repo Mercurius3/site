@@ -1,7 +1,7 @@
 <% if @page && @page.name == "Home" %>
 	<div class="youtube" id="Ov9SSSZ96ek"></div>
 <% end %>
-<% if @page && @page.picture && @page.name != "Nieuwsbrief" %>
+<% if @page && @page.picture && @page.name != "Nieuwsbrief" && @page.name != "Home"%>
 	<%= image_tag(@page.picture) %>
 <% end %>
 <% if @product && @product.picture %>

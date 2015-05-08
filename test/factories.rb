@@ -3,14 +3,25 @@ Faker::Config.locale = :nl
 
 FactoryGirl.define do
 	factory :user do
-		email "test@test.nl"
+		email { Faker::Internet.email }
 		first_name "John"
 		last_name "Doe"
 		password "xxxxxx"
 		password_confirmation "xxxxxx"
+		confirmed_at Date.today
 		admin false
-  	end
+		factory :admin do
+			admin true
+		end
+  end
 
+	factory :product do
+		name "Een lezing"
+		price 10.00
+		description "This is my products description"
+		startdate { 1.year.ago }
+	end
+end
 #  factory :user do
 #    email { Faker::Internet.email }
 #    first_name { Faker::Name.first_name }
@@ -29,4 +40,3 @@ FactoryGirl.define do
 #
 #    factory :user_without_street_number, traits: [:wrong_street_number]
 #  end
-end
