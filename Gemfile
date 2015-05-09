@@ -67,13 +67,11 @@ end
 
 # Use Capistrano for deployment
 group :development do
-#  gem 'capistrano-rails', '~> 1.0.0'
+	gem 'capistrano', '~> 3.0', require: false, group: :development
+	gem 'capistrano-rails', require: false
+	gem 'capistrano-bundler', require: false
+	gem 'capistrano-rvm', require: false
 end
-# gem 'capistrano', '~> 3.0', require: false, group: :development
-gem 'capistrano', '~> 2.15'
-gem 'rvm-capistrano'
-# gem 'capistrano-bundler'
-# gem 'capistrano-rvm'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]

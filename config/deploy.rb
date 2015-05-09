@@ -1,82 +1,53 @@
-set :stages, %w(production staging)
-set :default_stage, "staging"
+# config valid only for current version of Capistrano
+lock '3.4.0'
 
-require 'bundler/capistrano'
-require 'rvm/capistrano'
-require 'capistrano/ext/multistage'
+set :application, 'site'
+set :repo_url, 'git@github.com:Mercurius3/site.git'
 
-set :application, "site"
+# Default branch is :master
+# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
-# Gegevens van de Bluerail server
-set :host, "mushu.bluerail.nl"
-set :user, "lassche"
+# Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
 
-# Versiebeheer instellingen
-set :scm, :git  # Of 'subversion', 'mercurial' , etc.
-set :repository,  "git@github.com:Mercurius3/site.git"
+# Default value for :scm is :git
+# set :scm, :git
 
-# Gebruik de standaard Ruby van de server
-# Zou niet meer nodig moeten zijn
-  set :rvm_ruby_string, 'default'
+# Default value for :format is :pretty
+# set :format, :pretty
 
-# De onderstaande instellingen zijn specifiek voor de Bluerail servers, u
-# hoeft hier zelf geen wijzigingen in aan te brengen.
-# set :deploy_to, lambda { capture("echo -n ~/rails") }
-set :deploy_to, lambda { capture("echo -n ~/staging") }
+# Default value for :log_level is :debug
+# set :log_level, :debug
+
+# Default value for :pty is false
+# set :pty, true
+
+# Default value for :linked_files is []
+# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+
+# Default value for linked_dirs is []
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+set :keep_releases, 3
+
+# capistrano/rvm
 set :rvm_type, :system
 set :rvm_path, '/usr/local/rvm'
 set :rvm_bin_path, '/usr/local/rvm/bin'
-set :use_sudo, false
-set :keep_releases, 1
-
-ssh_options[:forward_agent] = true
-
-set :shared_children, shared_children + %w{public/uploads}
-
-role :web, host
-role :app, host
-role :db,  host, :primary => true
 
 namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
   end
 
-  after "deploy:update_code", :link_production_db
 end
-
-desc "Link database.yml from shared path"
-task :link_production_db do
-  run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-  run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
-  run "ln -nfs #{deploy_to}/shared/config/initializers/devise.rb #{release_path}/config/initializers/devise.rb"
-  run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
-  run "ln -nfs #{deploy_to}/shared/config/app_environment_variables.rb #{release_path}/config/app_environment_variables.rb"
-  run "rm -rf #{release_path}/public/uploads} && ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
-end
-
-# Taak voor het herstarten van de Passenger applicatie en symlinken van de database.yml
-# namespace :deploy do
-#   task :start do ; end
-#   task :stop do ; end
-#   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-#   before "deploy:assets:precompile", :create_symlinks
-#   after "deploy", "deploy:cleanup"
-#   task :seed do
-#     run "cd #{deploy_to}/current && bundle exec rake db:seed RAILS_ENV=#{rails_env} && touch tmp/restart.txt"
-#   end
-# end
-# 
-# desc "Link database.yml from shared path"
-# task :create_symlinks do
-#   run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
-#   run "ln -nfs #{deploy_to}/shared/config/initializers/secret_token.rb #{release_path}/config/initializers/secret_token.rb"
-#   run "ln -nfs #{deploy_to}/shared/config/initializers/devise.rb #{release_path}/config/initializers/devise.rb"
-#   run "ln -nfs #{deploy_to}/shared/config/application.yml #{release_path}/config/application.yml"
-#   run "ln -nfs #{deploy_to}/shared/config/app_environment_variables.rb #{release_path}/config/app_environment_variables.rb"
-#   run "rm -rf #{release_path}/public/uploads} && ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
-# end
