@@ -7,7 +7,9 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 server 'mushu.bluerail.nl', user: 'lassche', roles: %w{app db web}
-set :deploy_to, lambda { capture("echo -n ~/staging") }
+# set :deploy_to, lambda { capture("echo -n ~/staging") }
+set :deploy_to, "/var/www/vhosts/lassche-lassche.nl/staging"
+
 
 # role-based syntax
 # ==================
@@ -45,6 +47,12 @@ set :deploy_to, lambda { capture("echo -n ~/staging") }
 #    auth_methods: %w(password)
 #  }
 #
+# set :ssh_options, { 
+#	user: 'lassche',
+#	keys: %w(~/.ssh/id_rsa), 
+#	forward_agent: true,
+#}
+	
 # The server-based syntax can be used to override options:
 # ------------------------------------
 # server 'example.com',

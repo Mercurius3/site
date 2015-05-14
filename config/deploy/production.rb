@@ -7,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 server 'mushu.bluerail.nl', user: 'lassche', roles: %w{app db web}
-set :deploy_to, lambda { capture("echo -n ~/staging") }
+set :deploy_to, "/var/www/vhosts/lassche-lassche.nl/staging"
 
 
 
