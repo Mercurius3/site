@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :name
   rails_admin do
 #		configure :description do
 #//			html_attributes rows: 20, cols: 50
