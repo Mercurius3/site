@@ -24,20 +24,20 @@ Site::Application.routes.draw do
 #  get 'users/check_email_exists' => 'users#check_email_exists'
 #  get 'users/check_email_same_as_current_user_or_unique' => 'users#check_email_same_as_current_user_or_unique'
   
-#  get 'nieuws', to: 'posts#index', as: 'nieuws'
-#  get 'contact', to: 'questions#new', as: 'contact'
+get 'nieuws', to: 'posts#index', as: 'nieuws'
+get 'contact', to: 'questions#new', as: 'contact'
 
 #  get 'inopdracht', to: 'pages#inopdracht', id: 'inopdracht'
   
-#  get 'overzicht', to: 'pages#overzicht', id: 'overzicht'
-#  get 'home', to: 'pages#show', id: 'home'
+get 'overzicht', to: 'pages#overzicht', id: 'overzicht'
+get 'home', to: 'pages#show', id: 'home'
   
-#  get 'cursussen', to: 'pages#category', id: 'cursussen'
-#  get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
-#  get 'lezingen', to: 'pages#category', id: 'lezingen'
-#  get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
+get 'cursussen', to: 'pages#category', id: 'cursussen'
+get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
+get 'lezingen', to: 'pages#category', id: 'lezingen'
+get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
   
- get ':id', to: 'pages#show', as: :page
+# get ':id', to: 'pages#show', as: :page
  get 'produkten/:id', to: 'products#show', as: :product
 #  get 'categories/:name' => 'categories#show', as: :name
 resources :categories, :products, :transactions, :posts, :events
