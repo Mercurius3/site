@@ -1,11 +1,11 @@
 Site::Application.routes.draw do
 
-  get "errors/file_not_found"
-  get "errors/unprocessable"
-  get "errors/internal_server_error"
-  match '/404', to: 'errors#file_not_found', via: :all
-  match '/422', to: 'errors#unprocessable', via: :all
-  match '/500', to: 'errors#internal_server_error', via: :all
+#  get "errors/file_not_found"
+#  get "errors/unprocessable"
+#  get "errors/internal_server_error"
+#  match '/404', to: 'errors#file_not_found', via: :all
+#  match '/422', to: 'errors#unprocessable', via: :all
+#  match '/500', to: 'errors#internal_server_error', via: :all
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 #  devise_for :users, controllers: { registrations: "users/registrations", passwords: "users/passwords", sessions: "users/sessions" }
 #  devise_for :users
@@ -91,6 +91,4 @@ resources :categories, :products, :transactions, :posts, :events
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-	
-  match '/*', to: 'errors#file_not_found', via: :all
 end
