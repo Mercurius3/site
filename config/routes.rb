@@ -92,4 +92,5 @@ resources :categories, :products, :transactions, :posts, :events
   #     resources :products
   #   end
 	
+  match '/*', to: 'errors#file_not_found', via: :all
 end
