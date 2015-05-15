@@ -175,6 +175,8 @@ GEM
       piet (>= 0.2.0)
       png_quantizator
     png_quantizator (0.1.1)
+    quiet_safari (1.0.0)
+      railties (>= 3.1.0)
     rack (1.6.0)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -317,6 +319,7 @@ DEPENDENCIES
   nokogiri
   piet
   piet-binary
+  quiet_safari
   rack
   rack-cache
   rack-page_caching

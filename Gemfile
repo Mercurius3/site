@@ -10,6 +10,8 @@ group :development do
   # gem 'better_errors'
   # gem 'binding_of_caller'
   # gem 'meta_request'
+	# Stop getting errors from apple-touch-icon(-precomposed).png
+  gem 'quiet_safari'
 end
 
 # Use sqlite3 as the database for Active Record
