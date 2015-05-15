@@ -1,6 +1,5 @@
 <ul id="sidebar_nav">
   <% @page_nav.where(main_navigation: false).each do |page| %>
-    <li><%= nav_link_to(page.name.downcase, page_path(page.permalink), id: page.permalink) %></li>
   <% end %>
 </ul>
 
