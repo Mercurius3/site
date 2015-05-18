@@ -21,6 +21,8 @@
 /config/initializers/secret_token.rb
 /config/database.yml
 /config/database.live.yml
+/config/database.yml.live.yml
+/config/secrets.yml
 /vendor/bundle
 /public/tmp
 /public/uploads
