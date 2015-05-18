@@ -19,7 +19,7 @@
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_nl
 //= require users
-//= require youtube
+//= require gplus-youtubeembed
 //= require turbolinks
 $(document).foundation();
 if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
