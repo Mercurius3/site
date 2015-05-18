@@ -40,7 +40,7 @@ get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
 # get ':id', to: 'pages#show', as: :page
  get 'produkten/:id', to: 'products#show', as: :product
 #  get 'categories/:name' => 'categories#show', as: :name
-resources :categories, :products, :transactions, :posts, :events
+resources :pages, :categories, :products, :transactions, :posts, :events
 #  resources :questions, only: [:new, :create]
 
   # Example of regular route:

@@ -45,7 +45,7 @@ Site::Application.configure do
   config.assets.compress = true
  
 #	config.assets.prefix = "/dev-assets"
-	config.assets.js_compressor = :uglifier
+	config.assets.js_compressor = :yui
 
 	config.action_controller.perform_caching = true
 
