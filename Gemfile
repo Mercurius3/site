@@ -89,7 +89,8 @@ gem 'devise-i18n-views'
 
 # Zurb/Foundation
 #gem 'compass-rails'
-gem 'zurb-foundation'
+# gem 'zurb-foundation' # outdated
+gem 'foundation-rails'
 
 # Extra
 # gem 'icalendar'
