@@ -1,5 +1,5 @@
-<ul class="button-group">
+<ul class="stack-for-small button-group">
   <% @page_nav.main_nav.each do |page| %>
-		<li class="small button"><%= nav_link_to(page.name.upcase, page_path(page.permalink)) %></li>
+		<li><%= nav_link_to(page.name.upcase, page_path(page.permalink), class: "tiny button expanded") %></li>
   <% end %>
 </ul>
