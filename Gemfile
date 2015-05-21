@@ -119,3 +119,5 @@ gem 'friendly_id'
 gem 'rack-page_caching'
 gem 'htmlcompressor'
 gem 'thin'
+
+gem 'nav_lynx'

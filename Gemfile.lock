@@ -163,6 +163,8 @@ GEM
     multi_json (1.11.0)
     multi_xml (0.5.5)
     mysql2 (0.3.18)
+    nav_lynx (1.1.1)
+      rails (>= 3.1.0)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -317,6 +319,7 @@ DEPENDENCIES
   metamagic
   mini_magick
   mysql2
+  nav_lynx
   net-ssh
   nokogiri
   piet
