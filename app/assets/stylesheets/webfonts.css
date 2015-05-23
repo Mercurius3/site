@@ -5,16 +5,17 @@
 }
 @font-face {
 	font-family: 'Entypo-Social';
-	src: asset-url('entypo-social.eot'); /* IE9 Compat Modes */
-	src: asset-url('entypo-social.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	     asset-url('entypo-social.woff') format('woff'), /* Modern Browsers */
-	     asset-url('entypo-social.ttf')  format('truetype'), /* Safari, Android, iOS */
-	     asset-url('entypo-social.svg#svgFontName') format('svg'); /* Legacy iOS */
+	src: font-url('entypo-social.eot'); /* IE9 Compat Modes */
+	src: font-url('entypo-social.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     font-url('entypo-social.woff') format('woff'), /* Modern Browsers */
+	     font-url('entypo-social.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     font-url('entypo-social.svg#svgFontName') format('svg'); /* Legacy iOS */
 	}
   
 @font-face {
     font-family: 'Lucida-Bol';
-    src: font-url('2DD418_0_0.eot?#iefix') format('embedded-opentype'),
-         font-url('2DD418_0_0.woff') format('woff'), 
-         font-url('2DD418_0_0.ttf')  format('truetype')
+    src: url(font-path('294612_0_0.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('294612_0_0.woff')) format('woff'), 
+         url(font-path('294612_0_0.ttf'))  format('truetype'),
+         url(font-path('294612_0_0.svg') + "#MyFont") format('svg');
 }

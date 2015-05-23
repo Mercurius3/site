@@ -5,4 +5,5 @@ class Transaction < ActiveRecord::Base
   belongs_to :product
   accepts_nested_attributes_for :user
   accepts_nested_attributes_for :product
+	validates :accept_conditions, presence: true
 end

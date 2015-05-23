@@ -6,7 +6,6 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-		<%= metamagic %>
 
   	<!-- Uncomment to make IE8 render like IE7 -->
   	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
@@ -14,75 +13,60 @@
   	<!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lassche &amp; Lassche</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-		<%= javascript_include_tag "vendor/modernizr" %>
+		<%= stylesheet_link_tag "application", media: "all" %>
+    <!-- <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %> -->
+    <!-- <%= javascript_include_tag "application", "data-turbolinks-track" => true %> -->
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <body>
 		<div id="horizon-container">
 			<div id="horizon">
-				<svg width="100%" height="100%">
-				
-					<defs>
-						<clipPath id="clipPath" viewBox="0 0 9600 2000">
-							<rect x="0" y="0" width="100%" height="150" />
-						</clipPath>
-					</defs>
-					<rect x="0" y="0" width="100%" height="300" fill="white" style="clip-path: url(#clipPath);" />
-
-					<svg viewBox="0 0 9600 2000">
-							<path d="M0,0 L0,2000 C4800,720,8000,1040,9600,1360 L9600,0 Z" fill="white" />
-					</svg>
-				</svg>
 			</div>
 		</div>
-		<header id="header" class="row">
-		  <section id="marketing" class="medium-6 columns">
-			<div id="logo"> </div>
-				<div id="icon"></div>
-				<%= image_tag("logo_with_text.svg", alt: "logo", class: "logo", width: 278, height: 76) %>
-		    <h1><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
-		    <h2>kunst- en cultuureducatie</h2>
-			</section>
-		  <aside id="marketing-right" class="medium-6 columns">
-		    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
-		  </aside>
+		<header class="row">
+		  <section class="row" id="marketing">
+				<div id="logo" class="large-offset-2 large-5 columns">
+		      <h1><%= link_to (raw "<span>lassche</span> & <span>lassche</span>"), root_path %></h1>
+		      <h2>kunst- en cultuureducatie</h2>
+				</div>
+			  <aside class="large-5 columns" id="marketing-right">
+			    <p id="tagline">je <span>ziet</span> meer<br /> als je weet waar je naar kijkt</p>
+			  </aside>
+				<!-- <div id="logo-image">
+					<%= image_tag("logo.png") %>
+				</div> -->
+		  </section>
 		</header>
-		<nav class="row">
-			<div class="medium-offset-3 medium-9 columns">
-				<%= render 'layouts/nav' %>
-			</div>
-		</nav>
-		<section class="row" id="main_content">
-			<div class="medium-6 push-3 columns">
-				<%= render 'layouts/messages' -%>
-				<%= breadcrumbs pretext: "You are here: ", separator: " &raquo; " %>
-				<%= yield %>
-			</div>
-			<nav class="medium-3 pull-6 columns">
-					<%= render 'layouts/sidebar' %>
-					<%= render 'layouts/social' %>
-			</nav>
-			<aside class="medium-3 columns" id="aside">
-				<%= render 'layouts/aside' %>
-			</aside>
-		</section>
-		<footer class="row">
-			<p class="small-12 medium-12 large-12 columns">
-				Lassche &amp; Lassche Kunst en Cultuureducatie V.O.F.<br>
-				Mercurius 3<br>
-				2353 WP Leiderdorp<br>
-				Telefoonnummer<br>
-
-				KVK<br>
-				Bankrekeningnummer
-			</p>
-			<p class="medium-12 columns">
-				Copyright <%= Time.now.year %>
-			</p>
-		</footer>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <div id="wrapper">
+      <div class="row">
+        <nav id="main_nav" class="large-offset-2 large-10 columns">
+        	<%= render 'layouts/nav' %>
+        </nav>
+      </div>
+      <div class="row" id="main_content">
+        <div class="large-2 columns" id="sidebar">
+          <nav>
+            <%= render 'layouts/sidebar' %>
+						<%= render 'layouts/social' %>
+          </nav>
+        </div>
+        <div class="large-7 columns">
+          <%= render 'layouts/messages' -%>
+					<%= render 'shared/error_messages' -%>
+          <%= yield %>
+        </div>
+				<div class="large-3 columns" id="aside">
+					<%= render 'layouts/aside' %>
+				</div>
+      </div>
+		  <div class="row">
+			  <footer class="large-12 columns">
+				  <p>Copyright 2015</p>
+			  </footer>
+		  </div>
+		</div>
+    <%= javascript_include_tag "application" %>
     <%= yield :head %>
-		<script type="text/javascript">optimizeYouTubeEmbeds()</script>
   </body>
 </html>

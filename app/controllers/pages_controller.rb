@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
-#	caches_page :show
   before_action :permalink
   def show
+
   end
   
   def category
     @category = Category.current_category(params[:id]).first
-    @products = @category.own_products.sorted
+		@products = @category.own_products.sorted
   end
 
   def overzicht
@@ -25,8 +25,7 @@ class PagesController < ApplicationController
   
   private
   def permalink
-#    @page = Page.find_by_permalink!(params[:id])
-		@page = Page.friendly.find(params[:id])
+    @page = Page.find_by_permalink!(params[:id])
   end
     
 end

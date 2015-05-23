@@ -17,19 +17,19 @@ class ApplicationController < ActionController::Base
     @gb = Gibbon::API.new(ENV['MAILCHIMP_API_TOKEN'])
   end
   
-#  protected
+  protected
   # def configure_permitted_parameters
   #   devise_parameter_sanitizer.for(:sign_up) << :first_name
   #   devise_parameter_sanitizer.for(:account_update) << :first_name
   # end
   
-#   def devise_parameter_sanitizer
-#    if resource_class == User
-#       User::ParameterSanitizer.new(User, :user, params)
-#    else
-#       super
-#    end
-#  end
+  def devise_parameter_sanitizer
+    if resource_class == User
+       User::ParameterSanitizer.new(User, :user, params)
+    else
+       super
+    end
+  end
   
   private
   def set_nav_var

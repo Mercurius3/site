@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    name = params[:name].capitalize
+    name = params[:name]
     @category = Category.where(name: name).first
     @products = @category.products.order(:position)
   end

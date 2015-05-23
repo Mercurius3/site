@@ -1,6 +1,6 @@
 Wilt u onze nieuwsbrief ontvangen?<br>
 <%= form_tag('/mcsubscribe/subscribe', method: "post", id: "mcsubscribe", remote: "true") do -%>
    <%= email_field(:email, :address, {id: "email", placeholder: "uw mailadres"}) %>
-   <%= submit_tag("Aanmelden nieuwsbrief", class: "small button") %>
+   <%= submit_tag("Aanmelden nieuwsbrief") %>
 <% end %>
 <div id="response"></div>

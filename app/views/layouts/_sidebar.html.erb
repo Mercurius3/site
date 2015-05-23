@@ -1,14 +1,6 @@
-<ul class="stack button-group">
+<ul id="sidebar_nav">
   <% @page_nav.where(main_navigation: false).each do |page| %>
-		<li><%= nav_link_to(page.name.upcase, page_path(page.permalink), class: "tiny button extended") %></li>
+    <li><%= nav_link_to(page.name.downcase, page_path(page.permalink), id: page.permalink) %></li>
   <% end %>
 </ul>
-
-<% if user_signed_in? %>
-	Ingelogd als:<br><strong><%= current_user.email %></strong>
-	<ul id="user_nav">
-		<li><%= link_to "mijn account", edit_user_registration_path %></li>
-		<li><%= link_to "uitloggen", destroy_user_session_path, method: :delete %></li>
-	</ul>
-<% end %>
 <div><%= render 'layouts/subscribe_to_newsletter' %></div>

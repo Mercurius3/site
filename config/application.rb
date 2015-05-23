@@ -2,8 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-require 'carrierwave'
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -23,13 +21,8 @@ module Site
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.i18n.default_locale = :nl
-    config.assets.enabled = false
-#    config.assets.version = '1.2.5'
+    config.assets.enabled = true
+    config.assets.version = '1.2'
     config.assets.prefix = '/assets'
-		config.assets.precompile += %w( .svg )
-
-		config.exceptions_app = self.routes
-		config.active_record.raise_in_transactional_callbacks = true
-
   end
 end

@@ -7,7 +7,39 @@
 <%= form_for @transaction do |f| %>
   <%= f.hidden_field :product_id, value: @product.id %>
 	<%= f.fields_for :user do |builder| %>
-		<%= builder.text_field :email %>
+		<%= f.label "Mailadres:" %>
+		<%= builder.text_field :email, placeholder: "naam@provider.com", required: true %>
+		<div class="row">
+			<div class="small-6 columns">
+				<%= f.label "Voornaam:" %>
+				<%= builder.text_field :first_name, placeholder: "uw voornaam" %>
+			</div>
+			<div class="small-6 columns">
+				<%= f.label "Achternaam:" %>
+				<%= builder.text_field :last_name, placeholder: "uw achternaam" %>
+			</div>
+		</div>
+	<% end %>	
+	<%= f.label "Uw bericht" %>
+	<%= f.text_area :message, placeholder: "uw bericht (optioneel)" %>
+	<div class="row">
+		<div class="small-1 columns">
+			<%= f.check_box :accept_conditions, id: "transaction_accept_conditions", class: "right" %>
+		</div>
+		<div class="small-11 columns">
+			<%= f.label "accept_conditions", raw("Gaat u akkoord met onze #{link_to 'voorwaarden', page_path('voorwaarden'), :'data-reveal-id' => 'voorwaarden' }?"), class: "left inline" %>
+		</div>
+	</div>
+	<% unless @transaction.errors[:accept_conditions].empty? %>
+		<small class="error">U kunt zich alleen aanmelden als u akkoord gaat met onze voorwaarden.</small>
 	<% end %>
-  <%= f.submit "Aanmelden", class: "small button" %>
+  <%= f.submit "Aanmelding bevestigen", class: "small button" %>
 <% end %>
+
+<div id="modal">
+	<%= content_tag :div, id: "voorwaarden", class: "reveal-modal", :'data-reveal aria-labelledby' => 'voorwaardenModal', :role => 'dialog' do %>
+		<h1 id="voorwaardenModal">Voorwaarden</h1>
+		<%= Kramdown::Document.new(@conditions.content).to_html.html_safe if @conditions.content if @conditions %>
+		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+	<% end %>
+</div>

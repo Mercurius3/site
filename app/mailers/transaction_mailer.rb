@@ -1,8 +1,8 @@
 class TransactionMailer < ActionMailer::Base
-	default from: "info@lassche-lassche.nl"
+  default from: "info@lassche-lassche.nl"
 
-	def transaction_confirmation(transaction)
-		@transaction = transaction
-		mail(to: @transaction.user.email, subject: "Aanmelding #{transaction.product.name}")
-	end
+    def transaction_confirmation(transaction)
+      @transaction = transaction
+      mail(to: @transaction.user.email, bcc: ["mercurius3@me.com","marielle@lassche-lassche.nl"], subject: "Aanmelding #{@transaction.product.name}")
+    end
 end

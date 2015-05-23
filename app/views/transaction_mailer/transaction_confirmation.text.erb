@@ -1,4 +1,4 @@
-Geachte heer, mevrouw,
+Geachte <%= @transaction.user.first_name %> <%= @transaction.user.last_name %>,
 
 Hartelijk dank voor uw aanmelding voor: <%= @transaction.product.name %>
 
@@ -7,3 +7,7 @@ Uw aanmelding is pas definitief op het moment dat wij uw betaling hebben ontvang
 Met vriendelijke groet,
 
 Lassche & Lassche
+
+Uw bericht:
+
+"<%= @transaction.message %>"

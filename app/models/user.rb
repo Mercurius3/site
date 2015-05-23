@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
   
   # validate :email, uniqueness: true, presence: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, on: :create }
   # validate :street_number, presence: true
-  
+  validate :first_name, presence: true
+	validate :last_name, presence: true
 end

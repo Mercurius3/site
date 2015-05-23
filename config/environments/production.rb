@@ -1,5 +1,4 @@
 Site::Application.configure do
-	puts "Running in production mode"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -13,28 +12,28 @@ Site::Application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-  config.action_controller.perform_caching = false
+  config.action_controller.perform_caching = true
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like nginx, varnish or squid.
-  config.action_dispatch.rack_cache = true
+  # config.action_dispatch.rack_cache = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
-  config.serve_static_files = true
+  config.serve_static_assets = false
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :yui
-  config.assets.css_compressor = :sass
+  config.assets.js_compressor = :uglifier
+  # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-#  config.assets.compile = false
+  config.assets.compile = false
 
   # Generate digests for assets URLs.
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-#  config.assets.version = '1.2.5'
+  config.assets.version = '1.0'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -77,13 +76,5 @@ Site::Application.configure do
   # config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-	config.log_formatter = ::Logger::Formatter.new
-	
-	config.exceptions_app = self.routes
-	config.active_record.raise_in_transactional_callbacks = true
-
-	# Set far future expires headers on files that are served up.
-	config.static_cache_control = "public, max-age=31536000"
-
-#	config.action_controller.perform_caching = true
+  config.log_formatter = ::Logger::Formatter.new
 end

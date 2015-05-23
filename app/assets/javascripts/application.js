@@ -11,18 +11,16 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
+//= require raphael
+//= require logo
 //= require mailchimp
 //= require foundation
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_nl
 //= require users
-//= require gplus-youtubeembed
-//= require turbolinks
 $(document).foundation();
 if (!(/^http:\/\/lassche-lassche.nl/).test(window.location.href)) {
 	$('<header id="devbanner">').prependTo('body');
 }
-$(function(){ $(document).foundation(); });

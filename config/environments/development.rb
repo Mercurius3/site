@@ -1,5 +1,4 @@
 Site::Application.configure do
-	config.logger = Logger.new(STDOUT)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -28,7 +27,7 @@ Site::Application.configure do
   }
 
   
-  config.action_mailer.default_url_options = { :host => '0.0.0.0:3000' }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -39,14 +38,11 @@ Site::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-  config.assets.debug = false
+  config.assets.debug = true
   
   # Do not compress assets
-  config.assets.compress = true
+  config.assets.compress = false
  
-#	config.assets.prefix = "/dev-assets"
-	config.assets.js_compressor = :yui
-
-	config.action_controller.perform_caching = true
-
+  # Expands the lines which load the assets
+  config.assets.debug = true
 end

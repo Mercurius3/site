@@ -1,0 +1,1 @@
+Site::Application.config.secret_key_base = '8f21c7cbd136def2aad41aff98dbfd30331a9bbcaba44ff8e81f5856f0d6297e8f834bc439386a1fc0512b4304e502323c2901098a775f87d783de59312cba'
