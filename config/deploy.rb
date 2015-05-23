@@ -25,7 +25,7 @@ set :branch, fetch(:branch, 'rails3')
 # set :deploy_to, lambda { capture("echo -n ~/rails") }
 set :deploy_to, lambda { capture("echo -n ~/staging") }
 set :rvm_type, :system
-set :rvm_path, '/usr/local/rvm'
+#set :rvm_path, '/usr/local/rvm'
 set :rvm_bin_path, '/usr/local/rvm/bin'
 set :use_sudo, false
 set :keep_releases, 1
