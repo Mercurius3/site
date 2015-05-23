@@ -14,6 +14,7 @@ set :user, "lassche"
 # Versiebeheer instellingen
 set :scm, :git  # Of 'subversion', 'mercurial' , etc.
 set :repository,  "git@github.com:Mercurius3/site.git"
+set :branch, fetch(:branch, 'rails3')
 
 # Gebruik de standaard Ruby van de server
 # Zou niet meer nodig moeten zijn
