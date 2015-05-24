@@ -62,6 +62,44 @@ RailsAdmin.config do |config|
   
   config.model Product do
     nestable_list true
+		edit do
+			field :name
+#			field :short_description do
+#				label "waar gebruiken we dit ook al weer voor?"
+#			end
+			field :startdate do
+				label "startdatum"
+			end
+			field :purchasable do
+				label "bestelknop"
+			end
+			field :active do
+				label "nu in programma"
+			end
+			field :third_party do
+				label "voor ander bedrijf"
+			end
+			field :price do
+				label "prijs"
+			end
+			field :category do
+				label "categorie"
+			end
+			field :position do
+				label "positie"
+			end
+			field :teacher do
+				label "docent(-en)"
+			end
+			field :location do
+				label "locatie"
+			end
+			field :description do
+				label "tekst"
+				html_attributes rows: 30, cols: 80
+			end
+			field :picture
+		end
   end
 
   config.model Page do

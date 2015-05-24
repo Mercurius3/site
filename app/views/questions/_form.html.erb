@@ -3,14 +3,14 @@
 <p>Via het onderstaande contactformulier kunt u ons bereiken:</p>
 
 <%= form_for @question do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.label "naam" %>
+  <%= f.text_field :name, placeholder: "uw naam" %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+  <%= f.label "email" %>
+  <%= f.email_field :email, placeholder: "uw mailadres" %>
 
-  <%= f.label :message %>
-  <%= f.text_area :message %>
+  <%= f.label "bericht" %>
+  <%= f.text_area :message, placeholder: "uw bericht", rows: 5 %>
 
-  <%= f.submit 'Submit' %>
+  <%= f.submit "Verzenden", class: "small button" %>
 <% end %>

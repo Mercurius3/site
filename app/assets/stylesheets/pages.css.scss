@@ -21,6 +21,9 @@ $primary-color:$full;
 
 .foo {display:inline-block;}
 
+//bugfix
+textarea { height: auto; }
+
 //errors
 label.error { position: absolute; right: 0; top: -1em;}
 .valid:after{ content: "\2713"; color: green;}

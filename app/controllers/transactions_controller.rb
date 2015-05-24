@@ -18,7 +18,7 @@ class TransactionsController < ApplicationController
       redirect_to root_path, notice: 'Wij hebben uw aanmelding ontvangen!'
     else
 			@conditions = Page.find_by_permalink!('voorwaarden')
-      flash[:alert] = "Er is een probleem met uw aanmelding!"
+      flash[:error] = "Er is een probleem met uw aanmelding!"
 			puts "can't save"
       render :action => 'new'
     end
