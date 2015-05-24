@@ -14,8 +14,8 @@
 		<%=l @product.startdate, format: :long %>
 	<% end %>
 </p>
-<% if @product.timefield %>
-<p>Tijd:&nbsp;<%= @product.timefield %></p>
+<% unless @product.timefield.blank? %>
+	<p>Tijd:&nbsp;<%= @product.timefield %></p>
 <% end %>
 <!-- 		<table>
 	<% @product.events.each do |event| %>
@@ -24,7 +24,7 @@
 	<% end %>
 	</tr>
 </table> -->
-<% if @product.price %>
+<% unless @product.price.blank? %>
 	<p>Prijs: &euro;&nbsp;<%= @product.price %></p>
 <% end %>
 <% if @product.offer %>
