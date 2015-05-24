@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524151517) do
+ActiveRecord::Schema.define(version: 20150524174848) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -89,6 +89,7 @@ ActiveRecord::Schema.define(version: 20150524151517) do
     t.date     "startdate"
     t.text     "timefield"
     t.boolean  "purchasable"
+    t.string   "offer"
   end
 
   add_index "products", ["active"], name: "index_products_on_active"

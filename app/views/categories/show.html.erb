@@ -1,6 +1,8 @@
 <div class="row">
 	<h1><%= @category.name %></h1>
 	<% @products.each do |product| %>
-		<p><%= link_to(product.name, product) %></p>
+		<h2><%= product.name %></h2>
+		<p><%= product.short_description %></p>
+		<p><%= link_to "meer info", product %></p>
 	<% end %>
 </div>

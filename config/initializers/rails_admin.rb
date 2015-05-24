@@ -64,9 +64,6 @@ RailsAdmin.config do |config|
     nestable_list true
 		edit do
 			field :name
-#			field :short_description do
-#				label "waar gebruiken we dit ook al weer voor?"
-#			end
 			field :startdate do
 				label "startdatum"
 			end
@@ -82,6 +79,9 @@ RailsAdmin.config do |config|
 			field :price do
 				label "prijs"
 			end
+			field :offer do
+				label "aanbiedingsprijs"
+			end
 			field :category do
 				label "categorie"
 			end
@@ -94,9 +94,15 @@ RailsAdmin.config do |config|
 			field :location do
 				label "locatie"
 			end
+			field :timefield do
+				label "tijd"
+			end
 			field :description do
 				label "tekst"
 				html_attributes rows: 30, cols: 80
+			end
+			field :short_description do
+				label "korte tekst voor in de lijst"
 			end
 			field :picture
 		end
