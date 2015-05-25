@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+
   rails_admin do
     
   end

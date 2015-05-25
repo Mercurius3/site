@@ -80,6 +80,8 @@ GEM
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     formatador (0.2.5)
+    friendly_id (5.1.0)
+      activerecord (>= 4.0.0)
     fssm (0.2.10)
     gibbon (1.1.5)
       httparty
@@ -245,6 +247,7 @@ DEPENDENCIES
   devise
   devise-i18n-views
   fog
+  friendly_id
   gibbon
   jbuilder (~> 1.2)
   jquery-rails

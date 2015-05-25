@@ -24,13 +24,15 @@ Site::Application.routes.draw do
   get 'overzicht', to: 'pages#overzicht', id: 'overzicht'
   get 'home', to: 'pages#show', id: 'home'
   
-get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
-get 'lezingen', to: 'pages#category', id: 'lezingen'
-get 'cursussen', to: 'pages#category', id: 'cursussen'
-#  get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
-get 'lezingen', to: 'pages#category', id: 'lezingen'
-get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
-get 'voorwaarden', to: 'pages#voorwaarden', id: 'voorwaarden'
+get 'pages/rondleidingen', to: 'pages#category', id: 'rondleidingen'
+get 'pages/lezingen', to: 'pages#category', id: 'lezingen'
+get 'pages/cursussen', to: 'pages#category', id: 'cursussen'
+get 'pages/lezingen', to: 'pages#category', id: 'lezingen'
+get 'pages/cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
+get 'voorwaarden', to: 'pages#show', id: 'voorwaarden'
+get 'pages/contact', to: redirect('/contact')
+get 'pages/voorwaarden', to: redirect('/voorwaarden')
+get 'contact', to: 'pages#show', id: 'contact'
 #  get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
   resources :categories, :products, :transactions, :posts, :events, :pages
