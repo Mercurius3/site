@@ -55,7 +55,11 @@
 <div id="modal">
 	<%= content_tag :div, id: "voorwaarden", class: "reveal-modal", :'data-reveal aria-labelledby' => 'voorwaardenModal', :role => 'dialog' do %>
 		<h1 id="voorwaardenModal">Voorwaarden</h1>
-		<%= Kramdown::Document.new(@conditions.content).to_html.html_safe if @conditions.content if @conditions %>
+		<% if @conditions && !@conditions.content.blank? %>
+			<%= Kramdown::Document.new(@conditions.content).to_html.html_safe %>
+		<% else %>
+			<p>Voorwaarden ontbreken</p>
+		<% end %>
 		<a class="close-reveal-modal" aria-label="Close">&#215;</a>
 	<% end %>
 </div>
