@@ -43,7 +43,8 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
 
-  after "deploy:update_code", :link_production_db
+  #after "deploy:update_code", :link_production_db
+	before "deploy:assets:precompile", :link_production_db
 end
 
 desc "Link database.yml from shared path"
