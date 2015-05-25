@@ -1,0 +1,21 @@
+<p>Geachte <%= @transaction.user.first_name %> <%= @transaction.user.last_name %>,</p>
+
+<p>Heel hartelijk dank voor uw aanmelding voor: <%= @transaction.product.name %></p>
+
+<p>Wij hebben uw aanmelding in goede orde ontvangen en zullen u ná 17 juni een mailbericht sturen met een bevestiging en onze betalingsgegevens. U hoeft dus nu nog niet te betalen.</p>
+
+<p>Bij sommige van onze activiteiten is een beperkt aantal plaatsen beschikbaar. Daarbij hanteren we de volgorde van inschrijving, wie het eerst komt, wie het eerst maalt. Wanneer een cursus is volgeboekt zullen wij u hiervan op de hoogte stellen en u, indien mogelijk, een alternatief aanbieden.</p>
+
+<p>Wij doen ons best om zo snel mogelijk alle e-mails en inschrijvingen te beantwoorden. Ons kantoor is van 30 mei t/m 17 juni gesloten wegens werkzaamheden en onderzoek in het buitenland. Wij zullen vanaf 17 juni alle mailberichten beantwoorden.</p>
+
+<p>Marielle en Caroline</p>
+
+<p>Lassche & Lassche Kunst- en Cultuureducatie V.O.F.</p>
+<p><%= link_to 'www.lassche-lassche.nl', 'http://www.lassche-lassche.nl' %><br>
+<%= link_to 'facebook', 'https://www.facebook.com/Lasschelassche' %><br>
+<%= link_to 'twitter', 'https://twitter.com/lasschecultuur' %><br>
+<%= link_to 'google+', 'https://plus.google.com/111919899281812173891' %></p>
+
+<p>Uw bericht:</p>
+
+<p>"<%= @transaction.message %>"</p>

@@ -3,7 +3,7 @@ class TransactionMailer < ActionMailer::Base
 
     def transaction_confirmation(transaction)
       @transaction = transaction
-			attachments.inline['logo.png'] = File.read(image_path('logo.png'))
+			attachments['logo.jpg'] = File.read("#{Rails.root}/app/assets/images/logo.jpg")
       mail(to: @transaction.user.email, bcc: ["mercurius3@me.com","marielle@lassche-lassche.nl"], subject: "Aanmelding #{@transaction.product.name}")
     end
 end

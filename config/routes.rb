@@ -24,14 +24,16 @@ Site::Application.routes.draw do
   get 'overzicht', to: 'pages#overzicht', id: 'overzicht'
   get 'home', to: 'pages#show', id: 'home'
   
-  get 'cursussen', to: 'pages#category', id: 'cursussen'
-  get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
-  get 'lezingen', to: 'pages#category', id: 'lezingen'
-  get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
-  
-  get ':id', to: 'pages#show', as: :page
+get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
+get 'lezingen', to: 'pages#category', id: 'lezingen'
+get 'cursussen', to: 'pages#category', id: 'cursussen'
+#  get 'rondleidingen', to: 'pages#category', id: 'rondleidingen'
+get 'lezingen', to: 'pages#category', id: 'lezingen'
+get 'cultuurtrips', to: 'pages#category', id: 'cultuurtrips'
+get 'voorwaarden', to: 'pages#voorwaarden', id: 'voorwaarden'
+#  get ':id', to: 'pages#show', as: :page
   get 'categories/:name' => 'categories#show', as: :name
-  resources :categories, :products, :transactions, :posts, :events
+  resources :categories, :products, :transactions, :posts, :events, :pages
   resources :questions, only: [:new, :create]
 
   # Example of regular route:

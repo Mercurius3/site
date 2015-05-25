@@ -3,5 +3,7 @@
 <% @products.each do |product| %>
 	<h2><%= product.name %></h2>
 	<p><%= product.short_description %><br>
-	<%= link_to "meer info", product %></p>
+	<%= link_to "meer info", product %>
+	<% if product.purchasable %><%= link_to 'Inschrijven', product, class: "tiny button right" %><% end %>
+	</p>
 <% end %>
