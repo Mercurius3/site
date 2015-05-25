@@ -6,7 +6,6 @@ db/*.sqlite3
 
 .git
 .DS_STORE
-config/database*
 config/deploy_3.rb
 config/deploy_backup.rb
 config/oldcap/
