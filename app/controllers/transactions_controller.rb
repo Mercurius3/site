@@ -20,18 +20,18 @@ class TransactionsController < ApplicationController
 			@conditions = Page.find_by_permalink!('voorwaarden')
       flash[:error] = "Er is een probleem met uw aanmelding!"
 			puts "can't save"
-      render :action => 'new'
+      render action: 'new', transaction_params: transaction_params
     end
   end
   
   private
   
     def transaction_params
-      params.require(:transaction).permit( :user_id, :message, :accept_conditions, :product_id, user_attributes: [ :email, :id, :first_name, :last_name ], product_attributes: [ :name, :id ])
+      params.require(:transaction).permit( :user_id, :message, :accept_conditions, :product_id, user_attributes: [ :email, :id, :first_name, :last_name, :phone_number ], product_attributes: [ :name, :id ])
     end
 
 		def create_user(user_attributes)
-			user = User.new(email: user_attributes[:email], first_name: user_attributes[:first_name], last_name: user_attributes[:last_name])
+			user = User.new(email: user_attributes[:email], first_name: user_attributes[:first_name], last_name: user_attributes[:last_name], phone_number: user_attributes[:phone_number])
 			user.skip_confirmation!
 			user
 		end

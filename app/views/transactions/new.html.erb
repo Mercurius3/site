@@ -28,6 +28,15 @@
 				<% end %>
 			</div>
 		</div>
+		<div class="row">
+			<div class="small-6 columns">
+				<%= f.label "Telefoonnummer *" %>
+				<%= builder.text_field :phone_number, placeholder: "uw telefoonnummer" %>
+				<% unless @transaction.errors.messages[:"user.phone_number"].nil? %>
+					<small class="error">Voer a.u.b. uw telefoonnummer in</small>
+				<% end %>
+			</div>
+		</div>
 	<% end %>	
 	<div class="row">
 		<div class="small-12 columns">

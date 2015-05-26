@@ -6,9 +6,10 @@ class PagesController < ApplicationController
   end
   
   def category
-    @category = Category.current_category(params[:id]).first
-		puts params[:id]
+#    @category = Category.current_category(params[:id]).first
+		@category = Category.find_by_name(params[:id])
 		@products = @category.own_products.sorted
+#		@products = @category.own_products.sorted
   end
 
   def overzicht

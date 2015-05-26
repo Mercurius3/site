@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   # validate :street_number, presence: true
   validates :first_name, presence: true
 	validates :last_name, presence: true
+	validates :phone_number, presence: true
 end

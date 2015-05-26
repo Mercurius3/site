@@ -14,16 +14,16 @@ end
 # Use sqlite3 as the database for Active Record
 group :development, :testing do
   gem 'sqlite3'
-  # gem 'factory_girl_rails'
-  # gem 'rspec-rails', '~> 2.0'
-  # gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'guard-rspec'
 end
 
 group :test do
   gem 'database_cleaner'
-  # gem 'capybara'
-  # gem 'faker'
-  # gem 'capybara-webkit'
+  gem 'capybara'
+  gem 'faker'
+  gem 'capybara-webkit'
 end
 
 group :production do
