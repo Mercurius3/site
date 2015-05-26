@@ -46,6 +46,7 @@ RailsAdmin.config do |config|
   config.actions do 
     dashboard
     index
+		toggle
     new
     export
     history_index
@@ -62,6 +63,27 @@ RailsAdmin.config do |config|
   
   config.model Product do
     nestable_list true
+		list do
+			field :name do
+				label "naam"
+			end
+			field :active, :toggle do
+				label "op het programma"
+			end
+			field :purchasable, :toggle do
+				label "bestelknop"
+			end
+			field :category do
+				label "categorie"
+			end
+			field :teacher do
+				label "docent(-en)"
+			end
+			field :position do
+				label "positie"
+			end
+		end
+
 		edit do
 			field :name
 			field :startdate do

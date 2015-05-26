@@ -80,6 +80,7 @@ gem 'rvm-capistrano', require: false
 gem 'rails_admin'
 gem 'devise'
 gem 'rails_admin_nestable'
+gem 'rails_admin_toggleable'
 
 # Translate Devise Views
 gem 'devise-i18n-views'
