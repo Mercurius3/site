@@ -18,7 +18,7 @@ class TransactionsController < ApplicationController
     @transaction.user = @user
     if @transaction.save
       TransactionMailer.transaction_confirmation(@transaction).deliver
-      redirect_to root_path, notice: 'Wij hebben uw aanmelding ontvangen! U ontvangt een email ter bevestiging.'
+      redirect_to root_path, notice: 'Hartelijk voor uw aanmelding. U ontvangt, als het goed is, binnen enkele ogenblikken een mailbericht van ons. Zo niet, controleer dan s.v.p. uw spambox.'
 		else
 			if @user.save
 				@conditions = Page.find_by_permalink!('voorwaarden')
