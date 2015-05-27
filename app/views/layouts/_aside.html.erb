@@ -1,5 +1,7 @@
 <% if @page && @page.name == "Home" %>
-	<iframe src="//www.youtube.com/embed/Ov9SSSZ96ek" frameborder="0" allowfullscreen></iframe>
+	<div class="videoWrapper">
+		<iframe src="//www.youtube.com/embed/Ov9SSSZ96ek" frameborder="0" allowfullscreen></iframe>
+	</div>
 <% end %>
 <% if @page && @page.picture && @page.name != "Nieuwsbrief" %>
 	<%= image_tag(@page.picture) %>
