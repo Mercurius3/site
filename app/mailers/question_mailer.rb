@@ -3,6 +3,7 @@ class QuestionMailer < ActionMailer::Base
   
   def new_question(question)
     @question = question
-    mail(to: @question.email, bcc: ["mercurius3@me.com","marielle@lassche-lassche.nl"], subject: "Bericht")
+		attachments['logo.jpg'] = File.read("#{Rails.root}/app/assets/images/logo.jpg")
+    mail(to: @question.email, bcc: "info@lassche-lassche.nl", subject: "Bericht")
   end
 end
