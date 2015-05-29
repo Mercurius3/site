@@ -1,8 +1,4 @@
-<h1>Aanmelding</h1>
-
-<p>Hartelijk dank voor uw interesse in de <%= @product.category.name.downcase %> <%= @product.name %>!</p>
-
-<p>Houdt u er s.v.p. rekening mee dat uw aanmelding pas definitief is nadat u betaald heeft!</p>
+<h1>Aanmelden voor <%= @product.name %></h1>
 
 <%= form_for @transaction do |f| %>
   <%= f.hidden_field :product_id, value: @product.id %>
