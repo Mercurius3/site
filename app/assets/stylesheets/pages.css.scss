@@ -124,7 +124,7 @@ iframe { max-width: 100%; overflow: visible; }
 #marketing { overflow: hidden;}
 #horizon-container {position:absolute; width: 100%;}
 #wrapper { margin-top: 132px; padding-top: 150px;}
-div#modal { }
+div#voorwaarden.reveal-modal.open {top: 0 !important;}
 .reveal-modal {
 top: 0;
 bottom:0;
