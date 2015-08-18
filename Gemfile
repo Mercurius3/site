@@ -101,7 +101,7 @@ gem 'rmagick'
 gem 'kramdown'
 
 gem "mailchimp-api", "~> 2.0.4"
-gem 'gibbon'
+gem 'gibbon', '~> 1.1.5'
 
 gem 'jquery-validation-rails'
 gem 'nokogiri', '1.5.10'
