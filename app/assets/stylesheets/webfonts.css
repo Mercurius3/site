@@ -4,14 +4,14 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Entypo-Social';
-	src: font-url('entypo-social.eot'); /* IE9 Compat Modes */
-	src: font-url('entypo-social.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-	     font-url('entypo-social.woff') format('woff'), /* Modern Browsers */
-	     font-url('entypo-social.ttf')  format('truetype'), /* Safari, Android, iOS */
-	     font-url('entypo-social.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-family: 'fontello';
+	src: font-url('fontello.eot');
+	src: font-url('fontello.eot?#iefix') format('embedded-opentype'),
+		font-url('fontello.woff') format('woff'),
+		font-url('fontello.ttf') format('truetype'),
+		font-url('fontello.svg#svgFontName') format('svg');
 	}
-  
+
 @font-face {
     font-family: 'Lucida-Bol';
     src: url(font-path('294612_0_0.eot') + "?#iefix") format('embedded-opentype'),

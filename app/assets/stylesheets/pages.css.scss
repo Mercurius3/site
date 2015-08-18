@@ -36,7 +36,7 @@ input:required { content: "\002A"; }
 //typography
 #logo h1 {font-family:'Lucida-Bol',georgia,serif;}
 
-#social_icons a {font-family:'Entypo-Social'; font-size: 300%;}
+#social_icons a {font-family:'fontello'; font-size: 200%;}
 body { font-family: helvetica, sans-serif; line-height: 1.3em;overflow-x: hidden; }
 h1, h2, h3, h4 { font-size: 1em; line-height: 2.6em;}
 
@@ -165,10 +165,10 @@ p.notice.label.success.radius { white-space: normal !important; line-height: 130
 //social
 #social_icons {
 	p {padding-left: 0;}
-	span {width: 33.33%; float: left; margin: 0;padding: 0; display: inline;}
+	span {width: 25%; float: left; margin: 0;padding: 0; display: inline;}
 	a#facebook { color: #3B5998; }
-	a#twitter { color: #4099FF; text-align: center;}
-	a#googleplus { color: #d34836; text-align: right; }
+	a#twitter { color: #4099FF; text-align: center; }
+	a#youtube { color: rgb(204,24,30); text-align: center; }
 }
 
 // small screen defaults
